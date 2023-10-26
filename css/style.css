@@ -1,0 +1,12 @@
+*{
+    direction: rtl;
+}
+
+body{
+    background-color: burlywood;
+}
+
+p {
+    color: blue;
+    font-size: 30px;
+}
