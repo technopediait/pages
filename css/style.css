@@ -1668,5 +1668,11 @@ padding-bottom: 20px;
  .copyright a:hover {
      color: #f4b328 ;
 }
+
+.address #logo img{
+    width: 150px;
+    height: 150px;
+    border-radius: 50% ;
+}
 /** end footer **/
 /*--------------------------------------------------------------------- ener page css ---------------------------------------------------------------------*/
