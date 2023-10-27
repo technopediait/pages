@@ -422,6 +422,18 @@ section{
     cursor: pointer;
 }
 
+.portfolio .image-container .box-2{
+    width:35rem;
+    margin: 1rem;
+    border-radius: .5rem;
+    box-shadow: 0 .5rem 1rem rgba(0,0,0,.1);
+    overflow: hidden;
+    height: 25rem;
+    position: relative;
+    border:1.5rem solid var(--primary-bg-color);
+    cursor: pointer;
+}
+
 .portfolio .image-container .box img{
     height: 100%;
     width: 100%;
@@ -592,6 +604,34 @@ section{
     border-radius: .5rem;
     text-align: center;
 }
+
+.contact .box-container .box-2{
+    flex: 1 1 30rem;
+    margin:1rem;
+    padding:3rem 1rem;
+    background:var(--primary-bg-color);
+    box-shadow: 0 .5rem 1rem rgba(0,0,0,.1);
+    border-radius: .5rem;
+    
+}
+
+.contact .box-container .box-2 div{
+    display: flex;
+    justify-content: space-around;
+    padding: 2rem;
+}
+.contact .box-container .box-2 img{
+ 
+ width: 100%;
+ height: 40px;
+}
+.contact .box-container .box-2 h3{
+    display: block;
+    font-size: 2rem;
+    text-align: center;
+
+}
+
 
 .contact .box-container .box i{
     height: 6rem;
