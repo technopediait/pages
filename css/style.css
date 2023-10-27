@@ -629,6 +629,7 @@ section{
     display: block;
     font-size: 2rem;
     text-align: center;
+    color:var(--primary-text-color);
 
 }
 
