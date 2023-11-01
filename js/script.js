@@ -23,6 +23,26 @@ $(document).ready(function(){
 
   });
 
+  function getMode() {
+    // اگر دستگاه اندروید است، حالت سیستم را تعیین کنید
+    if (window.matchMedia("(prefers-color-scheme: dark)").matches) {
+      return "dark";
+    } else {
+      return "light";
+    }
+  }
+
+  
+      // تعیین حالت اولیه صفحه
+      const mode = getMode();
+      changeMode(mode);
+      
+      // نظارت بر تغییر حالت سیستم و تغییر حالت صفحه به صورت خودکار
+      window.addEventListener("color-scheme-change", () => {
+        const mode = getMode();
+        changeMode(mode);
+      });
+      
   $('#theme-toggler').click(function(){
     $(this).toggleClass('fa-sun');
     $('body').toggleClass('dark-theme');

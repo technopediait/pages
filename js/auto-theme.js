@@ -5,29 +5,29 @@
         if (window.matchMedia("(prefers-color-scheme: dark)").matches) {
           return "dark";
         } else {
-          return "light"; 
+          return "light";
         }
       }
       
       // تابعی برای تغییر حالت صفحه
       function changeMode(mode) {
         // حالت صفحه را بر اساس مقدار بازگشتی تابع getMode() تغییر دهید
-        const body = document.querySelector("html");
+        const body = document.querySelector("body");
         body.classList.remove("light", "dark");
         body.classList.add(mode);
       
         // رنگ پس زمینه را تغییر دهید
         if (mode === "dark") {
-          html.style.backgroundColor = "#000";
+          body.style.backgroundColor = "#000";
         } else {
-          html.style.backgroundColor = "#ffffff";
+          body.style.backgroundColor = "#ffffff";
         }
       
         // رنگ متن را تغییر دهید
         if (mode === "dark") {
-          html.style.color = "#fff";
+          body.style.color = "#fff";
         } else {
-          html.style.color = "#000";
+          body.style.color = "#000";
         }
       }
       
