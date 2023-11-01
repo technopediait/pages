@@ -5,7 +5,7 @@
         if (window.matchMedia("(prefers-color-scheme: dark)").matches) {
           return "dark";
         } else {
-          return "light";
+          return "light"; 
         }
       }
       
@@ -18,9 +18,9 @@
       
         // رنگ پس زمینه را تغییر دهید
         if (mode === "dark") {
-          body.style.backgroundColor = "#000";
+          html.style.backgroundColor = "#000";
         } else {
-          body.style.backgroundColor = "#ffffff";
+          html.style.backgroundColor = "#ffffff";
         }
       
         // رنگ متن را تغییر دهید
