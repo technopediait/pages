@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>حالت خودکار روشن و تاریک</title>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.5.4/jspdf.min.js"></script>
+</head>
+<body>
+  <h1>حالت خودکار روشن و تاریک</h1>
+  <p>این صفحه از حالت خودکار روشن و تاریک پشتیبانی می‌کند.</p>
+  <script>
+    // تابعی برای تعیین حالت روشن یا تاریک بر اساس روشنایی صفحه
+    function getMode() {
+      const brightness = window.screen.brightness;
+      return brightness > 0.5 ? "light" : "dark";
+    }
+
+    // تابعی برای تغییر حالت صفحه
+    function changeMode(mode) {
+      const body = document.querySelector("body");
+      body.classList.remove("light", "dark");
+      body.classList.add(mode);
+    }
+
+    // تعیین حالت اولیه صفحه
+    const mode = getMode();
+    changeMode(mode);
+
+    // نظارت بر روشنایی صفحه و تغییر حالت صفحه به صورت خودکار
+    window.addEventListener("brightnesschange", () => {
+      const mode = getMode();
+      changeMode(mode);
+    });
+  </script>
+</body>
+</html>
