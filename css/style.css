@@ -16,7 +16,7 @@
     text-transform: capitalize;
     outline: none; border:none;
     text-decoration: none;
-    transition:all 1.3s cubic-bezier(.38,1.15,.7,1.12);
+    transition:all .3s cubic-bezier(.38,1.15,.7,1.12);
     direction: rtl;
 }
 

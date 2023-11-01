@@ -7,7 +7,7 @@
         } else {
           return "light";
         }
-      }
+      
       
       // تابعی برای تغییر حالت صفحه
       function changeMode(mode) {
@@ -15,7 +15,7 @@
         const body = document.querySelector("body");
         body.classList.remove("light", "dark");
         body.classList.add(mode);
-      
+      }
         // رنگ پس زمینه را تغییر دهید
         if (mode === "dark") {
           body.style.backgroundColor = "#000";
