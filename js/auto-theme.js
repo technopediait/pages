@@ -12,7 +12,7 @@
       // تابعی برای تغییر حالت صفحه
       function changeMode(mode) {
         // حالت صفحه را بر اساس مقدار بازگشتی تابع getMode() تغییر دهید
-        const body = document.querySelector("body");
+        const body = document.querySelector("html");
         body.classList.remove("light", "dark");
         body.classList.add(mode);
       
@@ -25,9 +25,9 @@
       
         // رنگ متن را تغییر دهید
         if (mode === "dark") {
-          body.style.color = "#fff";
+          html.style.color = "#fff";
         } else {
-          body.style.color = "#000";
+          html.style.color = "#000";
         }
       }
       
