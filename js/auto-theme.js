@@ -1,33 +1,28 @@
-function sendNotification() {
-  // ابتدا بررسی کنید که آیا مرورگر از API Notifications پشتیبانی می‌کند
-  if (Notification.permission === "granted") {
-    // یک نوتیفیکیشن جدید ایجاد کنید
-    const notification = new Notification("عنوان نوتیفیکیشن", {
-      // محتوای نوتیفیکیشن
-      body: "متن نوتیفیکیشن",
-      // آیکون نوتیفیکیشن
-      icon: "https://example.com/icon.png",
-      // دکمه‌های نوتیفیکیشن
-      buttons: [
-        {
-          // متن دکمه
-          label: "تایید",
-          // عملکرد دکمه
-          onClick: () => console.log("تایید شد"),
-        },
-        {
-          // متن دکمه
-          label: "لغو",
-          // عملکرد دکمه
-          onClick: () => console.log("لغو شد"),
-        },
-      ],
-    });
+// دریافت مجوز نوتیفیکیشن از کاربر
+document.getElementById('sendNotification').addEventListener('click', function() {
+  if ('Notification' in window) {
+      if (Notification.permission === 'granted') {
+          sendNotification();
+      } else if (Notification.permission !== 'denied') {
+          Notification.requestPermission().then(function(permission) {
+              if (permission === 'granted') {
+                  sendNotification();
+              }
+          });
+      }
+  }
+});
 
-    // نوتیفیکیشن را نمایش دهید
-    notification.show();
-  } else {
-    // از کاربر اجازه بگیرید
-    Notification.requestPermission();
+// ارسال نوتیفیکیشن با استفاده از اطلاعات ورودی فرم
+function sendNotification() {
+  const title = document.getElementById('notificationTitle').value;
+  const text = document.getElementById('notificationText').value;
+
+  if ('serviceWorker' in navigator) {
+      navigator.serviceWorker.register('sw.js').then(function(registration) {
+          registration.showNotification(title, {
+              body: text
+          });
+      });
   }
 }

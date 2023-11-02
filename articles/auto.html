@@ -1,30 +1,21 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-  <title>صفحه نمونه</title>
+    <title>ارسال نوتیفیکیشن با فرم</title>
 </head>
 <body>
-  <button onclick="sendNotification()">ارسال نوتیفیکیشن</button>
+    <h1>ارسال نوتیفیکیشن</h1>
+    <form id="notificationForm">
+        <label for="notificationTitle">عنوان نوتیفیکیشن:</label>
+        <input type="text" id="notificationTitle" name="notificationTitle">
+        <br>
+        <label for="notificationText">متن نوتیفیکیشن:</label>
+        <input type="text" id="notificationText" name="notificationText">
+        <br>
+        <button type="button" id="sendNotification">ارسال نوتیفیکیشن</button>
+    </form>
 
-  <script>
-    function sendNotification() {
-      // ابتدا بررسی کنید که آیا مرورگر از API Notifications پشتیبانی می‌کند
-      if (Notification.permission === "granted") {
-        // یک نوتیفیکیشن جدید ایجاد کنید
-        const notification = new Notification("عنوان نوتیفیکیشن", {
-          // محتوای نوتیفیکیشن
-          body: "متن نوتیفیکیشن",
-          // آیکون نوتیفیکیشن
-          icon: "https://example.com/icon.png",
-        });
-
-        // نوتیفیکیشن را نمایش دهید
-        notification.show();
-      } else {
-        // از کاربر اجازه بگیرید
-        Notification.requestPermission();
-      }
-    }
-  </script>
+    <script src="../js/auto-theme.js"></script>
+    <script src="../js/sw.js"></script>
 </body>
 </html>
