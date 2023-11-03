@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        const element = document.querySelector(".my-element");
+        
+        // تابع جاوا اسکریپت برای اضافه کردن و برداشتن کلاس
+        function toggleClass() {
+          // اضافه کردن کلاس
+          element.classList.add("my-new-class");
+        
+          // تنظیم زمان‌بندی برای برداشتن کلاس
+          setTimeout(() => {
+            element.classList.remove("my-new-class");
+          }, 2000);
+        }
+        
+        // اجرای تابع toggleClass()
+        toggleClass();
+        </script>
+        
+        <div class="my-element">
+          این المان دارای کلاس my-new-class است.
+        </div>
+        
+</body>
+</html>

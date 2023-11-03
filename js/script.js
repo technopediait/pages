@@ -59,6 +59,7 @@ $(document).ready(function(){
     $(this).toggleClass('fa-sun');
     $('body').toggleClass('dark-theme');
   });
+  
 
   // smooth scrolling 
 

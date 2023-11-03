@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, shrink-to-fit=no">
     <meta name="google-site-verification" content="nIxMvcaPihdQfSHdCHMv-Krrs35CvBqo7CaYPS2rwBY" />
     <meta name="keywords" content="تکنو پدیا">
     <meta name="description" content="سایت تکنو پدیا">
@@ -22,7 +23,7 @@
     <link rel="stylesheet" href="./css/auto.css">
 
 </head>
-<body>
+<body class="white">
    
 <!-- header section starts  -->
 
@@ -181,5 +182,11 @@
 <script src="js/script.js"></script>
 <script src="./js/auto.js"></script>
 <script id="dsq-count-scr" src="//technopedia-3.disqus.com/count.js" async></script>
+<script>
+    document.body.addEventListener("wheel", e=>{
+      if(e.ctrlKey)
+        e.preventDefault();//prevent zoom
+    });
+  </script>
 </body>
 </html>

@@ -1,28 +1,17 @@
-// دریافت مجوز نوتیفیکیشن از کاربر
-document.getElementById('sendNotification').addEventListener('click', function() {
-  if ('Notification' in window) {
-      if (Notification.permission === 'granted') {
-          sendNotification();
-      } else if (Notification.permission !== 'denied') {
-          Notification.requestPermission().then(function(permission) {
-              if (permission === 'granted') {
-                  sendNotification();
-              }
-          });
-      }
-  }
-});
+        const element = document.querySelector(".white");
+        
+        // تابع جاوا اسکریپت برای اضافه کردن و برداشتن کلاس
+        function toggleClass() {
+          // اضافه کردن کلاس
+          element.classList.add("dark-theme");
+        
+          // تنظیم زمان‌بندی برای برداشتن کلاس
+          setTimeout(() => {
+            element.classList.remove("dark-theme");
+          }, 3000);
+        }
+        
+        // اجرای تابع toggleClass()
+        toggleClass();
 
-// ارسال نوتیفیکیشن با استفاده از اطلاعات ورودی فرم
-function sendNotification() {
-  const title = document.getElementById('notificationTitle').value;
-  const text = document.getElementById('notificationText').value;
-
-  if ('serviceWorker' in navigator) {
-      navigator.serviceWorker.register('sw.js').then(function(registration) {
-          registration.showNotification(title, {
-              body: text
-          });
-      });
-  }
-}
+          
