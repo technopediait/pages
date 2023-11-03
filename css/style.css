@@ -619,13 +619,6 @@ section{
     margin: 20px;
     
 }
-.contact .box-container .box-2 h3{
-    display: block;
-    font-size: 2rem;
-    text-align: center;
-    color:var(--primary-text-color);
-
-}
 
 
 .contact .box-container .box i{
