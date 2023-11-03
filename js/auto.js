@@ -1,4 +1,4 @@
-        const element = document.querySelector(".white");
+      /*  const element = document.querySelector(".white");
         
         // تابع جاوا اسکریپت برای اضافه کردن و برداشتن کلاس
         function toggleClass() {
@@ -14,4 +14,4 @@
         // اجرای تابع toggleClass()
         toggleClass();
 
-          
+          */
