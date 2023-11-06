@@ -4,9 +4,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <style>
+        .bb{
+            display: none;
+        }
+    </style>
 </head>
 <body>
-    <form id="login-form">
+    <form id="login-form" >
         <input type="text" id="username" placeholder="نام کاربری" required>
         <input type="password" id="password" placeholder="رمز عبور" required>
         <button type="submit">ورود</button>
@@ -14,17 +19,26 @@
 
       <div id="after"></div>
       <script>
+        var p = document.createElement("p") ;
+        p.textContent = "به تو چه " ;
         // جاوا اسکریپت برای بررسی رمز عبور
 document.getElementById("login-form").addEventListener("submit", function (event) {
   event.preventDefault();
   const username = document.getElementById("username").value;
   const password = document.getElementById("password").value;
+  const bbc = document.querySelector("form")
+  var fe = document.querySelector("form.bb") ;
+  if (fe) {
+    fe.appendChild(p)
+
+  }
+  
 
   // اینجا می‌توانید رمز عبور را بررسی کرده و به صفحه ورود اجازه دهید
   if (username === "نام_کاربری" && password === "0000") {
+    document.getElementById("after")
     
-    document.getElementById("after").innerHTML
-    = "<p>شما شدید </p>" ;
+    bbc.classList.add("bb") ;
   } else {
     alert("ورود ناموفق. لطفا نام کاربری و رمز عبور را بررسی کنید.");
   }
