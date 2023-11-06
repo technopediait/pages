@@ -7,7 +7,7 @@ function saveData() {
   function displayData() {
     const name = localStorage.getItem('user_name');
     if (name) {
-      document.getElementById('result').textContent = 'نام: ' + name;
+      document.getElementById('result').textContent = '' + name ;
     }
   }
   

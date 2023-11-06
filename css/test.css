@@ -1,4 +1,33 @@
-div{
-    color: aqua;
-    font-weight: bold;
-}
+@font-face{
+    font-family: azir;
+    src: url(../fonts/Vazir-Regular.ttf);
+  }
+
+  body{
+    font-family: "azir";
+  }
+  .bbc{
+    white-space: nowrap;
+    overflow: hidden;
+    animation: scr 10s linear infinite;
+    background-color: yellow;
+    color: black;
+    font-size: 35px;
+    margin: 0;
+    padding: 0;
+    
+  }
+  .bbd{
+    background-color: yellow;
+  }
+  @keyframes scr {
+    0%{
+      transform: translateX(-100%)
+
+    }
+
+    100%{
+      transform: translateX(100%);
+    }
+
+  }
