@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>نمایش اطلاعات فرم بدون دکمه با جاوااسکریپت</title>
+    <title>نمایش اطلاعات فرم با جاوااسکریپت</title>
 </head>
 <body>
     <form id="myForm">
@@ -10,21 +10,17 @@
         <br>
         <label for="email">ایمیل:</label>
         <input type="email" id="email" name="email">
+        <br>
+        <button type="button" onclick="displayData()">نمایش اطلاعات</button>
     </form>
 
     <p id="output"></p>
 
     <script>
-        var nameInput = document.getElementById("name");
-        var emailInput = document.getElementById("email");
-        var output = document.getElementById("output");
-
-        nameInput.addEventListener("input", displayData);
-        emailInput.addEventListener("input", displayData);
-
         function displayData() {
-            var name = nameInput.value;
-            var email = emailInput.value;
+            var name = document.getElementById("name").value;
+            var email = document.getElementById("email").value;
+            var output = document.getElementById("output");
 
             output.innerHTML = "نام: " + name + "<br>ایمیل: " + email;
         }
