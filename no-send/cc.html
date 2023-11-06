@@ -1,25 +1,36 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>نمایش محتوای فرم با جاوااسکریپت</title>
+  <meta charset="UTF-8">
+  <title>Form</title>
 </head>
 <body>
-    <form id="myForm">
-        <textarea id="content" rows="4" cols="50" placeholder="متن خود را وارد کنید..."></textarea>
-    </form>
+  <form action="/" method="post">
+    <input type="text" name="name" placeholder="نام">
+    <input type="email" name="email" placeholder="ایمیل">
+    <input type="submit" value="ارسال">
+  </form>
 
-    <p id="output"></p>
+  <script>
+    // تابعی برای نمایش داده‌های فرم در صفحه
+    function showData() {
+      // دریافت داده‌های فرم
+      const data = new FormData(document.querySelector("form"));
 
-    <script>
-        var contentTextarea = document.getElementById("content");
-        var output = document.getElementById("output");
+      // ایجاد یک آرایه از داده‌ها
+      const array = [];
+      for (const [key, value] of data.entries()) {
+        array.push(`${key}: ${value}`);
+      }
 
-        contentTextarea.addEventListener("input", displayContent);
+      // نمایش داده‌ها در صفحه
+      document.querySelector("p").innerHTML = array.join(", ");
+    }
 
-        function displayContent() {
-            var content = contentTextarea.value;
-            output.textContent = content;
-        }
-    </script>
+    // ثبت رویداد submit برای فرم
+    document.querySelector("form").addEventListener("submit", showData);
+  </script>
+
+  <p id="data"></p>
 </body>
 </html>
