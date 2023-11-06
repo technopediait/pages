@@ -12,3 +12,20 @@ function saveData() {
   }
   
   displayData(); // نمایش داده‌ها هنگام بارگذاری صفحه
+
+  function showMessages() {
+    const messages = [
+      "پیام 1: این یک پیام است.",
+      "پیام 2: این پیام دوم است.",
+      "پیام 3: این پیام سوم است."
+    ];
+  
+    const messageContainer = document.getElementById("message-container");
+    //messageContainer.innerHTML = ""; // پاک کردن محتوای قبلی
+  
+    messages.forEach(message => {
+      const messageElement = document.createElement("p");
+      messageElement.textContent = message;
+      messageContainer.appendChild(messageElement);
+    });
+  }
