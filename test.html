@@ -1,25 +1,16 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>آزمایشی</title>
-  <link rel="stylesheet" href="css/test.css">
-  <style>
-   
-    
-  </style>
-
+    <title>ارسال به GitHub</title>
 </head>
 <body>
-  <input type="text" id="name" placeholder="نام">
-<button onclick="saveData()">ذخیره</button>
-<div class="bbd"><div id="result" class="bbc"></div></div>
-<P>سلام</P>
-  
-<div id="message-container"></div>
-<!--<button onclick="showMessages()">نمایش پیام‌ها</button>
--->
-  <script src="js/test.js"></script>
+    <form id="githubForm">
+        <label for="message">پیام: </label>
+        <input type="text" id="message" required><br>
+        <label for="content">محتوا: </label>
+        <textarea id="content" required></textarea><br>
+        <input type="submit" value="ارسال به GitHub">
+    </form>
+  <></>
 </body>
 </html>
