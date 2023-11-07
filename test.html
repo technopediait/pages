@@ -1,16 +1,41 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>ارسال به GitHub</title>
+ <title>Form</title>
+ <link rel="stylesheet" type="text/css" href="style.css">
 </head>
 <body>
-    <form id="githubForm">
-        <label for="message">پیام: </label>
-        <input type="text" id="message" required><br>
-        <label for="content">محتوا: </label>
-        <textarea id="content" required></textarea><br>
-        <input type="submit" value="ارسال به GitHub">
-    </form>
-  <script src="js/test.js"></script>
+ <form id="form">
+    <label for="username">Username:</label><br>
+    <input type="text" id="username" name="username"><br>
+    <label for="email">Email:</label><br>
+    <input type="text" id="email" name="email"><br>
+    <input type="submit" value="Submit">
+ </form>
+ <script>
+     document.getElementById('form').addEventListener('submit', function(event) {
+ event.preventDefault(); // prevent the form from being submitted
+
+ // retrieve the values of the inputs
+ var username = document.getElementById('username').value;
+ var email = document.getElementById('email').value;
+
+ // send the data to your GitHub repository
+ fetch('https://api.github.com/repos/YOUR_USERNAME/YOUR_REPO/contents/data.json', {
+    method: 'PUT',
+    headers: {
+      'Authorization': 'token YOUR_ACCESS_TOKEN',
+      'Content-Type': 'application/json'
+    },
+    body: JSON.stringify({
+      username: username,
+      email: email
+    })
+ })
+ .then(response => response.json())
+ .then(data => console.log(data))
+ .catch(error => console.error(error));
+});
+ </script>
 </body>
 </html>
