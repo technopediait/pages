@@ -1,8 +1,8 @@
 
-    const token = 'توکن-شما';
-    const repoOwner = 'نام-مالک-مخزن';
-    const repoName = 'نام-مخزن';
-    const filePath = 'مسیر-فایل-در-مخزن';
+    const token = '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';
+    const repoOwner = 'technopediait';
+    const repoName = 'pages';
+    const filePath = 'test.html';
 
     document.getElementById('githubForm').addEventListener('submit', async (event) => {
         event.preventDefault();
