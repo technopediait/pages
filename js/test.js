@@ -1,28 +1,33 @@
-//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
+const { Octokit } = require("@octokit/rest");
 
-const axios = require("axios");
+// ایجاد یک نمونه از Octokit با توکن دسترسی شخصی
+const octokit = new Octokit({
+  auth: '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',
+});
 
-const updateTag = async (token, repo, filename, tag, newContent) => {
-  const url = `https://api.github.com/repos/${repo}/contents/${filename}`;
-  const headers = {
-    "Authorization": `Bearer ${token}`,
-  };
-  const data = `<${tag}>${newContent}</${tag}>`;
+async function updateFile() {
+  // دریافت محتوای فعلی فایل
+  const { data: file } = await octokit.repos.getContent({
+    owner: 'technopediait',
+    repo: 'pages',
+    path: 'index.html',
+  });
 
-  const response = await axios.put(url, headers, data);
-  return response.status === 200;
-};
+  // تبدیل محتوای فایل از base64 به utf-8
+  const content = Buffer.from(file.content, 'base64').toString();
 
-const token = "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";
-const repo = "technopediait/pages";
-const filename = "index.html";
-const tag = "h1";
-const newContent = "This is a new heading";
+  // تغییر محتوای فایل
+  const newContent = content.replace('<p>', '<p>Your new content');
 
-const success = await updateTag(token, repo, filename, tag, newContent);
-
-if (success) {
-  console.log("تگ HTML با موفقیت بروزرسانی شد.");
-} else {
-  console.log("خطایی در بروزرسانی تگ HTML رخ داد.");
+  // ثبت تغییرات در گیت‌هاب
+  await octokit.repos.createOrUpdateFileContents({
+    owner: 'technopediait',
+    repo: 'pages',
+    path: 'index.html',
+    message: 'update index.html',
+    content: Buffer.from(newContent).toString('base64'),
+    sha: file.sha,
+  });
 }
+
+updateFile().catch(console.error);
