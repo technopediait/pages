@@ -7,7 +7,7 @@
         const repoName = 'pages';
         const accessToken = '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';
       
-        const apiUrl = `https://api.github.com/repos/${repoOwner}/${repoName}/contents/note.txt`;
+        const apiUrl = `https://api.github.com/repos/${repoOwner}/${repoName}/contents/note.html`;
       
         const data = {
           message: 'افزودن نوشتار از طریق فرم',
@@ -32,7 +32,7 @@
       function displayTextFromGitHub() {
         const repoOwner = 'technopediait';
         const repoName = 'pages';
-        const apiUrl = `https://api.github.com/repos/${repoOwner}/${repoName}/contents/note.txt`;
+        const apiUrl = `https://api.github.com/repos/${repoOwner}/${repoName}/contents/note.html`;
       
         axios.get(apiUrl)
           .then(response => {
