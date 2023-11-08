@@ -1,23 +1,11 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-  <title>بروزرسانی مخزن گیت هاب</title>
+    <title>نمایش متن</title>
 </head>
 <body>
-  <form action="#">
-    <input type="text" name="filename" placeholder="نام فایل">
-    <textarea name="content" placeholder="محتوای جدید">
-    </textarea>
-    <select name="type">
-      <option value="add">اضافه کردن</option>
-      <option value="remove">حذف</option>
-      <option value="change">تغییر</option>
-    </select>
-    <button type="submit">بروزرسانی</button>
-  </form>
-  <a href="note.html">qwer</a>
-  <script src="https://cdn.jsdelivr.net/npm/axios@0.26.0/dist/axios.min.js"></script>
-
-  <script src="js/test.js"></script>
+    <p>
+        <?php echo $_GET["text"]; ?> df
+    </p>
 </body>
 </html>
