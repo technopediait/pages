@@ -10,7 +10,7 @@ const data = {
 // ارسال اطلاعات به مخزن گیت هاب
 axios({
   method: "POST",
-  url: "https://api.github.com/repos/technopediait/pages/contents/[index.html]",
+  url: "https://api.github.com/repos/technopediait/pages/contents/[filename]",
   headers: {
     Authorization: `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`,
   },
