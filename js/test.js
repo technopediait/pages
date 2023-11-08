@@ -1,39 +1,47 @@
 
-    const token = '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';
-    const repoOwner = 'technopediait';
-    const repoName = 'pages';
-    const filePath = 'test.html';
+    const token = '';
 
-    document.getElementById('githubForm').addEventListener('submit', async (event) => {
-        event.preventDefault();
-
-        const message = document.getElementById('message').value;
-        const content = document.getElementById('content').value;
-
-        // ارسال اطلاعات به GitHub
-        // نحوه ارسال داده و ایجاد درخواست POST با استفاده از fetch API یا XMLHttpRequest به عهده‌ی شماست.
-        // متد fetch را به عنوان یک نمونه نمایشی ارائه دادم.
-
-        try {
-            // ایجاد درخواست
-            const response = await fetch(`https://api.github.com/repos/${repoOwner}/${repoName}/contents/${filePath}`, {
-                method: 'PUT',
-                headers: {
-                    'Authorization': `token ${token}`,
-                    'Content-Type': 'application/json',
-                },
-                body: JSON.stringify({
-                    message: message,
-                    content: btoa(content), // انکدینگ Base64 محتوا
-                }),
-            });
-
-            if (response.status === 201) {
-                alert('اطلاعات با موفقیت ارسال شد.');
-            } else {
-                alert('خطا در ارسال اطلاعات به GitHub.');
-            }
-        } catch (error) {
-            console.error('خطا:', error);
-        }
-    });
+    function submitForm() {
+        const text = document.getElementById("text").value;
+        const repoOwner = 'technopediait';
+        const repoName = 'pages';
+        const accessToken = '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';
+      
+        const apiUrl = `https://api.github.com/repos/${repoOwner}/${repoName}/contents/note.txt`;
+      
+        const data = {
+          message: 'افزودن نوشتار از طریق فرم',
+          content: btoa(text),
+        };
+      
+        const headers = {
+          Authorization: `token ${accessToken}`,
+        };
+      
+        axios.put(apiUrl, data, { headers })
+          .then(response => {
+            console.log('موفقیت‌آمیز: ', response.data);
+            // انجام عملیات نمایش در اینجا
+          })
+          .catch(error => {
+            console.error('خطا: ', error);
+            // نمایش پیغام خطا در اینجا
+          });
+      }
+      //نمایش اطلاعات
+      function displayTextFromGitHub() {
+        const repoOwner = 'technopediait';
+        const repoName = 'pages';
+        const apiUrl = `https://api.github.com/repos/${repoOwner}/${repoName}/contents/note.txt`;
+      
+        axios.get(apiUrl)
+          .then(response => {
+            const decodedContent = atob(response.data.content);
+            document.getElementById("displayText").innerText = decodedContent;
+          })
+          .catch(error => {
+            console.error('خطا: ', error);
+            // نمایش پیغام خطا در اینجا
+          });
+      }
+      

@@ -1,41 +1,17 @@
-<!DOCTYPE html>
-<html>
-<head>
- <title>Form</title>
- <link rel="stylesheet" type="text/css" href="style.css">
-</head>
-<body>
- <form id="form">
-    <label for="username">Username:</label><br>
-    <input type="text" id="username" name="username"><br>
-    <label for="email">Email:</label><br>
-    <input type="text" id="email" name="email"><br>
-    <input type="submit" value="Submit">
- </form>
- <script>
-     document.getElementById('form').addEventListener('submit', function(event) {
- event.preventDefault(); // prevent the form from being submitted
-
- // retrieve the values of the inputs
- var username = document.getElementById('username').value;
- var email = document.getElementById('email').value;
-
- // send the data to your GitHub repository
- fetch('https://api.github.com/repos/YOUR_USERNAME/YOUR_REPO/contents/data.json', {
-    method: 'PUT',
-    headers: {
-      'Authorization': 'token YOUR_ACCESS_TOKEN',
-      'Content-Type': 'application/json'
-    },
-    body: JSON.stringify({
-      username: username,
-      email: email
-    })
- })
- .then(response => response.json())
- .then(data => console.log(data))
- .catch(error => console.error(error));
-});
- </script>
-</body>
-</html>
+ 
+ <!DOCTYPE html>
+ <html lang="en">
+ <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+ </head>
+ <body>
+    <form id="myForm">
+        <textarea id="text" rows="4" cols="50"></textarea>
+        <button type="button" onclick="submitForm()">ارسال به GitHub</button>
+      </form>
+      <script src="js/test.js"></script>
+      
+ </body>
+ </html>
