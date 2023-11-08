@@ -12,7 +12,7 @@ axios({
   method: "POST",
   url: "https://api.github.com/repos/technopediait/pages/contents/[filename]",
   headers: {
-    Authorization: `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`,
+    Authorization: `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`,
   },
   data: data,
 })
