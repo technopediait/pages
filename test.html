@@ -1,17 +1,19 @@
- 
- <!DOCTYPE html>
- <html lang="en">
- <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
- </head>
- <body>
-    <form id="myForm">
-        <textarea id="text" rows="4" cols="50"></textarea>
-        <button type="button" onclick="submitForm()">ارسال به GitHub</button>
-      </form>
-      <script src="js/test.js"></script>
-      
- </body>
- </html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>بروزرسانی مخزن گیت هاب</title>
+</head>
+<body>
+  <form action="#">
+    <input type="text" name="filename" placeholder="نام فایل">
+    <textarea name="content" placeholder="محتوای جدید">
+    </textarea>
+    <select name="type">
+      <option value="add">اضافه کردن</option>
+      <option value="remove">حذف</option>
+      <option value="change">تغییر</option>
+    </select>
+    <button type="submit">بروزرسانی</button>
+  </form>
+</body>
+</html>

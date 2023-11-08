@@ -1,47 +1,30 @@
 
-    const token = '';
 
-    function submitForm() {
-        const text = document.getElementById("text").value;
-        const repoOwner = 'technopediait';
-        const repoName = 'pages';
-        const accessToken = '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';
-      
-        const apiUrl = `https://api.github.com/repos/${repoOwner}/${repoName}/contents/note.html`;
-      
-        const data = {
-          message: 'افزودن نوشتار از طریق فرم',
-          content: btoa(text),
-        };
-      
-        const headers = {
-          Authorization: `token ${accessToken}`,
-        };
-      
-        axios.put(apiUrl, data, { headers })
-          .then(response => {
-            console.log('موفقیت‌آمیز: ', response.data);
-            // انجام عملیات نمایش در اینجا
-          })
-          .catch(error => {
-            console.error('خطا: ', error);
-            // نمایش پیغام خطا در اینجا
-          });
-      }
-      //نمایش اطلاعات
-      function displayTextFromGitHub() {
-        const repoOwner = 'technopediait';
-        const repoName = 'pages';
-        const apiUrl = `https://api.github.com/repos/${repoOwner}/${repoName}/contents/note.html`;
-      
-        axios.get(apiUrl)
-          .then(response => {
-            const decodedContent = atob(response.data.content);
-            document.getElementById("displayText").innerText = decodedContent;
-          })
-          .catch(error => {
-            console.error('خطا: ', error);
-            // نمایش پیغام خطا در اینجا
-          });
-      }
-      
+// جمع‌آوری اطلاعات فرم
+const data = {
+  filename: document.querySelector("input[name='filename']").value,
+  content: document.querySelector("textarea[name='content']").value,
+  type: document.querySelector("select[name='type']").value,
+};
+
+// ارسال اطلاعات به مخزن گیت هاب
+axios({
+  method: "POST",
+  url: "https://api.github.com/repos/technopediait/pages/contents/[index.html]",
+  headers: {
+    Authorization: `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`,
+  },
+  data: data,
+})
+  .then((response) => {
+    // موفقیت
+    console.log(response);
+  })
+  .catch((error) => {
+    // خطا
+    console.log(error);
+  });
+
+
+
+ 
