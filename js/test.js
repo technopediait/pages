@@ -13,7 +13,7 @@ const updateTag = async (token, repo, filename, tag, newContent) => {
   return response.status === 200;
 };
 
-const token = "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";
+const token = "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";
 const repo = "technopediait/pages";
 const filename = "index.html";
 const tag = "h1";
