@@ -4,14 +4,13 @@ var nav = document.querySelector(".navbar") ;
 //کنترل لینک های ناو بار
 
 var link1 = document.querySelector(".link1") ;
-
+link1.textContent = " درباره "
 link1.href = "test.html" ;
 
 
 var link2 = document.querySelector(".link2") ;
 link2.textContent = " دسته ها " ;
 link2.href = "" ;
-link1.style.display = "none" ;
 
 var link3 = document.querySelector(".link3") ;
 link3.textContent = " خدمات " ;
@@ -22,7 +21,7 @@ link4.textContent = " وبلاگ " ;
 link4.href = "#blog" ;
 
 var link5 = document.querySelector(".link5") ;
-link5.textContent = " تماس با ما " ;
+link5.textContent = " تماس با " ;
 link5.href = "" ;
 
 var link6 = document.createElement("a") ;
@@ -46,3 +45,18 @@ btn2.href = "https://t.me/technopediait" ;
 var blog = document.querySelector(".blog") ;
 
 //کنترل متن بالای سکشن مقاله ها
+var title = document.querySelector(".art")
+title.innerHTML = " <a> مقاله های </a> <span>تکنو پدیا</span>"
+
+
+// کنترل فوتر
+var footer = document.querySelector(".footer")
+
+// کنترل متن فوتر
+var footerText = document.querySelector(".footer-text")
+footerText.textContent = " کلیه حقوق محفوظ می باشد  "
+
+// لینک 
+var footerLink = document.querySelector(".footer-link")
+footerLink.textContent = " تکنو "
+footerLink.href = "#"
