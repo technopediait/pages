@@ -4,8 +4,8 @@ var nav = document.querySelector(".navbar") ;
 //کنترل لینک های ناو بار
 
 var link1 = document.querySelector(".link1") ;
-link1
-link1.href = "" ;
+
+link1.href = "test.html" ;
 
 
 var link2 = document.querySelector(".link2") ;
@@ -46,17 +46,3 @@ btn2.href = "https://t.me/technopediait" ;
 var blog = document.querySelector(".blog") ;
 
 //کنترل متن بالای سکشن مقاله ها
-
-
-var titleblogspan = document.querySelector(".span-blog") ;
-
-
-titleblogspan.textContent = " سلام " ;
-
-
-//فوتر
-var footer = document.querySelector(".footer")
-footer.textContent = "سلام خوبی"
-
-
-
