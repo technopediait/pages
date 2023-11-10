@@ -1,34 +1,88 @@
-@font-face{
-    font-family: azir;
-    src: url(../fonts/Vazir-Regular.ttf);
-  }
 
-  body{
-    font-family: "azir";
-  }
-  .bbc{
-    white-space: nowrap;
-    overflow: hidden;
-    animation: scr 10s linear infinite;
-    background-color: yellow;
-    color: black;
-    font-size: 35px;
-    margin: 0;
-    padding: 0;
-    z-index: 1;
+    @font-face {
+        font-family: farsi;
+        src: url(../fonts/Vazir-Regular.ttf);
+    }
+
+    * {
+        margin: 0px;
+        padding: 0px;
+        font-family: farsi;
+        direction: rtl;
+        
+    }
+
+    body{
+        background-color: rgb(240, 251, 250);
+    }
+
+    button {
+        border: none;
+        background-color: blue;
+        color: aliceblue;
+        padding: 17px;
+        border-radius: 5px;
+        margin: 10px 5px;
+        box-shadow: 0px 0px 6px rgb(13, 255, 0);
+    }
+
+    form {
+    width: auto;
+    height: auto;
+    padding: 0px;
+    border-radius: 7px;
+    position:fixed;
+    bottom: 10px;
     
-  }
-  .bbd{
-    background-color: yellow;
-  }
-  @keyframes scr {
-    0%{
-      transform: translateX(-100%)
-
+    right: 10px;
+    
     }
 
-    100%{
-      transform: translateX(100%);
+    input {
+        
+    font-size: 16px;
+    font-weight: 400;
+    color:#000000;
+    padding: 15px;
+    border: none;
+    outline: none;
+    width: auto;
+    border-radius: 20px;
+    width: 200px;
+    box-shadow: 0px 0px 6px black;
     }
 
-  }
+    form input:focus{
+        color: #ffffff;
+        background-color: black;
+    }
+
+    b{
+        font-weight: 300;
+        background-color: bisque;
+        text-align: left;
+        display: block;
+        padding: 7px;
+        
+        box-shadow: 0px 0px 2px rgb(251, 255, 0);
+    }
+
+    p {
+        background-color: rgb(255, 255, 255);
+        margin-bottom: 15px;
+        padding: 10px;
+        color: #3f3554;
+        border: 1px solid;
+        box-shadow: 0px 0px 3px rgb(66, 62, 0);
+    }
+
+    .out{
+        
+        margin: 15px;
+    }
+
+    .blonk{
+        height: 100px;
+    }
+
+    

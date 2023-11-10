@@ -1,44 +1,22 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Document</title>
+   <link rel="stylesheet" href="./css/test.css">
+
 </head>
 <body>
- <nav class="header">
-    <a href="#" class="a">nnn</a>
- </nav>
-
-    
-   <script>
-        var nav = document.querySelector(".header") ;
-        var newn = document.createElement("a") ;
-        nav.appendChild(newn)
-        newn.textContent = " new link " ;
-        newn.href = "index.html" ;
-        newn.style.color = "red"
-
-        var br = document.createElement("br")
-        nav.appendChild(br)
-
-
-
-        var new2 = document.createElement("a") ;
-
-        new2.textContent = " two link " ;
-        new2.href = "index.html" ;
-
-        nav.appendChild(new2)
-
-        var a = document.querySelector("a")
-        a.style.color = "green"
-        a.textContent = "dddd"
-        
-        
-
-
-   </script>
-    
+   <form id="myForm">
+      <input type="text" id="inputText" placeholder="متن خود را وارد کنید">
+      <button type="button" onclick="addOutput()">تایید</button>
+   </form>
+   <div class="out">
+      
+   </div>
+   <div class="blonk"></div>
+   
+   <script src="./js/test.js"></script>
 </body>
 </html>
