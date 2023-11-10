@@ -8,8 +8,12 @@ function addOutput() {
     
     if (inputText === "سلام"){
         outTXT.textContent = " سلام چه کمکی می توانم به شما کنم "
-    }  
-    
+        
+    } 
+    else if (inputText === "محمد شائلی نژاد"){
+        outTXT.textContent = "چرا نمیشه"
+        outTXT.href = "index.html"
+    } 
     else if (inputText === "خوبی"){
         outTXT.textContent = "بله من خوبم شما خوبین"
     }  
@@ -22,15 +26,17 @@ function addOutput() {
 
 }   
 
-//var outP = document.createElement("p") ;
-//outP.textContent = outTXT  ;
+if (inputText.includes("سلام")){
+    outTXT.textContent = "سلام چه کمک م "
+    
+}   
+if (inputText.includes("محمد")){
+    outTXT.textContent = " تکنو پدیا"
+    
+} 
 var inpP = document.createElement("b") ;
 inpP.textContent =  inputText ;
 
- 
-
-//var outP = document.createElement("p") ;
-//outP.textContent = outTXT  ;
 out.appendChild(inpP) ;
 out.appendChild(outTXT) ;
 
