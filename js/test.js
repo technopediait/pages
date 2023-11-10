@@ -4,6 +4,7 @@ function addOutput() {
     
     var out = document.querySelector(".out") ;
     var outTXT = document.createElement("p") ;
+    var img = document.createElement("img") ;
     
     
     
@@ -27,6 +28,10 @@ function addOutput() {
     else if (inputText.includes("محمد")){
     outTXT.textContent = " تکنو پدیا"
 
+    }   
+    else if (inputText.includes("تصویر")){
+    img.src = "images/technopedia-no-bg.png"
+
     }
     
     else {
@@ -40,6 +45,10 @@ inpP.textContent =  inputText ;
 
 out.appendChild(inpP) ;
 out.appendChild(outTXT) ;
+
+
+
+out.appendChild(img) ;
 
 document.getElementById("inputText").value = "" ; 
 var storedData = localStorage.getItem("data")
