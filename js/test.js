@@ -6,7 +6,8 @@ function addOutput() {
     var outTXT = document.createElement("p") ;
     
     
-    if (inputText === "سلام"){
+    
+      if (inputText === "سلام"){
         outTXT.textContent = " سلام چه کمکی می توانم به شما کنم "
         
     } 
@@ -20,20 +21,20 @@ function addOutput() {
     else if (inputText === "اسمت چیه"){
         outTXT.textContent = "به تو چه"
     } 
+    else if (inputText.includes("سلام")){
+    outTXT.textContent = "سلام چه کمک م "
+    }   
+    else if (inputText.includes("محمد")){
+    outTXT.textContent = " تکنو پدیا"
+
+    }
     
     else {
         outTXT.textContent = " ورودی نامعتبر است "
 
 }   
+ 
 
-if (inputText.includes("سلام")){
-    outTXT.textContent = "سلام چه کمک م "
-    
-}   
-if (inputText.includes("محمد")){
-    outTXT.textContent = " تکنو پدیا"
-    
-} 
 var inpP = document.createElement("b") ;
 inpP.textContent =  inputText ;
 
