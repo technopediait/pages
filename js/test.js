@@ -42,7 +42,7 @@ function addOutput() {
 
 var inpP = document.createElement("b") ;
 inpP.textContent =  inputText ;
-
+     
 out.appendChild(inpP) ;
 out.appendChild(outTXT) ;
 

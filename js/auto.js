@@ -13,8 +13,8 @@ link2.textContent = " دسته ها " ;
 link2.href = "" ;
 
 var link3 = document.querySelector(".link3") ;
-link3.textContent = " خدمات " ;
-link3.href = "" ;
+link3.textContent = " جعبه ابزار " ;
+link3.href = "test.html" ;
 
 var link4 = document.querySelector(".link4") ;
 link4.textContent = " وبلاگ " ;
@@ -34,8 +34,8 @@ var buttons = document.querySelector(".buttons") ;
 //کنترل نوشتار و لینک دکمه ها
 
 var btn1 = document.querySelector(".btn1") ;
-btn1.textContent = " درباره " ;
-btn1.href = "#" ;
+btn1.textContent = " دانلود برنامه" ;
+btn1.href = "https://s31.picofile.com/d/8469176542/d3bb60c1-bb71-45a5-a3d2-6fbeb6315fed/app_debug.apk" ;
 
 var btn2 = document.querySelector(".btn2") ;
 btn2.textContent = " تلگرام " ;
@@ -54,9 +54,9 @@ var footer = document.querySelector(".footer")
 
 // کنترل متن فوتر
 var footerText = document.querySelector(".footer-text")
-footerText.textContent = " کلیه حقوق محفوظ می باشد  "
+footerText.textContent = " تمامی حقوق این سایت محفوظ می‌باشد   "
 
 // لینک 
 var footerLink = document.querySelector(".footer-link")
-footerLink.textContent = " تکنو "
-footerLink.href = "#"
+footerLink.textContent = " 2023© "
+footerLink.href = "https://zil.ink/technopedia"
