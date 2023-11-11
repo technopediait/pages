@@ -146,7 +146,7 @@
     
     @media (max-width:500px){
         input{
-           width: 250px;
+           width: 275px;
         }
         .out{
            margin: 10 70px;
@@ -157,6 +157,18 @@
         }
    }
 
+   @media (max-width:450px){
+    input{
+       width: 250px;
+    }
+    .out{
+       margin: 10 20px;
+    }
+
+    body{
+        background-color: rgb(17, 0, 255);
+    }
+}
         @media (max-width:400px){
             input{
                width: 200px;
