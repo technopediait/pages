@@ -611,7 +611,9 @@ section{
     
     padding: 1px;
     margin: 3px;
-    border: 1px solid;
+    box-shdow:0px 0px 5px black;
+    border-radios:10px;
+    background-color:#fff;
     
     
 }
