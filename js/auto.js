@@ -14,7 +14,7 @@ link2.href = "" ;
 
 var link3 = document.querySelector(".link3") ;
 link3.textContent = " جعبه ابزار " ;
-link3.href = "" ;
+link3.href = "test.html" ;
 
 var link4 = document.querySelector(".link4") ;
 link4.textContent = " وبلاگ " ;
