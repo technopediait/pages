@@ -42,7 +42,7 @@ var blog = document.querySelector(".blog") ;
 
 //کنترل متن بالای سکشن مقاله ها
 var articleTitle = document.querySelector(".art")
-articleTitle.innerHTML = " <a> مقاله های </a> <span>تکنو پدیا</span>"
+articleTitle.innerHTML = " <a> مقاله های </a> <span> جدید </span>"
 
 // کنترل تمام مقاله ها
 var article = document.querySelector(".articles")
