@@ -60,7 +60,7 @@
     }
 
     form input:focus{
-        color: #ffffff;
+        color: black;
         background-color: yellow;
     }
 
