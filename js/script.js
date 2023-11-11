@@ -79,16 +79,29 @@ $(document).ready(function(){
   });
 
 });
-
+const faList = document.querySelector(".fa-list")
 const toggleButton = document.getElementById("toggleButton");
 const sidebar = document.querySelector(".sidebar");
 
 toggleButton.addEventListener("click", () => {
     if (sidebar.style.width === "250px") {
         sidebar.style.width = "0";
-        toggleButton.textContent = "+";
+        faList.classList.add("fa-list")
+        faList.textContent = ""
     } else {
         sidebar.style.width = "250px";
-        toggleButton.textContent = "×";
+        faList.classList.remove("fa-list");
+        faList.textContent ="*"
     }
 });
+
+var input = document.getElementById("searchBox")
+var result = document.getElementById("result")
+var serchIcon = document.getElementById("serch")
+
+
+serchIcon.addEventListener("click", function() {
+  input.classList.remove("none")
+  result.classList.remove("none-out")
+
+})

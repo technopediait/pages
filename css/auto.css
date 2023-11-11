@@ -56,7 +56,7 @@ p{
   height: 40px;
   font-size: 22px;
   border-radius: 50%;
-  z-index: 1;
+  z-index: 2;
 }
 
 
@@ -81,4 +81,63 @@ p{
  background-color: #fff;
  color: black;
  font-size: 20px;
+}
+
+.serch{
+    font-size: 25px;
+    background-color: #ff00d4;
+    display: inline-block;
+    position: absolute;
+    left: 55px;
+    top: 10px;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    text-align: center;
+    color: #fff;
+
+
+}
+
+.none {
+   display: none;
+}
+
+.none-out{
+    display: none;
+}
+
+
+
+.on-out{
+    width: 400px;
+    height: auto;
+    background-color: #fff;
+    min-height: 100px;
+    position: absolute;
+    left: 95px;
+    top: 50px;
+    box-shadow: 0 0 5px#555;
+    border-radius: 15px;
+    font-size: 20px;
+    text-align: center;
+}
+
+.on-out a {
+    font-size: 20px;
+    color: #555;
+    display: block;
+    text-align: center;
+    padding: 10px;
+}
+
+.active{
+    background-color: #ff00d4;
+    color: white;
+    position: absolute;
+    left: 95px;
+    top: 12px;
+    height: 37px;
+    border-radius: 10px;
+    width: 400px;
 }

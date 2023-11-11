@@ -14,6 +14,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="./css/auto.css">
+    <script src="https://kit.fontawesome.com/e76e24237f.js" crossorigin="anonymous"></script>
     
 </head>
 
@@ -23,9 +24,15 @@
 
 <header class="script-header">
     <div class="tab">
-        <button class="sidebar-btn" id="toggleButton">+</button>
+        <button class="sidebar-btn" id="toggleButton"><i class="fa-solid fa-list"></i></button>
         <div class="img-tab"><img src="images/technopediai-no-bg-1.png" alt=""></div>
         <div id="menu" class="fas fa-bars">
+        </div>
+        <div class="serch" id="serch"><i class="fa-solid fa-magnifying-glass fa-shake"></i></div>
+        <form>
+            <input type="text" id="searchBox" class="none" placeholder="جستجو...">
+        </form>
+        <div class="none-out on-out" id="results">
         </div>
     
     </div>
@@ -213,5 +220,6 @@
 
 <!-- custom js file link  -->
 <script src="js/script.js"></script>
+<script src="js/serch.js"></script>
 </body>
 </html>
