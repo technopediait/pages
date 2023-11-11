@@ -79,3 +79,16 @@ $(document).ready(function(){
   });
 
 });
+
+const toggleButton = document.getElementById("toggleButton");
+const sidebar = document.querySelector(".sidebar");
+
+toggleButton.addEventListener("click", () => {
+    if (sidebar.style.width === "250px") {
+        sidebar.style.width = "0";
+        toggleButton.textContent = "+";
+    } else {
+        sidebar.style.width = "250px";
+        toggleButton.textContent = "×";
+    }
+});
