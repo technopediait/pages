@@ -43,7 +43,7 @@ function addOutput() {
 var inpP = document.createElement("b") ;
 inpP.textContent =  inputText ;
      window.scrollBy(0, window.innerHeight); // می‌توانید مقدار انتخابی برای اسکرول را تنظیم کنید
-}
+
 
 // تایمر برای اجرای تابع به صورت مکرر
 var scrollInterval = setInterval(scrollDown, 1000); // هر 1000 میلی‌ثانیه یکبار اسکرول به پایین انجام می‌شود
