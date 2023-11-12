@@ -95,13 +95,30 @@ toggleButton.addEventListener("click", () => {
     }
 });
 
-var input = document.getElementById("searchBox")
-var result = document.getElementById("result")
 var serchIcon = document.getElementById("serch")
+var input = document.getElementById("searchBox")
+var result = document.getElementById("results")
+
 
 
 serchIcon.addEventListener("click", function() {
-  input.classList.remove("none")
-  result.classList.remove("none-out")
+  if (input.classList.contains("active")) {
+    input.classList.remove("active")
+    input.classList.add("none") ;
+    
+  }
+  
 
+  if (result.classList.contains("on-out")){
+    result.classList.remove("on-out")
+    result.classList.add("none-out") 
+  }
+  
+
+  else{
+  input.classList.add("active") ;
+  result.classList.add("on-out") ;
+  input.classList.remove("none") ;
+  result.classList.remove("none-out") ;
+  }
 })

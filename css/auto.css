@@ -99,13 +99,6 @@ p{
 
 }
 
-.none {
-   display: none;
-}
-
-.none-out{
-    display: none;
-}
 
 
 
@@ -121,6 +114,9 @@ p{
     border-radius: 15px;
     font-size: 20px;
     text-align: center;
+    z-index: 2;
+    
+    
 }
 
 .on-out a {
@@ -140,4 +136,14 @@ p{
     height: 37px;
     border-radius: 10px;
     width: 400px;
+    padding: 15px;
 }
+
+.none {
+    display: none;
+ }
+ 
+ .none-out{
+     display: none
+ }
+ 

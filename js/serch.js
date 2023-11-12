@@ -10,6 +10,22 @@ document.addEventListener('DOMContentLoaded', function() {
             { title: 'آیتم 1', link: 'Hhh.html' },
             { title: 'آیتم 2', link: 'https://example.com/page2' },
             { title: 'آیتم 3', link: 'Barnameh.html' },
+            { title: 'آیتم 1', link: 'Hhh.html' },
+            { title: 'آیتم 2', link: 'https://example.com/page2' },
+            { title: 'آیتم 3', link: 'Barnameh.html' },
+            { title: 'آیتم 1', link: 'Hhh.html' },
+            { title: 'آیتم 2', link: 'https://example.com/page2' },
+            { title: 'آیتم 3', link: 'Barnameh.html' },
+            { title: 'آیتم 1', link: 'Hhh.html' },
+            { title: 'آیتم 2', link: 'https://example.com/page2' },
+            { title: 'آیتم 3', link: 'Barnameh.html' },
+            { title: 'آیتم 1', link: 'Hhh.html' },
+            { title: 'آیتم 2', link: 'https://example.com/page2' },
+            { title: 'آیتم 3', link: 'Barnameh.html' },
+            { title: 'آیتم 1', link: 'Hhh.html' },
+            { title: 'آیتم 2', link: 'https://example.com/page2' },
+            { title: 'آیتم 3', link: 'Barnameh.html' },
+            
             // ...
         ];
 
