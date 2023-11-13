@@ -7,31 +7,18 @@ document.addEventListener('DOMContentLoaded', function() {
         const searchTerm = searchBox.value.toLowerCase();
 
         const data = [
-            { title: 'آیتم 1', link: 'Hhh.html' },
+            { title: 'آیتم 1', link: 'https://example.com/page1' },
             { title: 'آیتم 2', link: 'https://example.com/page2' },
-            { title: 'آیتم 3', link: 'Barnameh.html' },
-            { title: 'آیتم 1', link: 'Hhh.html' },
-            { title: 'آیتم 2', link: 'https://example.com/page2' },
-            { title: 'آیتم 3', link: 'Barnameh.html' },
-            { title: 'آیتم 1', link: 'Hhh.html' },
-            { title: 'آیتم 2', link: 'https://example.com/page2' },
-            { title: 'آیتم 3', link: 'Barnameh.html' },
-            { title: 'آیتم 1', link: 'Hhh.html' },
-            { title: 'آیتم 2', link: 'https://example.com/page2' },
-            { title: 'آیتم 3', link: 'Barnameh.html' },
-            { title: 'آیتم 1', link: 'Hhh.html' },
-            { title: 'آیتم 2', link: 'https://example.com/page2' },
-            { title: 'آیتم 3', link: 'Barnameh.html' },
-            { title: 'آیتم 1', link: 'Hhh.html' },
-            { title: 'آیتم 2', link: 'https://example.com/page2' },
-            { title: 'آیتم 3', link: 'Barnameh.html' },
-            
+            { title: 'آیتم 3', link: 'https://example.com/page3' },
             // ...
         ];
 
         const searchResults = data.filter(item => item.title.toLowerCase().includes(searchTerm));
 
-        displayResults(searchResults);
+        // تنها دو نتیجه اول را نمایش دهید اگر فرم خالی باشد
+        const maxResultsToShow = (searchTerm === '') ? 2 : searchResults.length;
+
+        displayResults(searchResults.slice(0, maxResultsToShow));
     });
 
     function displayResults(results) {
@@ -43,7 +30,7 @@ document.addEventListener('DOMContentLoaded', function() {
             results.forEach(result => {
                 const resultLink = document.createElement('a');
                 resultLink.textContent = result.title;
-                resultLink.href = result.link; // از مقدار لینک مربوط به هر نتیجه استفاده می‌کنیم
+                resultLink.href = result.link;
                 resultsDiv.appendChild(resultLink);
             });
         }
