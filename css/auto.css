@@ -3,7 +3,7 @@ p{
 }
 
 .tab{
-    background-color: blue;
+    background-color: rgb(255, 255, 255);
     width: 100%;
     height: 60px;
 }
@@ -17,20 +17,21 @@ p{
 }
 .sidebar {
     width: 0;
-    background-color: #ff00d4;
+    background-color: #ffffff;
     position: absolute;
     top: 0;
-    left: 0;
-    height: 70%;
-    color: white;
+    right: 0;
+    height: 100%;
     transition: 0.3s;
     overflow-x: hidden;
-    z-index: 1;
+    z-index: 999;
+    position: fixed;
 }
 
 .sidebar ul {
     list-style-type: none;
     padding: 0;
+    font-size: 1.6rem;
 }
 
 .sidebar li {
@@ -40,23 +41,24 @@ p{
 
 .sidebar a {
     text-decoration: none;
-    color: white;
 }
 
 .sidebar a:hover {
-    background-color: #555;
+    background-color: #ffd90093;
+    padding: 10px;
 }
 
 .sidebar-btn{
   position: absolute;
   top: 1rem;
-  left: 1rem;
-  background-color: aqua;
+  right: 1rem;
+  background-color: rgb(7, 171, 212);
   width: 40px;
   height: 40px;
   font-size: 22px;
   border-radius: 50%;
-  z-index: 2;
+  z-index: 2000;
+  color: #fff;
 }
 
 
@@ -64,11 +66,8 @@ p{
     
     height: 20px;
     width: 20px;
-    
     text-align: center;
-    font-size: 20px;
-    
-    color: rgb(60, 255, 0);
+    font-size: 20px;    color: rgb(60, 255, 0);
     cursor: pointer;
     border-radius: 50%;
 }
@@ -85,7 +84,7 @@ p{
 
 .serch{
     font-size: 25px;
-    background-color: #ff00d4;
+    background-color: #0099ff;
     display: inline-block;
     position: absolute;
     left: 55px;
