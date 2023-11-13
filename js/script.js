@@ -122,3 +122,4 @@ serchIcon.addEventListener("click", function() {
   result.classList.remove("none-out") ;
   }
 })
+

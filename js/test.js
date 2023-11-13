@@ -1,6 +1,6 @@
 function addOutput() {
     var inputText = document.getElementById("inputText").value ;
-    localStorage.setItem("data", inputText)
+    
     
     var out = document.querySelector(".out") ;
     var outTXT = document.createElement("p") ;
@@ -51,10 +51,7 @@ out.appendChild(outTXT) ;
 out.appendChild(img) ;
 
 document.getElementById("inputText").value = "" ; 
-var storedData = localStorage.getItem("data")
-if (storedData) { 
-    document.querySelector("b").textContent = storedData
-}
+window.scrollTo(0, document.body.scrollHeight)
 
 }
 
