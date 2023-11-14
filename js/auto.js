@@ -103,7 +103,7 @@ artTitle3.href = ""
 artP3.textContent = ""
 artBtn3.textContent = ""
 artBtn3.href = ""
-
+/*
 // کنترل سکشن تماس با ما  
 var contact = document.querySelector(".contact")
 
@@ -169,3 +169,4 @@ footerText.textContent = " تمامی حقوق این سایت محفوظ می�
 var footerLink = document.querySelector(".footer-link")
 footerLink.textContent = " 2023© "
 footerLink.href = "https://zil.ink/technopedia"
+*/
