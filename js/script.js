@@ -9,7 +9,6 @@
         return "light";
       }
     }
-    
     // تابعی برای تغییر حالت صفحه
     function changeMode(mode) {
       // حالت صفحه را بر اساس مقدار بازگشتی تابع getMode() تغییر دهید
@@ -17,8 +16,6 @@
       body.classList.remove("light", "dark-theme");
       body.classList.add(mode);
     }
-
-    
       // تعیین حالت اولیه صفحه
       const mode = getMode();
       changeMode(mode);

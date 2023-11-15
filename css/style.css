@@ -134,7 +134,7 @@ header .sidebar img {
 }
 
 #theme-toggler.fa-sun{
-    transform:rotate(-360deg);
+    transform:rotate(-180deg);
 }
 
 
@@ -342,10 +342,11 @@ header .sidebar img {
 .home .image img{
     height:50rem;
     box-shadow: 0 .5rem 1rem rgba(0,0,0,.3);
-    border-top: 2rem solid var(--primary-bg-color);
-    border-right: 2rem solid var(--primary-bg-color);
+    border: .3rem solid var(--main-color);
     border-bottom: 2rem solid var(--main-color);
-    border-left: 2rem solid var(--main-color);
+    /*border-right: 2rem solid var(--primary-bg-color);
+    border-bottom: 2rem solid var(--main-color);
+    border-left: 2rem solid var(--main-color);*/
     border-radius: .5rem;
     background: var(--primary-bg-color);
 }
@@ -354,8 +355,8 @@ header .sidebar img {
     flex:1 1 40rem;
     padding:1rem;
     background-color: var(--primary-bg-color);
-    box-shadow: 0 0 1rem rgba(0, 0, 0, 0.616);
-    border-radius: 1.4rem;
+    box-shadow: 0 0 1rem rgba(61, 61, 61, 0.507);
+    border-radius: 5px;
 }
 
 .home .content .hello{
@@ -555,6 +556,18 @@ header .sidebar img {
 
 
 /* media queries  */
+@media (max-width:1400px){
+
+    .home .image img{
+        height: auto;
+        width: 100%;
+    }
+
+    main{
+        grid-template-columns: 3fr 7fr;
+    }
+
+}
 
 @media (max-width:991px){
 
@@ -585,7 +598,7 @@ header .sidebar img {
 
 }
 
-@media (max-width:500px) {
+@media (max-width:600px) {
     .menu{
         display: none;
     }
