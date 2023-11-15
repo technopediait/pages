@@ -19,7 +19,7 @@ link3.href = "test.html" ;
 link4.textContent = " وبلاگ " ;
 link4.href = "#blog" ;
 link5.textContent = " تماس با " ;
-link5.href = "" ;
+link5.href = "./StarWars.html" ;
 
 link6.textContent = " لینک جدید " ;
 nav.appendChild(link6) ;

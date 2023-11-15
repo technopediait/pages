@@ -125,16 +125,20 @@ header .sidebar img {
   
   #theme-toggler{
     
-    height: 20px;
-    width: 20px;
+    height: 30px;
+    width: 30px;
     text-align: center;
-    font-size: 20px;    color: rgb(60, 255, 0);
+    font-size: 30px;    color: var(--main-color);
     cursor: pointer;
     border-radius: 50%;
+    position: absolute;
+    left: 100px;
+    top: 10px;
 }
 
 #theme-toggler.fa-sun{
     transform:rotate(-180deg);
+    color: yellow;
 }
 
 
@@ -264,7 +268,7 @@ header .sidebar img {
 }
 
 .heading{
-    font-size: 5rem;
+    font-size: 4rem;
     color:var(--primary-text-color);
     text-align: center;
     padding:1rem;
@@ -278,20 +282,29 @@ header .sidebar img {
 
 #menu{
     font-size: 3rem;
-    color: #00153a;
+    color: #003da7;
     border-radius: 5rem;
     height:5rem;
     width:5rem;
     text-align: center;
     line-height: 5rem;
     position: absolute;
-    top: 1rem; left:1rem;
+    top: .5rem; left:.5rem;
     z-index: 1000;
     cursor: pointer;
 }
 
+#menu img {
+    position: absolute;
+    height:4rem;
+    width:4rem;
+    top: .8rem; left:.5rem;
+    z-index: -1;
+}
+
 #menu.fa-times{
     transform:rotate(-180deg);
+    color: rgb(255, 0, 0);
 }
 
 .navbar{
@@ -304,7 +317,7 @@ header .sidebar img {
     border-radius: 1rem;
     background:var(--primary-bg-color);
     opacity: 0;
-    transform-origin: top right;
+    transform-origin: top left;
     transform: scale(0);
 }
 
@@ -368,7 +381,7 @@ header .sidebar img {
 
 .home .content h3{
     color:var(--primary-text-color);
-    font-size: 5rem;
+    font-size: 3rem;
 }
 
 .home .content h3 span{
