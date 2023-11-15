@@ -137,7 +137,7 @@ header .sidebar img {
 }
 
 #theme-toggler.fa-sun{
-    transform:rotate(-180deg);
+    transform:rotate(-360deg);
     color: yellow;
 }
 
