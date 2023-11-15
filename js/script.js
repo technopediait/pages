@@ -98,6 +98,7 @@ toggleButton.addEventListener("click", () => {
 var serchIcon = document.getElementById("serch")
 var input = document.getElementById("searchBox")
 var result = document.getElementById("results")
+var searchImg = document.getElementById("search-img")
 
 
 
@@ -105,7 +106,9 @@ serchIcon.addEventListener("click", function() {
   if (input.classList.contains("active")) {
     input.classList.remove("active")
     input.classList.add("none") ;
-    
+    searchImg.src = "./icon/icons8-search.svg"
+    searchImg.style.transform = "rotate(360deg)"
+
   }
   
 
@@ -120,6 +123,8 @@ serchIcon.addEventListener("click", function() {
   result.classList.add("on-out") ;
   input.classList.remove("none") ;
   result.classList.remove("none-out") ;
+  searchImg.src = "./icon/icons8-close.svg"
+  searchImg.style.transform = "rotate(180deg)"
   }
 })
 

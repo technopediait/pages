@@ -80,15 +80,17 @@ header .teb.img-tab img{
 
    header .sidebar {
     width: 0;
-    background-color: #ffffff;
+    background:var(--secondary-bg-color);
     position: absolute;
+    border:.3rem solid var(--main-color);
     top: 0;
-    left: 0;
+    right: 0;
     height: 100%;
     transition: 0.3s;
     overflow-x: hidden;
-    z-index: 999;
+    z-index: 1000;
     position: fixed;
+    border-radius: 20px;
 }
 
 header .sidebar ul {
@@ -102,17 +104,23 @@ header .sidebar li {
     border-bottom: 1px solid #555;
 }
 
+header .sidebar img {
+    width: 150px;
+    height: 80px;
+}
+
 .sidebar-btn{
     position: absolute;
     top: 1rem;
-    left: 1rem;
-    background-color: rgb(41, 243, 0);
-    width: 40px;
-    height: 40px;
-    font-size: 22px;
+    right: 1rem;
     border-radius: 50%;
     z-index: 2000;
     color: #fff;
+  }
+
+  .sidebar-btn img {
+    width: 30px;
+    height: 30px;
   }
   
   #theme-toggler{
@@ -138,28 +146,28 @@ header .sidebar li {
    
    .serch{
        font-size: 25px;
-       background-color: #0099ff;
        display: inline-block;
        position: absolute;
        left: 55px;
-       top: 10px;
-       border-radius: 50%;
-       width: 40px;
-       height: 40px;
+       top: 11px;
        text-align: center;
-       color: #fff;
-   
-   
    }
+
+   .serch img {
+    width: 35px;
+    height: 35px;
+    transition: .3s;
+   }
+
    
    
    .on-out{
-       width: 200px;
        height: auto;
        background-color: #fff;
        min-height: 100px;
        position: absolute;
        left: 95px;
+       right: 10px;
        top: 50px;
        box-shadow: 0 0 5px#555;
        border-radius: 15px;
@@ -179,15 +187,17 @@ header .sidebar li {
    }
    
    .active{
-       background-color: #0059ff;
-       color: white;
+       background: var(--secondary-bg-color);
+       color: var(--primary-text-color);
+       border:.3rem solid var(--main-color);
        position: absolute;
        left: 95px;
-       top: 12px;
-       height: 37px;
-       border-radius: 10px;
-       width: 200px;
+       right: 10px;
+       top: 10px;
+       height: 45px;
+       border-radius: 5px;
        padding: 15px;
+       z-index: 10000;
    }
    
    .none {
@@ -214,6 +224,19 @@ header .sidebar li {
      main{
         display: grid;
         grid-template-columns: 2fr 7fr;
+        background:
+      conic-gradient(at 10% 50%,#0000 75%,#474bff 0),
+      conic-gradient(at 10% 50%,#0000 75%,#474bff 0) calc(1*34px) calc(3*34px),
+      conic-gradient(at 10% 50%,#0000 75%,#474bff 0) calc(2*34px) calc(1*34px),
+      conic-gradient(at 10% 50%,#0000 75%,#474bff 0) calc(3*34px) calc(4*34px),
+      conic-gradient(at 10% 50%,#0000 75%,#474bff 0) calc(4*34px) calc(2*34px),
+      conic-gradient(at 50% 10%,#0000 75%,#474bff 0) 0 calc(4*34px),
+      conic-gradient(at 50% 10%,#0000 75%,#474bff 0) calc(1*34px) calc(2*34px),
+      conic-gradient(at 50% 10%,#0000 75%,#474bff 0) calc(2*34px) 0,
+      conic-gradient(at 50% 10%,#0000 75%,#474bff 0) calc(3*34px) calc(3*34px),
+      conic-gradient(at 50% 10%,#0000 75%,#474bff 0) calc(4*34px) calc(1*34px),
+      #47d3ff;
+background-size: 170px 170px;
      }
     
 .btn{
@@ -267,16 +290,15 @@ header .sidebar li {
 }
 
 #menu{
-    font-size: 2rem;
-    background:var(--main-color);
-    color:#fff;
+    font-size: 3rem;
+    color: #00153a;
     border-radius: 5rem;
     height:5rem;
     width:5rem;
     text-align: center;
     line-height: 5rem;
     position: absolute;
-    top: 1rem; right:1rem;
+    top: 1rem; left:1rem;
     z-index: 1000;
     cursor: pointer;
 }
@@ -287,9 +309,9 @@ header .sidebar li {
 
 .navbar{
     position: fixed;
-    top:1.2rem; right:1.5rem;
-    padding:1.1rem 2rem;
-    padding-right: 4rem;
+    top:1.2rem; left:1.5rem;
+    padding:1.1rem 1rem;
+    padding-left: 4rem;
     z-index: 999;
     border:.2rem solid var(--main-color);
     border-radius: 1rem;
@@ -338,6 +360,7 @@ header .sidebar li {
     border-bottom: 2rem solid var(--main-color);
     border-left: 2rem solid var(--main-color);
     border-radius: .5rem;
+    background: var(--primary-bg-color);
 }
 
 .home .content{
