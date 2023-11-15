@@ -7,9 +7,9 @@ document.addEventListener('DOMContentLoaded', function() {
         const searchTerm = searchBox.value.toLowerCase();
 
         const data = [
-            { title: 'بهترین موتور های جستجو', link: '' },
-            { title: 'chat GPT چیست؟', link: 'https://example.com/page2' },
-            { title: 'انتقال بو از طریق اینترنت', link: 'https://example.com/page3' },
+            { title: 'بهترین موتور های جستجو', link: 'https://technopediait.github.io/pages/articles/page.html' },
+            { title: 'chat GPT چیست؟', link: 'https://technopediait.github.io/pages/articles/enteghal-boo.html' },
+            { title: 'انتقال بو از طریق اینترنت', link: 'https://technopediait.github.io/pages/articles/serch-motor.html' },
             // ...
         ];
 
