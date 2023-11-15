@@ -7,16 +7,19 @@ document.addEventListener('DOMContentLoaded', function() {
         const searchTerm = searchBox.value.toLowerCase();
 
         const data = [
-            { title: 'آیتم 1', link: 'https://example.com/page1' },
-            { title: 'آیتم 2', link: 'https://example.com/page2' },
-            { title: 'آیتم 3', link: 'https://example.com/page3' },
+            { title: 'بهترین موتور های جستجو', link: 'https://technopediait.github.io/pages/articles/enteghal-boo.html' },
+            { title: 'chat GPT چیست؟', link: 'https://technopediait.github.io/pages/articles/serch-motor.html' },
+            { title: 'انتقال بو از طریق اینترنت', link: 'https://technopediait.github.io/pages/articles/page.html' },
+            { title: 'تکنو بات', link: 'https://technopediait.github.io/pages/test.html' },
+            { title: 'کانال تلگرام تکنو پدیا', link: 'https://t.me/technopedaiit' },
+            { title: 'صفحه اینستاگرام تکنو پدیا', link: 'https://instagram.com/technopediait' },
             // ...
         ];
 
         const searchResults = data.filter(item => item.title.toLowerCase().includes(searchTerm));
 
         // تنها دو نتیجه اول را نمایش دهید اگر فرم خالی باشد
-        const maxResultsToShow = (searchTerm === '') ? 2 : searchResults.length;
+        const maxResultsToShow = (searchTerm === '') ? 4 : searchResults.length;
 
         displayResults(searchResults.slice(0, maxResultsToShow));
     });

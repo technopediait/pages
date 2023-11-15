@@ -469,6 +469,10 @@ header .sidebar img {
 
 .footer .grid-row{
     position: relative;
+    background: -webkit-linear-gradient(left top, red , blue); 
+background: -o-linear-gradient(bottom right, red, blue);
+background: -moz-linear-gradient(bottom right, red, blue);
+background: linear-gradient(to bottom right, red , blue);
 }
 .footer .grid-row .item1 {
     color: white;
