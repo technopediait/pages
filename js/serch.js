@@ -7,9 +7,9 @@ document.addEventListener('DOMContentLoaded', function() {
         const searchTerm = searchBox.value.toLowerCase();
 
         const data = [
-            { title: 'آیتم 1', link: 'https://example.com/page1' },
-            { title: 'آیتم 2', link: 'https://example.com/page2' },
-            { title: 'آیتم 3', link: 'https://example.com/page3' },
+            { title: 'بهترین موتور های جستجو', link: '' },
+            { title: 'chat GPT چیست؟', link: 'https://example.com/page2' },
+            { title: 'انتقال بو از طریق اینترنت', link: 'https://example.com/page3' },
             // ...
         ];
 
