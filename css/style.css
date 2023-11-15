@@ -224,19 +224,6 @@ header .sidebar img {
      main{
         display: grid;
         grid-template-columns: 2fr 7fr;
-        background:
-      conic-gradient(at 10% 50%,#0000 75%,#474bff 0),
-      conic-gradient(at 10% 50%,#0000 75%,#474bff 0) calc(1*34px) calc(3*34px),
-      conic-gradient(at 10% 50%,#0000 75%,#474bff 0) calc(2*34px) calc(1*34px),
-      conic-gradient(at 10% 50%,#0000 75%,#474bff 0) calc(3*34px) calc(4*34px),
-      conic-gradient(at 10% 50%,#0000 75%,#474bff 0) calc(4*34px) calc(2*34px),
-      conic-gradient(at 50% 10%,#0000 75%,#474bff 0) 0 calc(4*34px),
-      conic-gradient(at 50% 10%,#0000 75%,#474bff 0) calc(1*34px) calc(2*34px),
-      conic-gradient(at 50% 10%,#0000 75%,#474bff 0) calc(2*34px) 0,
-      conic-gradient(at 50% 10%,#0000 75%,#474bff 0) calc(3*34px) calc(3*34px),
-      conic-gradient(at 50% 10%,#0000 75%,#474bff 0) calc(4*34px) calc(1*34px),
-      #47d3ff;
-background-size: 170px 170px;
      }
     
 .btn{
