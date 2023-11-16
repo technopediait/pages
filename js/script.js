@@ -76,19 +76,24 @@ $(document).ready(function(){
   });
 
 });
-const faList = document.querySelector(".fa-list")
 const toggleButton = document.getElementById("toggleButton");
 const sidebar = document.querySelector(".sidebar");
+const sidebarBtnImg = document.querySelector(".sidebar-btn-img")
+const sidebarBtn = document.querySelector(".sidebar-btn")
 
 toggleButton.addEventListener("click", () => {
     if (sidebar.style.width === "250px") {
         sidebar.style.width = "0";
-        faList.classList.add("fa-list")
-        faList.textContent = ""
+        sidebarBtnImg.src = "./icon/menu.svg"
+        sidebarBtn.style.right = "1rem"
+        sidebarBtn.style.position = "absolute"
+        sidebar.style.border = "none"
     } else {
         sidebar.style.width = "250px";
-        faList.classList.remove("fa-list");
-        faList.textContent ="*"
+        sidebarBtnImg.src = "./icon/close.svg"
+        sidebarBtn.style.right = "210px"
+        sidebarBtn.style.position = "fixed"
+        sidebar.style.border = ".3rem solid var(--main-color)"
     }
 });
 
@@ -120,7 +125,7 @@ serchIcon.addEventListener("click", function() {
   result.classList.add("on-out") ;
   input.classList.remove("none") ;
   result.classList.remove("none-out") ;
-  searchImg.src = "./icon/icons8-close.svg"
+  searchImg.src = "./icon/close.svg"
   searchImg.style.transform = "rotate(180deg)"
   }
 })

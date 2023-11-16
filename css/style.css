@@ -90,7 +90,7 @@ header .teb.img-tab img{
     overflow-x: hidden;
     z-index: 1000;
     position: fixed;
-    border-radius: 20px;
+    border-radius: .4rem;
 }
 
 header .sidebar ul {
@@ -111,16 +111,15 @@ header .sidebar img {
 
 .sidebar-btn{
     position: absolute;
-    top: 1rem;
+    top: 1.6rem;
     right: 1rem;
-    border-radius: 50%;
+    cursor: pointer;
     z-index: 2000;
-    color: #fff;
   }
 
   .sidebar-btn img {
-    width: 30px;
-    height: 30px;
+    width: 35px;
+    height: 35px;
   }
   
   #theme-toggler{
@@ -130,10 +129,9 @@ header .sidebar img {
     text-align: center;
     font-size: 30px;    color: var(--main-color);
     cursor: pointer;
-    border-radius: 50%;
     position: absolute;
-    left: 100px;
-    top: 10px;
+    left: 10rem;
+    top: 1.6rem;
 }
 
 #theme-toggler.fa-sun{
@@ -143,18 +141,14 @@ header .sidebar img {
 
 
 .dork-light{
-    background-color: #fff;
     color: black;
     font-size: 20px;
    }
    
    .serch{
-       font-size: 25px;
-       display: inline-block;
        position: absolute;
-       left: 55px;
-       top: 11px;
-       text-align: center;
+       left: 5rem;
+       top: 1.6rem;
    }
 
    .serch img {
@@ -166,11 +160,12 @@ header .sidebar img {
    
    
    .on-out{
+       background: var(--secondary-bg-color);
+       color: var(--primary-text-color);
        height: auto;
-       background-color: #fff;
        min-height: 100px;
        position: absolute;
-       left: 95px;
+       left: 80px;
        right: 10px;
        top: 50px;
        box-shadow: 0 0 5px#555;
@@ -195,9 +190,9 @@ header .sidebar img {
        color: var(--primary-text-color);
        border:.3rem solid var(--main-color);
        position: absolute;
-       left: 95px;
+       left: 80px;
        right: 10px;
-       top: 10px;
+       top: 12px;
        height: 45px;
        border-radius: 5px;
        padding: 15px;
@@ -289,17 +284,14 @@ header .sidebar img {
     text-align: center;
     line-height: 5rem;
     position: absolute;
-    top: .5rem; left:.5rem;
+    top: 1.5rem; left:.5rem;
     z-index: 1000;
     cursor: pointer;
 }
 
 #menu img {
-    position: absolute;
-    height:4rem;
-    width:4rem;
-    top: .8rem; left:.5rem;
-    z-index: -1;
+    height:40px;
+    width:40px;
 }
 
 #menu.fa-times{
