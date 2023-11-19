@@ -17,7 +17,7 @@ setInterval(()=>{
       slideIndex=1;
   }
   setSlide(`slide${slideIndex}` , slideIndex)
-} , 4000)
+} , 7000)
 
 
     // تابعی برای تعیین حالت روشن یا تاریک بر اساس وضعیت سیستم
@@ -96,55 +96,46 @@ $(document).ready(function(){
   });
 
 });
-const toggleButton = document.getElementById("toggleButton");
+const toggleButton = document.getElementById("sidebar-btn");
 const sidebar = document.querySelector(".sidebar");
-const sidebarBtnImg = document.querySelector(".sidebar-btn-img")
+const sidebarBtnImg = document.getElementById("sidebar-btn-icon")
 const sidebarBtn = document.querySelector(".sidebar-btn")
 
 toggleButton.addEventListener("click", () => {
     if (sidebar.style.width === "250px") {
         sidebar.style.width = "0";
         sidebarBtnImg.src = "./icon/menu.svg"
-        sidebarBtn.style.right = "1rem"
-        sidebarBtn.style.position = "absolute"
+        sidebarBtn.style.position = "static"
         sidebar.style.border = "none"
     } else {
         sidebar.style.width = "250px";
         sidebarBtnImg.src = "./icon/close.svg"
         sidebarBtn.style.right = "210px"
         sidebarBtn.style.position = "fixed"
+        sidebarBtnImg.style.zIndex = "1"
         sidebar.style.border = ".3rem solid var(--main-color)"
     }
 });
 
-var serchIcon = document.getElementById("serch")
+var searchIcon = document.getElementById("search-btn")
 var input = document.getElementById("searchBox")
 var result = document.getElementById("results")
-var searchImg = document.getElementById("search-img")
+var searchImg = document.getElementById("search-btn-icon")
+var formSearch = document.getElementById("form-search")
 
 
 
-serchIcon.addEventListener("click", function() {
-  if (input.classList.contains("active")) {
-    input.classList.remove("active")
-    input.classList.add("none") ;
-    searchImg.src = "./icon/icons8-search.svg"
+searchIcon.addEventListener("click", function() {
+  if (formSearch.style.display === "block") {
+    formSearch.style.display = "none"
+    searchImg.src = "./icon/search.svg"
     searchImg.style.transform = "rotate(360deg)"
 
   }
   
 
-  if (result.classList.contains("on-out")){
-    result.classList.remove("on-out")
-    result.classList.add("none-out") 
-  }
-  
-
   else{
-  input.classList.add("active") ;
-  result.classList.add("on-out") ;
-  input.classList.remove("none") ;
-  result.classList.remove("none-out") ;
+    formSearch.style.display = "block" ;
   searchImg.src = "./icon/close.svg" ;
   searchImg.style.transform = "rotate(180deg)" ;
   }
