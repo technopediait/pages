@@ -1,4 +1,3 @@
-
 let slideIndex = 1;
 
 function setSlide(input,index){
@@ -125,10 +124,7 @@ const FCMT2 = document.getElementById("fcmt2")
 const FCMT3 = document.getElementById("fcmt3")
 const FCMT4 = document.getElementById("fcmt4")
 
-const FCMI1 = document.getElementById("fcmi1")
-const FCMI2 = document.getElementById("fcmi2")
-const FCMI3 = document.getElementById("fcmi3")
-const FCMI4 = document.getElementById("fcmi4")
+
 
 FCMTImg1.addEventListener("click", () => {
   if (FCMI1.style.height === "auto"){

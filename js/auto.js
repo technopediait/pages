@@ -1,28 +1,4 @@
-//کنترل ناو بار
-var nav = document.querySelector(".navbar") ;
 
-//کنترل لینک های ناو بار
-
-var link1 = document.querySelector(".link1") ;
-var link2 = document.querySelector(".link2") ;
-var link3 = document.querySelector(".link3") ;
-var link4 = document.querySelector(".link4") ;
-var link5 = document.querySelector(".link5") ;
-var link6 = document.createElement("a") ;
-
-link1.textContent = " درباره "
-link1.href = "test.html" ;
-link2.textContent = " دسته ها " ;
-link2.href = "" ;
-link3.textContent = " جعبه ابزار " ;
-link3.href = "test.html" ;
-link4.textContent = " وبلاگ " ;
-link4.href = "#blog" ;
-link5.textContent = " تماس با " ;
-link5.href = "./StarWars.html" ;
-
-link6.textContent = " لینک جدید " ;
-nav.appendChild(link6) ;
 
 //کنترل کننده دکمه های زیر مقاله ها 
 var buttons = document.querySelector(".buttons") ;
@@ -42,7 +18,7 @@ var blog = document.querySelector(".blog") ;
 
 //کنترل متن بالای سکشن مقاله ها
 var articleTitle = document.querySelector(".art")
-articleTitle.innerHTML = " <a> مقاله های </a> <span> جدید </span>"
+articleTitle.innerHTML = " <a> مقاله های </a> <span> تکنو پدیا </span>"
 
 // کنترل تمام مقاله ها
 var article = document.querySelector(".articles")
@@ -103,70 +79,42 @@ artTitle3.href = ""
 artP3.textContent = ""
 artBtn3.textContent = ""
 artBtn3.href = ""
-/*
-// کنترل سکشن تماس با ما  
-var contact = document.querySelector(".contact")
-
-// کنترل عنوان سکشن تماس با ما
-var titleContact = document.querySelector(".contact-title")
-titleContact.innerHTML = " <a> تماس </a> <span>با ما</span>"
-var contacts = document.querySelector(".contacts")
-
-// کنترل کانتکت 1
-var contact1 = document.querySelector(".contact1")
-var ctnTitle1 = document.querySelector(".ctn-title1")
-var ctnLink1 = document.querySelector(".ctn-links1")
-var ctnLinkA1 = document.querySelector(".ctn-link-a1")
-var ctnLinkA2 = document.querySelector(".ctn-link-a2")
-var ctnLinkA3 = document.querySelector(".ctn-link-a3")
-var ctnLinkA4 = document.querySelector(".ctn-link-a4")
-var ctnImgA1 = document.querySelector(".ctn-img-a1")
-var ctnImgA2 = document.querySelector(".ctn-img-a2")
-var ctnImgA3 = document.querySelector(".ctn-img-a3")
-var ctnImgA4 = document.querySelector(".ctn-img-a4")
-
-ctnTitle1.textContent = ""
-ctnLinkA1.href = ""
-ctnLinkA2.href = ""
-ctnLinkA3.href = ""
-ctnLinkA4.href = ""
-ctnImgA1.src = ""
-ctnImgA2.src = ""
-ctnImgA3.src = ""
-ctnImgA4.src = ""
-
-//کنترل کانتکت 2 
-var contact2 = document.querySelector(".contact2")
-var ctnTitle2 = document.querySelector(".ctn-title2")
-var ctnLink2 = document.querySelector(".ctn-links2")
-var ctnLinkB1 = document.querySelector(".ctn-link-b1")
-var ctnLinkB2 = document.querySelector(".ctn-link-b2")
-var ctnLinkB3 = document.querySelector(".ctn-link-b3")
-var ctnLinkB4 = document.querySelector(".ctn-link-b4")
-var ctnImgB1 = document.querySelector(".ctn-img-b1")
-var ctnImgB2 = document.querySelector(".ctn-img-b2")
-var ctnImgB3 = document.querySelector(".ctn-img-b3")
-var ctnImgB4 = document.querySelector(".ctn-img-b4")
-
-ctnTitle2.textContent = ""
-ctnLinkB1.href = ""
-ctnLinkB2.href = ""
-ctnLinkB3.href = ""
-ctnLinkB4.href = ""
-ctnImgB1.src = ""
-ctnImgB2.src = ""
-ctnImgB3.src = ""
-ctnImgB4.src = ""
 
 // کنترل فوتر
 var footer = document.querySelector(".footer")
-
-// کنترل متن فوتر
-var footerText = document.querySelector(".footer-text")
-footerText.textContent = " تمامی حقوق این سایت محفوظ می‌باشد   "
-
-// لینک 
-var footerLink = document.querySelector(".footer-link")
-footerLink.textContent = " 2023© "
-footerLink.href = "https://zil.ink/technopedia"
-*/
+var backToTopText = document.getElementById("back-to-top-text")
+var callIcon = document.getElementById("call-icon")
+var callHref = document.getElementById("call-href")
+var emailIcon = document.getElementById("email-icon")
+var emailHref = document.getElementById("email-href")
+var FCMTt1 = document.getElementById("fcmt-t1")
+var FCMTt2 = document.getElementById("fcmt-t2")
+var FCMTt3 = document.getElementById("fcmt-t3")
+var FCMTt4 = document.getElementById("fcmt-t4")
+var FCMI1 = document.getElementById("fcmi1")
+var FCMI2 = document.getElementById("fcmi2")
+var FCMI3 = document.getElementById("fcmi3")
+var FCMI4 = document.getElementById("fcmi4")
+var textCSM = document.querySelector(".footer-center-csm-text")
+var copyRite = document.querySelector(".footer-bottom-copy")
+var CSMimg = document.querySelector(".footer-center-csm-img")
+var CSMhref1 = document.getElementById("csm-href1")
+var CSMhref2 = document.getElementById("csm-href2")
+var CSMhref3 = document.getElementById("csm-href3")
+var CSMhref4 = document.getElementById("csm-href4")
+var CSMicon1 = document.getElementById("csm-icon1")
+var CSMicon2 = document.getElementById("csm-icon2")
+var CSMicon3 = document.getElementById("csm-icon3")
+var CSMicon4 = document.getElementById("csm-icon4")
+var FCMI1A = document.createElement("a")
+var FCMI2A = document.createElement("a")
+var FCMI3A = document.createElement("a")
+var FCMI4A = document.createElement("a")
+FCMI1.appendChild(FCMI1A)
+FCMI2.appendChild(FCMI2A)
+FCMI3.appendChild(FCMI3A)
+FCMI4.appendChild(FCMI4A)
+FCMI1A.textContent = "ایتم 1"
+FCMI2A.textContent = "ایتم 1"
+FCMI3A.textContent = "ایتم 1"
+FCMI4A.textContent = "ایتم 1"

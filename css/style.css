@@ -562,7 +562,7 @@ p{
    font-size: 2rem;
 }
 
-.footer-center-menu-items span {
+.footer-center-menu-items a{
     margin-bottom: 1rem;
     font-size: 1.5rem;
     
