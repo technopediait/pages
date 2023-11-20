@@ -13,7 +13,7 @@ document.addEventListener('DOMContentLoaded', function() {
             { title: 'تکنو بات', link: 'https://technopediait.github.io/pages/test.html' },
             { title: 'کانال تلگرام تکنو پدیا', link: 'https://t.me/technopedaiit' },
             { title: 'صفحه اینستاگرام تکنو پدیا', link: 'https://instagram.com/technopediait' },
-            // ...
+            
         ];
 
         const searchResults = data.filter(item => item.title.toLowerCase().includes(searchTerm));
