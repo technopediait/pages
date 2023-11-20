@@ -105,14 +105,14 @@ toggleButton.addEventListener("click", () => {
     if (sidebar.style.width === "250px") {
         sidebar.style.width = "0";
         sidebarBtnImg.src = "./icon/menu.svg"
-        sidebarBtn.style.position = "static"
+        sidebarBtn.style.right = "12px"
+        sidebarBtn.style.position = "absolute"
         sidebar.style.border = "none"
     } else {
         sidebar.style.width = "250px";
         sidebarBtnImg.src = "./icon/close.svg"
         sidebarBtn.style.right = "210px"
         sidebarBtn.style.position = "fixed"
-        sidebarBtnImg.style.zIndex = "1"
         sidebar.style.border = ".3rem solid var(--main-color)"
     }
 });
@@ -201,6 +201,7 @@ FCMTImg4.addEventListener("click", () => {
     FCMTImg4.style.transform = "rotate(90deg)"
     
   }
+
 
   else {
     FCMI4.style.height = "auto"
