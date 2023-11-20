@@ -119,13 +119,6 @@ const  FCMTImg2 = document.getElementById("fcmt-img2")
 const  FCMTImg3 = document.getElementById("fcmt-img3")
 const  FCMTImg4 = document.getElementById("fcmt-img4")
 
-const FCMT1 = document.getElementById("fcmt1")
-const FCMT2 = document.getElementById("fcmt2")
-const FCMT3 = document.getElementById("fcmt3")
-const FCMT4 = document.getElementById("fcmt4")
-
-
-
 FCMTImg1.addEventListener("click", () => {
   if (FCMI1.style.height === "auto"){
     FCMI1.style.height = "0"
