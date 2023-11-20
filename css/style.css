@@ -122,9 +122,6 @@ header .sidebar img {
 
 }
 
-    
-
-
 #form-search {
     display: none;
     background: var(--primary-bg-color);
@@ -147,7 +144,7 @@ header .sidebar img {
 
 #results{
     box-shadow: 0 0 5px#555;
-    border-radius: 15px;
+    border-radius: .5rem;
     font-size: 20px;
     text-align: center;
     height: auto;
@@ -158,14 +155,20 @@ header .sidebar img {
     top: 60px;
     background: var(--primary-bg-color);
     z-index: 1000;
-    direction: flex;
-    flex-direction: column;
-    justify-content: center;
-    
 }
 
 #results a{
     display: block;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.315);
+    margin: .9rem;
+    padding: 1rem;
+    color: var(--primary-text-color);
+}
+
+#results a:hover{
+    border-bottom: 1px solid var(--main-color);
+    color: var(--main-color);
+    transform: translateX(1rem);
 }
 
 #theme-toggler{
@@ -459,6 +462,7 @@ p{
     font-size: 1.5rem;
 }
 
+/* فوتر سایت */
 .footer{
     background-color: #010825;
     color: #eee;
@@ -469,7 +473,6 @@ p{
 }
 
 .footer-top-btu {
-    
     color: #010825;
     background-color: #eee;
     padding: 1rem;
@@ -590,7 +593,6 @@ p{
     
 }
 
-
 .footer-bottom {
     background-color: #000000;
     margin: 0;
@@ -602,16 +604,6 @@ p{
     font-size: 1.5rem;
     text-align: center;
 }
-
-
-
-
-
-
-
-
-
-
 
 /* media queries  */
 @media (max-width:1400px){
@@ -669,7 +661,7 @@ p{
 @media (max-width:400px){
 
     html{
-        font-size: 50%;
+        font-size: 55%;
     }
 
     .services .box-container .box{
@@ -689,5 +681,3 @@ p{
     }
 
 }
-
- 
