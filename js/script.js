@@ -1,4 +1,19 @@
 
+const navBar = document.querySelector(".tabbar");
+let prevScrollPos = window.scrollY;
+
+window.addEventListener("scroll", function () {
+  let currScrollPos = window.scrollY;
+
+  if (currScrollPos > prevScrollPos) {
+    navBar.style.transform = `translateY(-105%)`;
+  } else {
+    navBar.style.transform = `translateY(0%)`;
+  }
+
+  prevScrollPos = currScrollPos;
+});
+
 const progressBar = document.querySelector(".progress-bar");
 const height =
   document.documentElement.scrollHeight - document.documentElement.clientHeight;
@@ -33,38 +48,7 @@ setInterval(()=>{
 
 
 $(document).ready(function(){
-
-  $('#menu').click(function(){
-      $(this).toggleClass('fa-times');
-      $('.navbar').toggleClass('nav-toggle');
-  });
-
-  $(window).on('scroll load',function(){
-    $('#menu').removeClass('fa-times');
-    $('.navbar').removeClass('nav-toggle');
-  });
-
-  $('.portfolio .button-container .btn').click(function(){
-
-    let filter = $(this).attr('data-filter');
-
-    if(filter == 'all'){
-      $('.portfolio .image-container .box').show('400')
-    }else{
-      $('.portfolio .image-container .box').not('.'+filter).hide('200');
-      $('.portfolio .image-container .box').filter('.'+filter).show('400');
-    }
-
-  });
-
-  $('#theme-toggler').click(function(){
-    $(this).toggleClass('fa-sun');
-    $('body').toggleClass('dark-theme');
-  });
-  
-
   // smooth scrolling 
-
   $('a[href*="#"]').on('click',function(e){
 
     e.preventDefault();
@@ -72,7 +56,6 @@ $(document).ready(function(){
     $('html, body').animate({
 
       scrollTop : $($(this).attr('href')).offset().top,
-
     },
       500,
       'linear'
