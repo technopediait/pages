@@ -53,6 +53,23 @@ body.dark-theme{
     --secondary-text-color:#eee;
 }
 
+.scroll-indicator {
+    height: 10px;
+    width: calc(100% - .6rem);
+    position: fixed;
+    top: .4rem;
+    left: 1.6rem;
+    right: .1rem;
+    z-index: 10000;
+  }
+  
+  .scroll-indicator .progress-bar {
+    height: 100%;
+    width: 0;
+    border-radius: 10px;
+    background: linear-gradient(to right, #8e2de2, #4a00e0);
+  }
+
 /* هدر سایت */
 /* سربرگ بالا */
 nav{
