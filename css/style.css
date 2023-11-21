@@ -316,6 +316,10 @@ p{
     display: none;
 }
 
+.home .slides {
+    margin-top: 3rem;
+}
+
 .home .slides .slide-active{
     display: block;
     animation-name: fadeIn;
