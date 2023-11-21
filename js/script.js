@@ -68,7 +68,6 @@ const toggleButton = document.getElementById("sidebar-btn");
 const sidebar = document.querySelector(".sidebar");
 const sidebarBtnImg = document.getElementById("sidebar-btn-icon")
 const sidebarBtn = document.querySelector(".sidebar-btn")
-
 toggleButton.addEventListener("click", () => {
     if (sidebar.style.width === "250px") {
         sidebar.style.width = "0";
@@ -79,11 +78,16 @@ toggleButton.addEventListener("click", () => {
     } else {
         sidebar.style.width = "250px";
         sidebarBtnImg.src = "./icon/close.svg"
-        sidebarBtn.style.right = "210px"
+        sidebarBtn.style.right = "250px"
         sidebarBtn.style.position = "fixed"
         sidebar.style.border = ".3rem solid var(--main-color)"
     }
+    
+    
 });
+
+
+
 
 var searchIcon = document.getElementById("search-btn")
 var input = document.getElementById("searchBox")

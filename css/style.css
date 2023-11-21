@@ -61,13 +61,12 @@ body.dark-theme{
     left: .5rem;
     right: .1rem;
     z-index: 10000;
-    box-shadow: 2px 1px 10px  rgb(150, 0, 250);
   }
   
   .scroll-indicator .progress-bar {
     height: 100%;
     width: 0;
-    border-radius: 0px;
+    border-radius: 3px;
     background: linear-gradient(to right, #8e2de2, #4a00e0);
   }
 
@@ -80,7 +79,7 @@ nav{
     width: 100%;
     height: 60px;
     background-color: #ffffe8;
-    z-index: 9999;
+    z-index: 9000;
 }
 
 #search-btn {
@@ -105,27 +104,27 @@ nav{
 }
 
 header .sidebar a {
-    list-style-type: none;
     padding: 0;
     font-size: 1.6rem;
+    display: block;
+}
+
+#sidebar-btn{
+    z-index: 10000;
 }
 
 header .sidebar {
     width: 0;
     background:var(--secondary-bg-color);
     position: absolute;
-    top: 0;
-    right: 0;
+    top: 0px; right: 0;
     height: 100%;
     transition: 0.3s;
     overflow-x: hidden;
-    position: fixed;
     border-radius: .4rem;
-    z-index: 1;
-}
+    z-index: 9050;
 
-#sidebar-btn{
-    z-index: 2;
+    
 }
 
 header .sidebar a {
@@ -188,17 +187,7 @@ header .sidebar img {
     transform: translateX(1rem);
 }
 
-#theme-toggler{
-    font-size: 25px;
-    color: #003da7;
-}
 
-#theme-toggler.fa-sun{
-   color: #cace00; 
-   transform: rotate(180deg);
-}
-
-  
 /* منوی سمت راست که پس طول 600 پیکسل نمایش داده می شود */
 .menu {
         background-color: #0099ff;
@@ -230,63 +219,6 @@ main{
 .heading span{
     color:var(--main-color);
     text-transform: uppercase;
-}
-
-/*منوی ناو بر سمت چپ*/
-#menu{
-    font-size: 3rem;
-    color: #003da7;
-    border-radius: 5rem;
-    height:5rem;
-    width:5rem;
-    text-align: center;
-    line-height: 5rem;
-    position: absolute;
-    top: 1.5rem; left:.5rem;
-    z-index: 1000;
-    cursor: pointer;
-}
-
-#menu img {
-    height:40px;
-    width:40px;
-}
-
-#menu.fa-times{
-    transform:rotate(-180deg);
-    color: rgb(255, 0, 0);
-}
-
-.navbar{
-    position: fixed;
-    top:1.2rem; left:1.5rem;
-    padding:1.1rem 1rem;
-    padding-left: 4rem;
-    z-index: 999;
-    border:.2rem solid var(--main-color);
-    border-radius: 1rem;
-    background:var(--primary-bg-color);
-    opacity: 0;
-    transform-origin: top left;
-    transform: scale(0);
-}
-
-.navbar.nav-toggle{
-    opacity: 1;
-    transform: scale(1);
-}
-
-.navbar a{
-    display: block;
-    font-size: 2rem;
-    padding:1rem;
-    padding-right: 7rem;
-    color:var(--primary-text-color);
-}
-
-.navbar a:hover{
-    color:var(--main-color);
-    transform: translateX(1rem);
 }
 
 section{
