@@ -54,10 +54,10 @@ body.dark-theme{
 }
 
 .scroll-indicator {
-    height: 5px;
+    height: 7px;
     width: calc(100% - .5rem);
     position: fixed;
-    top: 4px;
+    top: 2px;
     left: .5rem;
     right: .1rem;
     z-index: 10000;
