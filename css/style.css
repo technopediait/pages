@@ -54,8 +54,8 @@ body.dark-theme{
 }
 
 .scroll-indicator {
-    height: 10px;
-    width: calc(100% - .6rem);
+    height: 5px;
+    width: calc(100% - .5rem);
     position: fixed;
     top: 0;
     left: 1.3rem;
@@ -66,7 +66,7 @@ body.dark-theme{
   .scroll-indicator .progress-bar {
     height: 100%;
     width: 0;
-    border-radius: 10px;
+    border-radius: 5px;
     background: linear-gradient(to right, #8e2de2, #4a00e0);
   }
 
@@ -79,7 +79,6 @@ nav{
     height: 60px;
     background-color: #ffffe8;
     z-index: 9999;
-
 }
 
 #search-btn {
