@@ -25,6 +25,31 @@ window.addEventListener("scroll", () => {
   progressBar.style.width = `${scrolled}%`;
 });
 
+function toggleTheme() {
+  const bodyTheme = document.body
+  const toggleButtonText = document.querySelector(".toggle-theme-text") ;
+  const toggleButtonIcon = document.querySelector(".toggle-theme-icon") ;
+  if (bodyTheme.classList.contains("light-theme")) {
+    bodyTheme.classList.remove("light-theme")
+    bodyTheme.classList.add("dark-theme")
+    toggleButtonText.textContent = "تغییر پوسته به حالت روشن"
+    toggleButtonIcon.src = "icon/light_mode.svg"
+    localStorage.setItem("theme", "dark")
+} else {
+  bodyTheme.classList.remove("dark-theme")
+  bodyTheme.classList.add("light-theme")
+  toggleButtonText.textContent = "تغییر پوسته به حالت تاریک"
+  toggleButtonIcon.src = "icon/dark_mode.svg"
+  localStorage.setItem("theme", "light")
+}
+}
+function checkAutoTheme() {
+  const savedTheme = localStorage.getItem("theme")
+  if (savedTheme === "dark") {
+    toggleTheme()
+}
+} 
+checkAutoTheme() ;
 let slideIndex = 1;
 
 function setSlide(input,index){
