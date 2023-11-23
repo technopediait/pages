@@ -57,8 +57,8 @@ body.dark-theme{
     height: 4px;
     width: calc(100% - .5rem);
     position: fixed;
-    top: 2px;
-    left: .5rem;
+    bottom: -8px;
+    left: .8rem;
     right: .1rem;
     z-index: 10000;
   }
@@ -80,7 +80,7 @@ nav{
     height: 60px;
     background-color: rgb(191, 248, 179);
     z-index: 9000;
-    box-shadow: 0 0 5px var(--primary-text-color);
+    box-shadow: 0 0 10px var(--primary-text-color);
 }
 
 #search-btn {
@@ -206,7 +206,7 @@ header .sidebar .toggletheme img {
         background-color: #0099ff;
         display: flex;
         flex-direction: column;
-    
+        
      }
 section.menu span {
         border-bottom: 1px solid red;
