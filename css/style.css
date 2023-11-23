@@ -120,6 +120,7 @@ header .sidebar a {
     padding: 0;
     font-size: 1.6rem;
     display: block;
+    color: red;
 }
 
 #sidebar-btn{
