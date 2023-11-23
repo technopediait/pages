@@ -89,6 +89,19 @@ nav{
     right: 59px;
 }
 
+header .sidebar {
+    width: 0;
+    background:var(--secondary-bg-color);
+    position: fixed;
+    top: 0px; right: 0;
+    height: 100%;
+    transition: 0.3s;
+    overflow-x: hidden;
+    border-radius: .4rem;
+    z-index: 9050;
+    overflow: hidden;
+}
+
 #sidebar-btn{
     position: absolute;
     top: 11px;
@@ -114,19 +127,6 @@ header .sidebar a {
     z-index: 10000;
 }
 
-header .sidebar {
-    width: 0;
-    background:var(--secondary-bg-color);
-    position: fixed;
-    top: 0px; right: 0;
-    height: 100%;
-    transition: 0.3s;
-    overflow-x: hidden;
-    border-radius: .4rem;
-    z-index: 9050;
-
-    
-}
 
 header .sidebar a {
     padding: 10px;
@@ -482,7 +482,6 @@ p{
 .footer-top-ctn img {
     margin: 1rem;
 }
-
 
 .footer-center{
     margin: 1rem;
