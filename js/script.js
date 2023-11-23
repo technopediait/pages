@@ -32,14 +32,14 @@ function toggleTheme() {
   if (bodyTheme.classList.contains("light-theme")) {
     bodyTheme.classList.remove("light-theme")
     bodyTheme.classList.add("dark-theme")
-    toggleButtonText.textContent = "تغییر پوسته به حالت روشن"
     toggleButtonIcon.src = "icon/light_mode.svg"
+    toggleButtonIcon.style.transform = "rotate(180deg)"
     localStorage.setItem("theme", "dark")
 } else {
   bodyTheme.classList.remove("dark-theme")
   bodyTheme.classList.add("light-theme")
-  toggleButtonText.textContent = "تغییر پوسته به حالت تاریک"
   toggleButtonIcon.src = "icon/dark_mode.svg"
+  toggleButtonIcon.style.transform = "rotate(360deg)"
   localStorage.setItem("theme", "light")
 }
 }
