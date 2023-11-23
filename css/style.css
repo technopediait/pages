@@ -99,7 +99,6 @@ header .sidebar {
     overflow-x: hidden;
     border-radius: .4rem;
     z-index: 9050;
-    overflow: hidden;
 }
 
 #sidebar-btn{
