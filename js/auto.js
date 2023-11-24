@@ -92,20 +92,24 @@ var footerTopCTN_img = document.createElement("img") ;
 var footerTopCTN_a = document.createElement("a") ;
 var footerTopCTN_img2 = document.createElement("img") ;
 var footerTopCTN_a2 = document.createElement("a") ;
+// فوتر وسط
 var footerCenter = document.createElement("div") ;
 var footerCenterMenu = document.createElement("div") ;
+// فوتر وسط - منوی 1
 var footerCenterMenuT = document.createElement("div") ;
 var footerCenterMenuTitle = document.createElement("div") ;
 var footerCenterMenuTitle_span = document.createElement("span") ;
 var footerCenterMenuTitle_img = document.createElement("img") ;
 var footerCenterMenuItems = document.createElement("div") ;
 var footerCenterMenuItems_a = document.createElement("a") ;
+// فوتر وسط منوی 2
 var footerCenterMenuT2 = document.createElement("div") ;
 var footerCenterMenuTitle2 = document.createElement("div") ;
 var footerCenterMenuTitle2_span = document.createElement("span") ;
 var footerCenterMenuTitle2_img = document.createElement("img") ;
 var footerCenterMenuItems2 = document.createElement("div") ;
 var footerCenterMenuItems2_a = document.createElement("a") ;
+// فوتر وسط - شبکه های اجتماعی 
 var footerCenterCSM = document.createElement("div") ;
 var footerCenterCSMText = document.createElement("div") ;
 var footerCenterCSMImg = document.createElement("div") ;
@@ -117,14 +121,9 @@ var footerCenterCSMImg_a3 = document.createElement("a") ;
 var footerCenterCSMImg_a3_img = document.createElement("img") ;
 var footerCenterCSMImg_a4 = document.createElement("a") ;
 var footerCenterCSMImg_a4_img = document.createElement("img") ;
+// فوتر پایین 
 var footerBottom = document.createElement("div") ;
 var footerBottomCopy = document.createElement("div") ;
-
-
-
-
-
-
 
 // تنظیم پدر و فرزند تمام المنت های فوتر
 footer.appendChild(footerTop) ;
@@ -136,14 +135,17 @@ footerTopCTN.appendChild(footerTopCTN_img) ;
 footerTopCTN.appendChild(footerTopCTN_a) ;
 footerTopCTN.appendChild(footerTopCTN_img2) ;
 footerTopCTN.appendChild(footerTopCTN_a2) ;
+// فوتر وسط - منو ها باز شو
 footer.appendChild(footerCenter) ;
 footerCenter.appendChild(footerCenterMenu) ;
+// فوتر وسط - منو 1
 footerCenterMenu.appendChild(footerCenterMenuT) ;
 footerCenterMenuT.appendChild(footerCenterMenuTitle) ;
 footerCenterMenuTitle.appendChild(footerCenterMenuTitle_span) ;
 footerCenterMenuTitle.appendChild(footerCenterMenuTitle_img) ;
 footerCenterMenuT.appendChild(footerCenterMenuItems) ;
 footerCenterMenuItems.appendChild(footerCenterMenuItems_a)
+// فوتر وسط - منو 2
 footerCenterMenu.appendChild(footerCenterMenuT2) ;
 footerCenterMenuT2.appendChild(footerCenterMenuTitle2) ;
 footerCenterMenuTitle2.appendChild(footerCenterMenuTitle2_span) ;
@@ -151,6 +153,7 @@ footerCenterMenuTitle2.appendChild(footerCenterMenuTitle2_img) ;
 footerCenterMenuT.appendChild(footerCenterMenuItems) ;
 footerCenterMenuT2.appendChild(footerCenterMenuItems2) ;
 footerCenterMenuItems2.appendChild(footerCenterMenuItems2_a) ;
+// فوتر وسط - شبکه های اجتماعی 
 footerCenter.appendChild(footerCenterCSM) ;
 footerCenterCSM.appendChild(footerCenterCSMText) ;
 footerCenterCSM.appendChild(footerCenterCSMImg) ;
@@ -162,9 +165,9 @@ footerCenterCSMImg.appendChild(footerCenterCSMImg_a3) ;
 footerCenterCSMImg_a3.appendChild(footerCenterCSMImg_a3_img) ;
 footerCenterCSMImg.appendChild(footerCenterCSMImg_a4) ;
 footerCenterCSMImg_a4.appendChild(footerCenterCSMImg_a4_img) ;
+// فوتر پایین 
 footer.appendChild(footerBottom) ;
-
-
+footerBottom.appendChaild(footerBottomCopy) ;
 
 // اضافه کردن تمام کلاس های المنت های فوتر
 footerTop.classList.add("footer-top") ;
@@ -183,8 +186,6 @@ footerCenterCSMText.classList.add("footer-center-csm-text") ;
 footerCenterCSMImg.classList.add("footer-center-csm-img") ;
 footerBottom.classList.add("footer-bottom") ;
 
-
-
 // نوشتن در تگ های داخل فوتر
 footerTopBTU_a.href = "#header" ;
 footerTopBTU_a_span.textContent = " بازگشت به بالا " ;
@@ -194,6 +195,7 @@ footerTopCTN_a.textContent = " تلفن: 09390595102 " ;
 footerTopCTN_img2.src = "./icon/mail.svg" ;
 footerTopCTN_a2.href = "mailto:mohammad.shaylinejad@gmail.com" ;
 footerTopCTN_a2.textContent = " ایمیل: mohammad.shaylinejad@gmail.com  " ;
+// فوتر وسط
 footerCenterMenuTitle_span.textContent = " ایتم ها " ;
 footerCenterMenuTitle_img.src ="./icon/expand_more.svg" ;
 footerCenterMenuTitle2_span.textContent = " ایتم ها " ;
@@ -209,6 +211,7 @@ footerCenterCSMImg_a_img.src = "./icon/instagram.svg" ;
 footerCenterCSMImg_a2_img.src = "./icon/telegram.svg" ;
 footerCenterCSMImg_a3_img.src = "./icon/linkedin.svg" ;
 footerCenterCSMImg_a4_img.src = "./icon/facebook.svg" ;
+footerBottomCopy.textContent = " کلیه حقوق این سایت متعلق به تکنو پدبا آی تی می باش©2024" ;
 
 
 /*
