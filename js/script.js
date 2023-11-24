@@ -27,7 +27,6 @@ window.addEventListener("scroll", () => {
 
 function toggleTheme() {
   const bodyTheme = document.body
-  const toggleButtonText = document.querySelector(".toggle-theme-text") ;
   const toggleButtonIcon = document.querySelector(".toggle-theme-icon") ;
   if (bodyTheme.classList.contains("light-theme")) {
     bodyTheme.classList.remove("light-theme")

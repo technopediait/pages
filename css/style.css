@@ -90,7 +90,7 @@ nav{
 }
 
 header .sidebar {
-    width: 0;
+    width: 0px;
     background:var(--secondary-bg-color);
     position: fixed;
     top: 0px; right: 0;
@@ -101,20 +101,21 @@ header .sidebar {
     z-index: 9050;
 }
 
+.img-top{
+ display: flex;
+ border-bottom: 3px solid var(--main-color);
+ 
+}
+
 #sidebar-btn{
     position: absolute;
     top: 11px;
     right: 12px;
     cursor: pointer;
+    z-index: 10000;
 }
 
-.nav-circle img {
-    width: 40px;
-    height: 40px;
-    position: absolute;
-    top: 11px; left: 8px;
-    cursor: pointer;
-}
+
 
 header .sidebar a {
     padding: 0;
@@ -123,26 +124,23 @@ header .sidebar a {
     color: red;
 }
 
-#sidebar-btn{
-    z-index: 10000;
+header .sidebar .item:hover{
+    padding-right: 3rem;
 }
-
 
 header .sidebar a {
     padding: 10px;
     border-bottom: 1px solid #555;
 }
 
-header .sidebar>img {
+header .sidebar img {
     width: 150px;
     height: 68px;
     padding: 8px;
 }
 
 header .sidebar .toggletheme {
-    position: absolute;
-    top: 3px;
-    left: 20px;
+    
     padding: 10px;
 }
 
@@ -200,6 +198,13 @@ header .sidebar .toggletheme img {
     transform: translateX(1rem);
 }
 
+.nav-circle img {
+    width: 40px;
+    height: 40px;
+    position: absolute;
+    top: 11px; left: 8px;
+    cursor: pointer;
+}
 
 /* منوی سمت راست که پس طول 600 پیکسل نمایش داده می شود */
 .menu {
