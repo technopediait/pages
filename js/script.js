@@ -135,57 +135,30 @@ searchIcon.addEventListener("click", function() {
   }
 })
 
-const  FCMTImg1 = document.getElementById("fcmt-img1")
-const  FCMTImg2 = document.getElementById("fcmt-img2")
-const  FCMTImg3 = document.getElementById("fcmt-img3")
-const  FCMTImg4 = document.getElementById("fcmt-img4")
-
-FCMTImg1.addEventListener("click", () => {
-  if (FCMI1.style.height === "auto"){
-    FCMI1.style.height = "0"
-    FCMTImg1.style.transform = "rotate(90deg)"
+footerCenterMenuTitle_img.addEventListener("click", () => {
+  if (footerCenterMenuItems.style.height === "auto"){
+    footerCenterMenuItems.style.height = "0"
+    footerCenterMenuTitle_img.style.transform = "rotate(90deg)"
     
   }
 
   else {
-    FCMI1.style.height = "auto"
-    FCMTImg1.style.transform = "rotate(0deg)"
+    footerCenterMenuItems.style.height = "auto"
+    footerCenterMenuTitle_img.style.transform = "rotate(0deg)"
   }
 })
 
-FCMTImg2.addEventListener("click", () => {
-  if (FCMI2.style.height === "auto"){
-    FCMI2.style.height = "0"
-    FCMTImg2.style.transform = "rotate(90deg)"
+footerCenterMenuTitle2_img.addEventListener("click", () => {
+  if (footerCenterMenuItems2.style.height === "auto"){
+    footerCenterMenuItems2.style.height = "0"
+    footerCenterMenuTitle2_img.style.transform = "rotate(90deg)"
     
   }
 
   else {
-    FCMI2.style.height = "auto"
-    FCMTImg2.style.transform = "rotate(0deg)"
+    footerCenterMenuItems2.style.height = "auto"
+    footerCenterMenuTitle2_img.style.transform = "rotate(0deg)"
   }
 })
 
-FCMTImg3.addEventListener("click", () => {
-  if (FCMI3.style.height === "auto"){
-    FCMI3.style.height = "0"
-    FCMTImg3.style.transform = "rotate(90deg)"
-    
-  }
 
-  else {
-    FCMI3.style.height = "auto"
-    FCMTImg3.style.transform = "rotate(0deg)"
-  }
-})
-
-FCMTImg4.addEventListener("click", () => {
-  if (FCMI4.style.height === "auto"){
-    FCMI4.style.height = "0"
-    FCMTImg4.style.transform = "rotate(90deg)"
-    
-  }else {
-    FCMI4.style.height = "auto"
-    FCMTImg4.style.transform = "rotate(0deg)"
-  }
-})
