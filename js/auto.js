@@ -33,8 +33,8 @@ var artDate1 = document.querySelector(".art-date1")
 var artTitle1 = document.querySelector(".art-title1")
 var artP1 = document.querySelector(".art-p1")
 var artBtn1 = document.querySelector(".art-btn1")
-artImg1.src = ""
-artName1.textContent = ""
+artImg1.src = "" 
+artName1.textContent = "" 
 artDate1.textContent = ""
 artTitle1.textContent = ""
 artTitle1.href = ""
@@ -185,7 +185,7 @@ footerCenterCSM.classList.add("footer-center-csm") ;
 footerCenterCSMText.classList.add("footer-center-csm-text") ;
 footerCenterCSMImg.classList.add("footer-center-csm-img") ;
 footerBottom.classList.add("footer-bottom") ;
-footerBottomCopy.classList.add("footer-bottom-copy")
+footerBottomCopy.classList.add("footer-bottom-copy") ;
 
 // نوشتن در تگ های داخل فوتر
 footerTopBTU_a.href = "#header" ;
