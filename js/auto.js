@@ -167,7 +167,8 @@ footerCenterCSMImg.appendChild(footerCenterCSMImg_a4) ;
 footerCenterCSMImg_a4.appendChild(footerCenterCSMImg_a4_img) ;
 // فوتر پایین 
 footer.appendChild(footerBottom) ;
-footerBottom.appendChaild(footerBottomCopy) ;
+footerBottom.appendChild(footerBottomCopy)
+
 
 // اضافه کردن تمام کلاس های المنت های فوتر
 footerTop.classList.add("footer-top") ;
