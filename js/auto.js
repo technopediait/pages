@@ -135,10 +135,10 @@ footerTopCTN.appendChild(footerTopCTN_img) ;
 footerTopCTN.appendChild(footerTopCTN_a) ;
 footerTopCTN.appendChild(footerTopCTN_img2) ;
 footerTopCTN.appendChild(footerTopCTN_a2) ;
-// فوتر وسط - منو ها باز شو
+// فوتر وسط منو ها باز شو
 footer.appendChild(footerCenter) ;
 footerCenter.appendChild(footerCenterMenu) ;
-// فوتر وسط - منو 1
+// فوتر وسط  منو 1
 footerCenterMenu.appendChild(footerCenterMenuT) ;
 footerCenterMenuT.appendChild(footerCenterMenuTitle) ;
 footerCenterMenuTitle.appendChild(footerCenterMenuTitle_span) ;
@@ -153,7 +153,7 @@ footerCenterMenuTitle2.appendChild(footerCenterMenuTitle2_img) ;
 footerCenterMenuT.appendChild(footerCenterMenuItems) ;
 footerCenterMenuT2.appendChild(footerCenterMenuItems2) ;
 footerCenterMenuItems2.appendChild(footerCenterMenuItems2_a) ;
-// فوتر وسط - شبکه های اجتماعی 
+// فوتر وسط  شبکه های اجتماعی 
 footerCenter.appendChild(footerCenterCSM) ;
 footerCenterCSM.appendChild(footerCenterCSMText) ;
 footerCenterCSM.appendChild(footerCenterCSMImg) ;
@@ -185,6 +185,7 @@ footerCenterCSM.classList.add("footer-center-csm") ;
 footerCenterCSMText.classList.add("footer-center-csm-text") ;
 footerCenterCSMImg.classList.add("footer-center-csm-img") ;
 footerBottom.classList.add("footer-bottom") ;
+footerBottomCopy.classList.add("footer-bottom-copy")
 
 // نوشتن در تگ های داخل فوتر
 footerTopBTU_a.href = "#header" ;
