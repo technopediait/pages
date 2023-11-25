@@ -69,7 +69,7 @@ setInterval(()=>{
       slideIndex=1;
   }
   setSlide(`slide${slideIndex}` , slideIndex)
-} , 7000)
+} , 5000)
 
 $(document).ready(function(){
   // smooth scrolling 
@@ -88,12 +88,13 @@ $(document).ready(function(){
   });
 
 });
+
  // سید بار
 const toggleButton = document.getElementById("sidebar-btn");
 const sidebar = document.querySelector(".sidebar");
 const sidebarBtnImg = document.getElementById("sidebar-btn-icon")
 const sidebarBtn = document.querySelector(".sidebar-btn")
-const html = document.querySelector("html")
+const html = document.querySelector("html") 
 toggleButton.addEventListener("click", () => {
     if (sidebar.style.width === "250px") {
         sidebar.style.width = "0";
