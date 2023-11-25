@@ -189,7 +189,7 @@ footerBottom.classList.add("footer-bottom") ;
 footerBottomCopy.classList.add("footer-bottom-copy") ;
 
 // نوشتن در تگ های داخل فوتر
-footerTopBTU_a.href = "#header" ;
+footerTopBTU_a.href = "#body" ;
 footerTopBTU_a_span.textContent = " بازگشت به بالا " ;
 footerTopCTN_img.src = "./icon/call.svg" ;
 footerTopCTN_a.href = "tel:09390595102" ;
