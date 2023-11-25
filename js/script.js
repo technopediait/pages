@@ -69,7 +69,7 @@ setInterval(()=>{
       slideIndex=1;
   }
   setSlide(`slide${slideIndex}` , slideIndex)
-} , 5000)
+} , 2000)
 
 $(document).ready(function(){
   // smooth scrolling 

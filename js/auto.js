@@ -213,4 +213,4 @@ footerCenterCSMImg_a_img.src = "./icon/instagram.svg" ;
 footerCenterCSMImg_a2_img.src = "./icon/telegram.svg" ;
 footerCenterCSMImg_a3_img.src = "./icon/linkedin.svg" ;
 footerCenterCSMImg_a4_img.src = "./icon/facebook.svg" ;
-footerBottomCopy.textContent = " کلیه حقوق این سایت متعلق به تکنو پدبا آی تی می باش©2024" ;
+footerBottomCopy.textContent = " کلیه حقوق این سایت متعلق به تکنو پدیا آی تی می باشد©2024" ;
