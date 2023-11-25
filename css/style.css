@@ -58,7 +58,7 @@ body.dark-theme{
     width: calc(100% - .5rem);
     position: fixed;
     bottom: -8px;
-    left: .8rem;
+    left: 0rem;
     right: .1rem;
     z-index: 10000;
   }
