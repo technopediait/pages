@@ -107,7 +107,7 @@ toggleButton.addEventListener("click", () => {
         sidebarBtnImg.src = "./icon/close.svg"
         sidebarBtn.style.right = "250px"
         sidebarBtn.style.position = "fixed"
-        html.style.overflow = "hidden"
+        html.style.overflow = "auto"
     }
     
     
