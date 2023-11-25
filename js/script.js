@@ -1,4 +1,4 @@
-
+// تب بالا
 const navBar = document.querySelector(".tabbar");
 let prevScrollPos = window.scrollY;
 
@@ -25,6 +25,7 @@ window.addEventListener("scroll", () => {
   progressBar.style.width = `${scrolled}%`;
 });
 
+// حالت تاریک روشن 
 function toggleTheme() {
   const bodyTheme = document.body
   const toggleButtonIcon = document.querySelector(".toggle-theme-icon") ;
@@ -49,8 +50,9 @@ function checkAutoTheme() {
 }
 } 
 checkAutoTheme() ;
-let slideIndex = 1;
 
+// اسلایدر
+let slideIndex = 1;
 function setSlide(input,index){
   slideIndex = index;
   let item = document.querySelector(`#${input}`)
@@ -86,6 +88,7 @@ $(document).ready(function(){
   });
 
 });
+ // سید بار
 const toggleButton = document.getElementById("sidebar-btn");
 const sidebar = document.querySelector(".sidebar");
 const sidebarBtnImg = document.getElementById("sidebar-btn-icon")
@@ -110,7 +113,7 @@ toggleButton.addEventListener("click", () => {
 
 
 
-
+// دکمه جستجو کردن
 var searchIcon = document.getElementById("search-btn")
 var input = document.getElementById("searchBox")
 var result = document.getElementById("results")
@@ -135,6 +138,7 @@ searchIcon.addEventListener("click", function() {
   }
 })
 
+// منو های باز شو فوتر
 footerCenterMenuTitle_img.addEventListener("click", () => {
   if (footerCenterMenuItems.style.height === "auto"){
     footerCenterMenuItems.style.height = "0"
