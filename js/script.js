@@ -6,7 +6,7 @@ window.addEventListener("scroll", function () {
   let currScrollPos = window.scrollY;
 
   if (currScrollPos > prevScrollPos) {
-    navBar.style.transform = `translateY(-105%)`;
+    navBar.style.transform = `translateY(-100%)`;
   } else {
     navBar.style.transform = `translateY(0%)`;
   }
@@ -69,7 +69,7 @@ setInterval(()=>{
       slideIndex=1;
   }
   setSlide(`slide${slideIndex}` , slideIndex)
-} , 5000)
+} , 7000)
 
 $(document).ready(function(){
   // smooth scrolling 
@@ -93,19 +93,20 @@ const toggleButton = document.getElementById("sidebar-btn");
 const sidebar = document.querySelector(".sidebar");
 const sidebarBtnImg = document.getElementById("sidebar-btn-icon")
 const sidebarBtn = document.querySelector(".sidebar-btn")
+const html = document.querySelector("html")
 toggleButton.addEventListener("click", () => {
     if (sidebar.style.width === "250px") {
         sidebar.style.width = "0";
         sidebarBtnImg.src = "./icon/menu.svg"
         sidebarBtn.style.right = "12px"
         sidebarBtn.style.position = "absolute"
-        sidebar.style.border = "none"
+        html.style.overflow = "auto"
     } else {
         sidebar.style.width = "250px";
         sidebarBtnImg.src = "./icon/close.svg"
         sidebarBtn.style.right = "250px"
         sidebarBtn.style.position = "fixed"
-        sidebar.style.border = ".3rem solid var(--main-color)"
+        html.style.overflow = "hidden"
     }
     
     

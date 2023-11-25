@@ -57,7 +57,7 @@ body.dark-theme{
     height: 4px;
     width: calc(100% - .5rem);
     position: fixed;
-    bottom: -8px;
+    bottom: -4px;
     left: 0rem;
     right: .1rem;
     z-index: 10000;
@@ -121,11 +121,7 @@ header .sidebar a {
     padding: 0;
     font-size: 1.6rem;
     display: block;
-    color: red;
-}
-
-header .sidebar .item:hover{
-    padding-right: 3rem;
+    color: rgb(3, 187, 12);
 }
 
 header .sidebar a {
@@ -306,9 +302,9 @@ p{
     flex:1 1 40rem;
     padding:1rem;
     background-color: var(--primary-bg-color);
-    
     border-radius: 5px;
 }
+
 
 .home .content h3{
     color:var(--primary-text-color);
@@ -323,6 +319,7 @@ p{
     padding:1rem .5rem;
     color:var(--secondary-text-color);
     font-size: 2rem;
+    line-height: 4.2rem;
 }
 
 /* دکمه های زیر مقاله */
@@ -625,6 +622,7 @@ p{
     main{
         display: block;
     }
+    
  }
 
 
