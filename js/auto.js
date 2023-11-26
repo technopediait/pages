@@ -191,17 +191,17 @@ footerBottomCopy.classList.add("footer-bottom-copy") ;
 // نوشتن در تگ های داخل فوتر
 footerTopBTU_a.href = "#body" ;
 footerTopBTU_a_span.textContent = " بازگشت به بالا " ;
-footerTopCTN_img.src = "./icon/call.svg" ;
+footerTopCTN_img.src = "https://technopediait.github.io/pages/icon/call.svg" ;
 footerTopCTN_a.href = "tel:09390595102" ;
 footerTopCTN_a.textContent = " تلفن: 09390595102 " ;
-footerTopCTN_img2.src = "./icon/mail.svg" ;
+footerTopCTN_img2.src = "https://technopediait.github.io/pages/icon/mail.svg" ;
 footerTopCTN_a2.href = "mailto:mohammad.shaylinejad@gmail.com" ;
 footerTopCTN_a2.textContent = " ایمیل: mohammad.shaylinejad@gmail.com  " ;
 // فوتر وسط
 footerCenterMenuTitle_span.textContent = " ایتم ها " ;
-footerCenterMenuTitle_img.src ="./icon/expand_more.svg" ;
+footerCenterMenuTitle_img.src ="https://technopediait.github.io/pages/icon/expand_more.svg" ;
 footerCenterMenuTitle2_span.textContent = " ایتم ها " ;
-footerCenterMenuTitle2_img.src ="./icon/expand_more.svg" ;
+footerCenterMenuTitle2_img.src ="https://technopediait.github.io/pages/icon/expand_more.svg" ;
 footerCenterMenuItems_a.textContent = " سلام خوبی " ;
 footerCenterMenuItems2_a.textContent = " آیتم دو " ;
 footerCenterCSMText.textContent = " تکنو پدیا در شبکه های اجتماعی " ;
