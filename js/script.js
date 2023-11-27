@@ -28,7 +28,8 @@ window.addEventListener("scroll", () => {
 // حالت تاریک روشن 
 function toggleTheme() {
   const bodyTheme = document.body
-  const toggleButtonIcon = document.querySelector(".toggle-theme-icon") ;
+  var toggleButtonIcon = document.querySelector(".toggle-theme-icon") ;
+  
   if (bodyTheme.classList.contains("light-theme")) {
     bodyTheme.classList.remove("light-theme")
     bodyTheme.classList.add("dark-theme")

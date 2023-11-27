@@ -2,55 +2,59 @@
     font-family: "Vazir";
     src: url(../fonts/Vazir-Regular.ttf);
 }
-:root{
-    --main-color:#4C84FF;
-    --primary-bg-color:#fff;
-    --secondary-bg-color:#eee;
-    --primary-text-color:#222;
-    --secondary-text-color:#666;
+
+:root {
+    --main-color: #4C84FF;
+    --primary-bg-color: #fff;
+    --secondary-bg-color: #eee;
+    --primary-text-color: #222;
+    --secondary-text-color: #666;
 }
-*{
+
+* {
     font-family: "Vazir";
-    margin:0; padding:0;
+    margin: 0;
+    padding: 0;
     box-sizing: border-box;
-    outline: none; border:none;
+    outline: none;
+    border: none;
     text-decoration: none;
-    transition:all .3s cubic-bezier(.38,1.15,.7,1.12);
+    transition: all .3s cubic-bezier(.38, 1.15, .7, 1.12);
     direction: rtl;
     /*user-select: none;*/
 }
 
-*::selection{
+*::selection {
     background-color: var(--main-color);
-    color:#fff;
+    color: #fff;
 }
 
-html{
+html {
     font-size: 60.5%;
     overflow-x: hidden;
 }
 
-html::-webkit-scrollbar{
-    width:.5rem;
+html::-webkit-scrollbar {
+    width: .5rem;
 }
 
-html::-webkit-scrollbar-track{
+html::-webkit-scrollbar-track {
     background-color: none;
 }
 
-html::-webkit-scrollbar-thumb{
+html::-webkit-scrollbar-thumb {
     background-color: var(--main-color);
 }
 
-body{
-    background:var(--secondary-bg-color);
+body {
+    background: var(--secondary-bg-color);
 }
 
-body.dark-theme{
-    --primary-bg-color:#252C48;
-    --secondary-bg-color:#171C32;
-    --primary-text-color:#fff;
-    --secondary-text-color:#eee;
+body.dark-theme {
+    --primary-bg-color: #252C48;
+    --secondary-bg-color: #171C32;
+    --primary-text-color: #fff;
+    --secondary-text-color: #eee;
 }
 
 .scroll-indicator {
@@ -61,19 +65,21 @@ body.dark-theme{
     left: 0rem;
     right: .1rem;
     z-index: 10000;
-  }
-  
-  .scroll-indicator .progress-bar {
+}
+
+.scroll-indicator .progress-bar {
     height: 100%;
     width: 0;
     border-radius: 3px;
     background: linear-gradient(to right, #ff8800, rgb(224, 0, 0));
-  }
+}
 
 /* هدر سایت */
 /* سربرگ بالا */
-nav{
-    top: 0px; right: 0px; left: 0px;
+nav {
+    top: 0px;
+    right: 0px;
+    left: 0px;
     position: fixed;
     transition: transform 0.5s ease;
     width: 100%;
@@ -92,9 +98,10 @@ nav{
 
 header .sidebar {
     width: 0px;
-    background:var(--secondary-bg-color);
+    background: var(--secondary-bg-color);
     position: fixed;
-    top: 0px; right: 0px;
+    top: 0px;
+    right: 0px;
     height: 100%;
     transition: 0.3s;
     overflow-x: hidden;
@@ -102,15 +109,40 @@ header .sidebar {
     box-shadow: 0 0 6px rgba(0, 0, 0, 0.719);
 }
 
-.img-top{
- display: flex;
- background-color: rgb(191, 248, 179);
- box-shadow: 0 0 6px rgba(0, 0, 0, 0.719);
+
+
+.technopedia-logo img {
+    width: 142px;
+    height: 56px;
+    position: absolute;
+    top: 4px;
+    right: 5px;
+}
+
+.toggletheme2 {
+    position: absolute;
+    top: 12px;
+    left: 59px;
+}
+
+.toggletheme2 img {
+
+    width: 40px;
+    height: 40px;
+    box-shadow: 0 0 6px var(--secondary-text-color);
+    border-radius: 50%;
+    background-color: var(--secondary-bg-color);
+}
+
+.img-top {
+    display: flex;
+    background-color: rgb(191, 248, 179);
+    box-shadow: 0 0 6px rgba(0, 0, 0, 0.719);
 }
 
 
 
-#sidebar-btn{
+#sidebar-btn {
     position: fixed;
     top: 11px;
     right: 12px;
@@ -128,7 +160,7 @@ header .sidebar a {
 
 header .sidebar a {
     padding: 10px;
-    
+
 }
 
 header .sidebar .img-top>img {
@@ -136,7 +168,7 @@ header .sidebar .img-top>img {
     height: 56px;
     padding-top: 5px;
     padding-right: 5px;
-    
+
 }
 
 header .sidebar .toggletheme {
@@ -159,21 +191,21 @@ header .sidebar .toggletheme img {
     position: relative;
 }
 
-#searchBox{
-    
+#searchBox {
+
     position: absolute;
     right: 95px;
     left: 10px;
     top: 12px;
     background: var(--secondary-bg-color);
     color: var(--primary-text-color);
-    border:.3rem solid var(--main-color);
+    border: .3rem solid var(--main-color);
     border-radius: 5px;
     padding: 10px;
     z-index: 1000;
 }
 
-#results{
+#results {
     box-shadow: 0 0 5px#555;
     border-radius: .5rem;
     font-size: 20px;
@@ -182,13 +214,13 @@ header .sidebar .toggletheme img {
     min-height: 100px;
     position: absolute;
     right: 95px;
-    left:  10px;
+    left: 10px;
     top: 60px;
     background: var(--primary-bg-color);
     z-index: 1000;
 }
 
-#results a{
+#results a {
     display: block;
     border-bottom: 1px solid rgba(0, 0, 0, 0.315);
     margin: .9rem;
@@ -196,7 +228,7 @@ header .sidebar .toggletheme img {
     color: var(--primary-text-color);
 }
 
-#results a:hover{
+#results a:hover {
     border-bottom: 1px solid var(--main-color);
     color: var(--main-color);
     transform: translateX(1rem);
@@ -206,64 +238,66 @@ header .sidebar .toggletheme img {
     width: 40px;
     height: 40px;
     position: absolute;
-    top: 11px; left: 8px;
+    top: 11px;
+    left: 8px;
     cursor: pointer;
 }
 
 /* منوی سمت راست که پس طول 600 پیکسل نمایش داده می شود */
 .menu {
-        background: var(--primary-bg-color);
-        box-shadow: 0 0 4px rgba(0, 0, 0, 0.719);
-        display: flex;
-        flex-direction: column;
-        
-     }
+    background: var(--primary-bg-color);
+    box-shadow: 0 0 4px rgba(0, 0, 0, 0.719);
+    display: flex;
+    flex-direction: column;
+
+}
+
 section.menu span {
-        border-bottom: 1px solid red;
-        padding: 10px;
-        color: #fff;
-        width: 100px;
-     }
-     
-main{
-        display: grid;
-        grid-template-columns: 2fr 7fr;
-     }
-    
+    border-bottom: 1px solid red;
+    padding: 10px;
+    color: #fff;
+    width: 100px;
+}
 
-.heading{
+main {
+    display: grid;
+    grid-template-columns: 2fr 7fr;
+}
+
+
+.heading {
     font-size: 4rem;
-    color:var(--primary-text-color);
+    color: var(--primary-text-color);
     text-align: center;
-    padding:1rem;
+    padding: 1rem;
     text-transform: uppercase;
 }
 
-.heading span{
-    color:var(--main-color);
+.heading span {
+    color: var(--main-color);
     text-transform: uppercase;
 }
 
-section{
+section {
     min-height: 100vh;
-    padding:1rem;
-    padding:0 8%;
+    padding: 1rem;
+    padding: 0 8%;
 }
 
-p{
+p {
     text-align: justify;
 }
 
 /* سکشن خانه*/
-.home{
+.home {
     align-items: center;
     justify-content: center;
     flex-wrap: wrap;
 }
 
-.home .image{
-    flex:1 1 40rem;
-    padding:1rem;
+.home .image {
+    flex: 1 1 40rem;
+    padding: 1rem;
     text-align: center;
     position: relative;
 }
@@ -276,7 +310,7 @@ p{
     margin-top: 9rem;
 }
 
-.home .slides .slide-active{
+.home .slides .slide-active {
     display: block;
     animation-name: fadeIn;
     animation-duration: 3s;
@@ -287,8 +321,9 @@ p{
     text-align: center;
     position: absolute;
     bottom: -2.3rem;
-    left: 10px; right: 10px;
-    
+    left: 10px;
+    right: 10px;
+
 }
 
 .home .image .slider-buttons span {
@@ -297,18 +332,18 @@ p{
     cursor: pointer;
 }
 
-.home .image img{
-    height:50rem;
-    box-shadow: 0 .5rem 1rem rgba(0,0,0,.3);
+.home .image img {
+    height: 50rem;
+    box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .3);
     border: .3rem solid var(--main-color);
     border-bottom: 2rem solid var(--main-color);
     border-radius: .5rem;
     background: var(--primary-bg-color);
 }
 
-.home .content{
-    flex:1 1 40rem;
-    padding:1rem;
+.home .content {
+    flex: 1 1 40rem;
+    padding: 1rem;
     background-color: var(--primary-bg-color);
     border-radius: 5px;
     box-shadow: 0 0 3px rgba(70, 40, 245, 0.137);
@@ -320,18 +355,18 @@ p{
 }
 
 
-.home .content h3{
-    color:var(--primary-text-color);
+.home .content h3 {
+    color: var(--primary-text-color);
     font-size: 3rem;
 }
 
-.home .content h3 span{
-    color:var(--main-color);
+.home .content h3 span {
+    color: var(--main-color);
 }
 
-.home .content p{
-    padding:1rem .5rem;
-    color:var(--secondary-text-color);
+.home .content p {
+    padding: 1rem .5rem;
+    color: var(--secondary-text-color);
     font-size: 2rem;
     line-height: 4.2rem;
 }
@@ -342,110 +377,111 @@ p{
     justify-content: center;
 }
 
-.btn{
+.btn {
     display: inline-block;
-    padding:.9rem 3.5rem;
+    padding: .9rem 3.5rem;
     font-size: 2rem;
-    background:none;
-    color:#fff;
+    background: none;
+    color: #fff;
     border-radius: .5rem;
-    box-shadow: 0 .5rem 1rem rgba(0,0,0,.1);
+    box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .1);
     margin-top: 1rem;
     z-index: 0;
     position: relative;
     overflow: hidden;
-    border:.2rem solid var(--main-color);
+    border: .2rem solid var(--main-color);
 }
 
 
-.btn::before{
+.btn::before {
     content: '';
     position: absolute;
-    top:50%; left: 50%;
+    top: 50%;
+    left: 50%;
     transform: translate(-50%, -50%);
     border-radius: .5rem;
-    background:var(--main-color);
-    height:85%;
+    background: var(--main-color);
+    height: 85%;
     width: 95%;
     z-index: -1;
     transition: .2s linear;
 }
 
-.btn:hover:before{
-    top:100%;
+.btn:hover:before {
+    top: 100%;
     transform: translate(-50%, 100%);
 }
 
-.btn:hover{
-    color:var(--primary-text-color);
+.btn:hover {
+    color: var(--primary-text-color);
 }
 
 
 /* سکشن مقاله های جدید */
-.blog .box-container{
+.blog .box-container {
     display: flex;
     align-items: center;
     justify-content: center;
     flex-wrap: wrap;
 }
 
-.blog .box-container .box{
-    width:33rem;
+.blog .box-container .box {
+    width: 33rem;
     border-radius: .5rem;
-    box-shadow: 0 .5rem 1rem rgba(0,0,0,.1);
-    margin:1.5rem;
+    box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .1);
+    margin: 1.5rem;
     background: var(--primary-bg-color);
     overflow: hidden;
 }
 
-.blog .box-container .box img{
+.blog .box-container .box img {
     width: 100%;
     height: 20rem;
     object-fit: cover;
 }
 
-.blog .box-container .box .content{
-    padding:1.5rem;
+.blog .box-container .box .content {
+    padding: 1.5rem;
 }
 
-.blog .box-container .box .content .info{
+.blog .box-container .box .content .info {
     border-radius: .5rem;
-    box-shadow: 0 .5rem 1rem rgba(0,0,0,.1);
+    box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .1);
     text-align: center;
     position: relative;
     font-size: 1.5rem;
-    color:var(--primary-text-color);
-    background:var(--secondary-bg-color);
-    padding:1rem;
+    color: var(--primary-text-color);
+    background: var(--secondary-bg-color);
+    padding: 1rem;
     margin-top: -4rem;
     margin-bottom: 1rem;
 }
 
-.blog .box-container .box .content .info i{
-    color:var(--main-color);
-    padding:0 1rem;
+.blog .box-container .box .content .info i {
+    color: var(--main-color);
+    padding: 0 1rem;
 }
 
-.blog .box-container .box .content .title{
-    color:var(--primary-text-color);
+.blog .box-container .box .content .title {
+    color: var(--primary-text-color);
     display: block;
     font-size: 2.5rem;
-    padding:.5rem 0;
+    padding: .5rem 0;
 }
 
-.blog .box-container .box .content .title:hover{
+.blog .box-container .box .content .title:hover {
     text-decoration: underline;
-    color:var(--main-color);
+    color: var(--main-color);
 }
 
-.blog .box-container .box .content p{
-    color:var(--secondary-text-color);
-    padding:.5rem 0;
+.blog .box-container .box .content p {
+    color: var(--secondary-text-color);
+    padding: .5rem 0;
     font-size: 1.5rem;
 }
 
 /* فوتر سایت */
-.footer{
+.footer {
     background-color: #010825;
     color: #eee;
     margin: 0;
@@ -461,19 +497,19 @@ p{
     border-radius: .8rem;
 }
 
-.footer-top-btu a{
+.footer-top-btu a {
     display: flex;
     justify-content: center;
     align-items: center;
     color: #010825;
 }
 
-.footer-top-btu span{
+.footer-top-btu span {
     font-size: 1.4rem;
     font-weight: 800;
 }
 
-.footer-top-btu img{
+.footer-top-btu img {
     transform: rotate(180deg);
 }
 
@@ -491,7 +527,7 @@ p{
     font-size: 1.5rem;
 }
 
-.footer-top-ctn a:hover{
+.footer-top-ctn a:hover {
     color: #4C84FF;
 }
 
@@ -499,7 +535,7 @@ p{
     margin: 1rem;
 }
 
-.footer-center{
+.footer-center {
     margin: 1rem;
     margin-top: 3rem;
     margin-bottom: 2rem;
@@ -522,7 +558,7 @@ p{
     justify-content: space-between;
 }
 
-.footer-center-menu-items{
+.footer-center-menu-items {
     display: flex;
     flex-direction: column;
     margin-right: .5rem;
@@ -534,19 +570,19 @@ p{
 }
 
 .footer-center-menu-title img {
-   transform: rotate(90deg);
+    transform: rotate(90deg);
 }
 
 .footer-center-menu-title span {
-   font-weight: 400;
-   color: #cec1ff;
-   font-size: 2rem;
+    font-weight: 400;
+    color: #cec1ff;
+    font-size: 2rem;
 }
 
-.footer-center-menu-items a{
+.footer-center-menu-items a {
     margin-bottom: 1rem;
     font-size: 1.5rem;
-    
+
 }
 
 .footer-center-csm {
@@ -571,7 +607,7 @@ p{
 
 .footer-center-csm-img img {
     padding: 1rem;
-    
+
 }
 
 .footer-bottom {
@@ -588,80 +624,115 @@ p{
 }
 
 /* media queries  */
-@media (max-width:1400px){
+@media (max-width:1400px) {
 
-    .home .image img{
+    .home .image img {
         height: auto;
         width: 100%;
     }
 
-    main{
+    main {
         grid-template-columns: 3fr 7fr;
     }
 
 }
 
-@media (max-width:991px){
+@media (max-width:991px) {
 
-    html{
+    html {
         font-size: 55%;
     }
 
-    section{
-        padding:1rem;
+    section {
+        padding: 1rem;
         padding: 0 3%;
     }
-    .home .image img{
+
+    .home .image img {
         height: 50rem;
         width: 100%;
     }
 
-    .sidebar{
-        width: 255px;
+
+    #sidebar-btn {
+        display: none;
     }
 }
 
-@media (max-width:900px){
+@media (max-width:900px) {
 
-    .home .image img{
+    .home .image img {
         height: auto;
         width: 100%;
     }
-    main{
+
+    main {
         grid-template-columns: 4fr 7fr;
     }
-    #search-btn{
-        right: 76px;
+
+    #search-btn {
+        right: 160px;
+        top: 14px;
+
     }
+
+
+    #sidebar-btn {
+        display: none;
+    }
+
 }
 
 @media screen and (max-width:600px) {
-    .menu{
+    .menu {
         display: none;
     }
-    main{
+
+    main {
         display: block;
     }
-    #search-btn{
-        right: 56px;
-    }
-    
- }
 
-
-
-
- @media screen and (max-width:400px){
-
-    html{
-        font-size: 60%;
-    }
-
-    #search-btn{
+    #search-btn {
         right: 56px;
     }
 
+    .technopedia-logo {
+        display: none;
+    }
+
+    .toggletheme2 {
+        display: none;
+    }
+
+    #sidebar-btn {
+        display: block;
+    }
 
 }
 
 
+
+
+@media screen and (max-width:400px) {
+
+    html {
+        font-size: 60%;
+    }
+
+    #search-btn {
+        right: 56px;
+    }
+
+    .technopedia-logo {
+        display: none;
+    }
+
+    .toggletheme2 {
+        display: none;
+    }
+
+    #sidebar-btn {
+        display: block;
+    }
+
+}
