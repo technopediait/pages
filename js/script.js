@@ -98,16 +98,14 @@ const html = document.querySelector("html")
 toggleButton.addEventListener("click", () => {
     if (sidebar.style.width === "250px") {
         sidebar.style.width = "0";
-        sidebarBtnImg.src = "./icon/menu.svg"
-        sidebarBtn.style.right = "12px"
-        sidebarBtn.style.position = "absolute"
-        html.style.overflow = "auto"
+        sidebarBtn.style.top = "11px"
+        sidebarBtn.style.padding = "2px"
+        sidebarBtn.style.background = ""
     } else {
         sidebar.style.width = "250px";
-        sidebarBtnImg.src = "./icon/close.svg"
-        sidebarBtn.style.right = "250px"
-        sidebarBtn.style.position = "fixed"
-        html.style.overflow = "auto"
+        sidebarBtn.style.top = "0px"
+        sidebarBtn.style.padding = "100%"
+        sidebarBtn.style.background = "#000000bb"
     }
     
     
