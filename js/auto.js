@@ -1,4 +1,117 @@
 
+// کنترل هدر
+var header = document.querySelector(".header") ;
+// نویگشن بار
+var navigationBar = document.querySelector(".navigation-bar") ;
+// تمام عنصر های نویگشن بار
+var navBar = document.createElement("div") ;
+var sidebarBtn = document.createElement("div") ;
+var sidebarBtn_img = document.createElement("img") ;
+var searchBtn = document.createElement("div") ;
+var searchBtn_img = document.createElement("img") ;
+var menuApps = document.createElement("div") ;
+var menuApps_img = document.createElement("img") ;
+var scrollIndicator = document.createElement("div") ;
+var progressBar = document.createElement("div") ;
+var navPlus = document.createElement("div") ;
+var sidebar = document.createElement("div") ;
+
+
+var formSearch = document.createElement("div") ;
+var formSearch_input = document.createElement("input") ;
+var formSearchResults = document.createElement("div") ;
+
+// پدر فرزند تمام عنصر های نوی
+navigationBar.appendChild(navBar) ;
+navBar.appendChild(sidebarBtn) ;
+sidebarBtn.appendChild(sidebarBtn_img) ;
+navBar.appendChild(searchBtn) ;
+searchBtn.appendChild(searchBtn_img) ;
+navBar.appendChild(menuApps) ;
+menuApps.appendChild(menuApps_img) ;
+navBar.appendChild(scrollIndicator) ;
+scrollIndicator.appendChild(progressBar) ;
+navigationBar.appendChild(navPlus) ;
+navPlus.appendChild(sidebar) ;
+
+
+navPlus.appendChild(formSearch) ;
+formSearch.appendChild(formSearch_input) ;
+formSearch.appendChild(formSearchResults) ;
+
+
+// افزودن کلاس های نوی
+navBar.classList.add("nav-bar") ;
+sidebarBtn.classList.add("sidebar-btn") ;
+
+formSearch.classList.add("form-search") ;
+formSearch_input.classList.add("form-search-input") ;
+formSearchResults.classList.add("form-search-results") ;
+searchBtn.classList.add("search-btn") ;
+menuApps.classList.add("menu-apps") ;
+scrollIndicator.classList.add("scroll-indicator") ;
+progressBar.classList.add("progress-bar") ;
+navPlus.classList.add("nav-plus") ;
+sidebar.classList.add("sidebar") ;
+sidebar.classList.add("menu-two") ;
+
+
+// نوشتن در ناو بار
+sidebarBtn_img.src = "./icon/menu.svg" ;
+searchBtn_img.src = "./icon/search.svg" ;
+menuApps_img.src = "./images/technopedia-logo-u.png" ;
+formSearch_input.type = "search" ;
+formSearch_input.placeholder = " جستجو... " ;
+
+
+
+// سید بار
+var menuTwo = document.querySelectorAll(".menu-two") ;
+menuTwo.forEach(function(menuTwo) {
+    var sidebarImg = document.createElement("div") ;
+    var sidebarImg_technopedia = document.createElement("img") ;
+    var toggleTheme = document.createElement("div") ;
+    var toggleTheme_img = document.createElement("img") ;
+    sidebarImg.classList.add("sidebar-img") ;
+    toggleTheme.classList.add("toggle-theme") ;
+
+    toggleTheme.onclick = toggleTheme ;
+    sidebarImg_technopedia.src = "./images/technopedia-logo.png" ;
+    toggleTheme_img.src ="icon/dark_mode.svg" ; 
+    toggleTheme.onclick = toggleTheme ;
+
+    menuTwo.appendChild(sidebarImg) ;
+    sidebarImg.appendChild(sidebarImg_technopedia) ;
+    sidebarImg.appendChild(toggleTheme) ;
+    toggleTheme.appendChild(toggleTheme_img) ;
+
+
+});
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 //کنترل کننده دکمه های زیر مقاله ها 
 var buttons = document.querySelector(".buttons") ;
@@ -12,7 +125,7 @@ btn1.href = "https://s31.picofile.com/d/8469176542/d3bb60c1-bb71-45a5-a3d2-6fbeb
 
 btn2.textContent = " تلگرام " ;
 btn2.href = "https://www.addtoany.com/share#url=https://technopediait.github.io/pages" ;
-
+/*
 //کنترل کننده سکشن مقاله ها
 var blog = document.querySelector(".blog") ;
 
@@ -79,7 +192,7 @@ artTitle3.href = ""
 artP3.textContent = ""
 artBtn3.textContent = ""
 artBtn3.href = ""
-
+*/
 // کنترل فوتر
 var footer = document.querySelector(".footer") ;
 // اضافه کردن تمام المنت های فوتر

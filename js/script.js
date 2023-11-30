@@ -1,5 +1,4 @@
-// تب بالا
-const navBar = document.querySelector(".tabbar");
+
 let prevScrollPos = window.scrollY;
 
 window.addEventListener("scroll", function () {
@@ -14,7 +13,6 @@ window.addEventListener("scroll", function () {
   prevScrollPos = currScrollPos;
 });
 
-const progressBar = document.querySelector(".progress-bar");
 const height =
   document.documentElement.scrollHeight - document.documentElement.clientHeight;
 
@@ -27,20 +25,18 @@ window.addEventListener("scroll", () => {
 
 // حالت تاریک روشن 
 function toggleTheme() {
-  const bodyTheme = document.body
-  var toggleButtonIcon = document.querySelector(".toggle-theme-icon") ;
-  
+  const bodyTheme = document.body ;
   if (bodyTheme.classList.contains("light-theme")) {
-    bodyTheme.classList.remove("light-theme")
+    bodyTheme.classList.remove("light-theme") 
     bodyTheme.classList.add("dark-theme")
-    toggleButtonIcon.src = "icon/light_mode.svg"
-    toggleButtonIcon.style.transform = "rotate(180deg)"
+    toggleTheme_img.src = "icon/light_mode.svg"
+    toggleTheme_img.style.transform = "rotate(180deg)"
     localStorage.setItem("theme", "dark")
 } else {
   bodyTheme.classList.remove("dark-theme")
   bodyTheme.classList.add("light-theme")
-  toggleButtonIcon.src = "icon/dark_mode.svg"
-  toggleButtonIcon.style.transform = "rotate(360deg)"
+  toggleTheme_img.src = "icon/dark_mode.svg"
+  toggleTheme_img.style.transform = "rotate(360deg)"
   localStorage.setItem("theme", "light")
 }
 }
@@ -70,8 +66,8 @@ setInterval(()=>{
       slideIndex=1;
   }
   setSlide(`slide${slideIndex}` , slideIndex)
-} , 2000)
-
+} , 5000)
+/*
 $(document).ready(function(){
   // smooth scrolling 
   $('a[href*="#"]').on('click',function(e){
@@ -88,25 +84,25 @@ $(document).ready(function(){
 
   });
 
-});
+});*/
 
  // سید بار
-const toggleButton = document.getElementById("sidebar-btn");
-const sidebar = document.querySelector(".sidebar");
-const sidebarBtnImg = document.getElementById("sidebar-btn-icon")
-const sidebarBtn = document.querySelector(".sidebar-btn")
-const html = document.querySelector("html") 
-toggleButton.addEventListener("click", () => {
+const html = document.querySelector("html") ;
+sidebarBtn.addEventListener("click", () => {
     if (sidebar.style.width === "250px") {
-        sidebar.style.width = "0";
-        sidebarBtn.style.top = "11px"
-        sidebarBtn.style.padding = "2px"
-        sidebarBtn.style.background = ""
+        sidebar.style.width = "0" ;
+        sidebarBtn_img.style.display = "block" ;
+        sidebarBtn.style.top = "11px" ;
+        sidebarBtn.style.padding = "2px" ;
+        sidebarBtn.style.background = "" ;
+        html.style.overflow = "auto" ;
     } else {
-        sidebar.style.width = "250px";
-        sidebarBtn.style.top = "0px"
-        sidebarBtn.style.padding = "100%"
-        sidebarBtn.style.background = "#000000bb"
+        sidebar.style.width = "250px" ;
+        sidebarBtn.style.top = "0px" ;
+        sidebarBtn_img.style.display = "none" ;
+        sidebarBtn.style.padding = "100%" ;
+        sidebarBtn.style.background = "rgba(0, 0, 0, 0.788)" ; 
+        html.style.overflow = "hidden" ;
     }
     
     
@@ -115,29 +111,27 @@ toggleButton.addEventListener("click", () => {
 
 
 // دکمه جستجو کردن
-var searchIcon = document.getElementById("search-btn")
-var input = document.getElementById("searchBox")
-var result = document.getElementById("results")
-var searchImg = document.getElementById("search-btn-icon")
-var formSearch = document.getElementById("form-search")
 
-
-
-searchIcon.addEventListener("click", function() {
+searchBtn.addEventListener("click", function() {
   if (formSearch.style.display === "block") {
-    formSearch.style.display = "none"
-    searchImg.src = "./icon/search.svg"
-    searchImg.style.transform = "rotate(360deg)"
+    formSearch.style.display = "none" ;
+    searchBtn_img.src = "./icon/search.svg" ;
+    searchBtn_img.style.transform = "rotate(360deg)" ;
+   // searchBtn.style.padding = "0" ;
+    //searchBtn.style.top = "13px" ;
+//searchBtn.style.background = "" ;
 
   }
-  
 
   else{
     formSearch.style.display = "block" ;
-  searchImg.src = "./icon/close.svg" ;
-  searchImg.style.transform = "rotate(180deg)" ;
+  searchBtn_img.src = "./icon/close.svg" ;
+  searchBtn_img.style.transform = "rotate(180deg)" ;
+  //searchBtn.style.padding = "100%" ;
+    //searchBtn.style.top = "0" ;
+    //searchBtn.style.background = "" ;
   }
-})
+});
 
 // منو های باز شو فوتر
 footerCenterMenuTitle_img.addEventListener("click", () => {

@@ -1,10 +1,8 @@
 
 document.addEventListener('DOMContentLoaded', function() {
-    const searchBox = document.getElementById('searchBox');
-    const resultsDiv = document.getElementById('results');
 
-    searchBox.addEventListener('input', function() {
-        const searchTerm = searchBox.value.toLowerCase();
+    formSearch_input.addEventListener('input', function() {
+        const searchTerm = formSearch_input.value.toLowerCase();
 
         const data = [
             { title: 'بهترین موتور های جستجو', link: 'https://technopediait.github.io/pages/articles/enteghal-boo.html' },
@@ -25,16 +23,16 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 
     function displayResults(results) {
-        resultsDiv.innerHTML = '';
+        formSearchResults.innerHTML = '';
 
         if (results.length === 0) {
-            resultsDiv.innerHTML = 'موردی یافت نشد.';
+            formSearchResults.innerHTML = 'موردی یافت نشد.';
         } else {
             results.forEach(result => {
                 const resultLink = document.createElement('a');
                 resultLink.textContent = result.title;
                 resultLink.href = result.link;
-                resultsDiv.appendChild(resultLink);
+                formSearchResults.appendChild(resultLink);
             });
         }
     }

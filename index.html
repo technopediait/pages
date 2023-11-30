@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-
+<html>
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -20,57 +20,11 @@
 
 <body class="light-theme" id="body">
     <header class="header">
-        <nav class="tabbar">
-            <div class="nav-right" id="nav-right">
-                <div class="technopedia-logo"><img src="./images/technopedia-logo.png" alt="لوگو تکنو پدیا">
-                </div>
-                <div class="sidebar-btn" id="sidebar-btn"><img src="./icon/menu.svg" alt="icon" id="sidebar-btn-icon"></div>
-                
-               
-                <div id="search-btn"><img id="search-btn-icon" src="./icon/search.svg" alt="icon"></div>
-                <form id="form-search">
-                    <input type="search" id="searchBox" placeholder="جستجو...">
-                    <div id="results">
-                    </div>
-                </form>
-            </div>
-            <div class="nav-center"></div>
-            <div class="nav-left" id="nav-left">
-                <div class="nav-circle" onclick="toggleTheme()"><img src="./images/technopedia-logo-u.png" alt="techno pedia icon"></div>
-                <div class="toggletheme2" onclick="toggleTheme()">
-                    <img class="toggle-theme-ico" src="icon/dark_mode.svg" alt="toggle theme">
-                </div>
-            </div>
-            <div class="scroll-indicator">
-                <div class="progress-bar"></div>
-              </div>
-              
-        </nav>
-
-        <div class="sidebar">
-            <div class="img-top">
-            <img src="./images/technopedia-logo.png" alt="لوگو تکنو پدیا">
-            <div class="toggletheme" onclick="toggleTheme()">
-                <img class="toggle-theme-icon" src="icon/dark_mode.svg" alt="toggle theme">
-            </div>
-            </div>
-            
-            <div class="item">
-            <a href="#">آیتم 1</a>
-            <a href="#">آیتم 2</a>
-            <a href="#">آیتم 3</a>
-            <a href="#">آیتم 4</a>
-            <a href="#">آیتم 5</a>
-            <a href="#">آیتم 6</a>
-            <a href="#">آیتم 7</a>
-            <a href="#">آیتم 8</a>
-            <a href="#">آیتم 9</a>
-        </div>
-      </div>
-        
+        <nav class="navigation-bar">
     </header>
     <main class="main">
-        <section class="menu">
+        <section class="menu menu-two">
+            <div class="empty"></div>
         </section>
         <div class="main-content">
             <section class="home" id="home">
@@ -219,9 +173,9 @@
     <footer class="footer"></footer>
 
     <script src="./js/auto.js"></script>
-    <!-- jquery cdn link -->
+    <!-- jquery cdn link 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-
+    -->
     <!-- custom js file link  -->
     <script src="js/script.js" defer></script>
     <script src="js/serch.js"></script>
