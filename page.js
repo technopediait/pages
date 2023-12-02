@@ -1,3 +1,4 @@
+/*
 var div2 = document.querySelectorAll(".salam") ;
 
     
@@ -23,7 +24,13 @@ div2.forEach(function(div2) {
 var form = document.createElement("form")
 var input = document.createElement("input")
 
+
 document.body.appendChild(form)
 form.appendChild(input)
 input.type = "no"
+*/
 
+
+function salam() {
+    alert("چرا درست نمیشه")
+}

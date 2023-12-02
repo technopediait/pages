@@ -1,7 +1,7 @@
 
-document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener('DOMContentLoaded', function () {
 
-    formSearch_input.addEventListener('input', function() {
+    formSearch_input.addEventListener('input', function () {
         const searchTerm = formSearch_input.value.toLowerCase();
 
         const data = [
@@ -11,12 +11,12 @@ document.addEventListener('DOMContentLoaded', function() {
             { title: 'تکنو بات', link: 'https://technopediait.github.io/pages/test.html' },
             { title: 'کانال تلگرام تکنو پدیا', link: 'https://t.me/technopedaiit' },
             { title: 'صفحه اینستاگرام تکنو پدیا', link: 'https://instagram.com/technopediait' },
-            
+
         ];
 
         const searchResults = data.filter(item => item.title.toLowerCase().includes(searchTerm));
 
-        // تنها دو نتیجه اول را نمایش دهید اگر فرم خالی باشد
+        // تنها چهار نتیجه اول را نمایش دهید اگر فرم خالی باشد
         const maxResultsToShow = (searchTerm === '') ? 4 : searchResults.length;
 
         displayResults(searchResults.slice(0, maxResultsToShow));

@@ -14,9 +14,13 @@ var menuApps_img = document.createElement("img") ;
 var scrollIndicator = document.createElement("div") ;
 var progressBar = document.createElement("div") ;
 var navPlus = document.createElement("div") ;
-var sidebar = document.createElement("div") ;
+//var sidebar = document.createElement("div") ;
+var menuTop = document.querySelector(".menu-top") ;
 
-
+//var sidebarImg = document.createElement("div") ;
+var sidebarImg_technopedia = document.createElement("img") ;
+var toggleTheme = document.createElement("div") ;
+var toggleTheme_img = document.createElement("img") ;
 var formSearch = document.createElement("div") ;
 var formSearch_input = document.createElement("input") ;
 var formSearchResults = document.createElement("div") ;
@@ -32,9 +36,13 @@ menuApps.appendChild(menuApps_img) ;
 navBar.appendChild(scrollIndicator) ;
 scrollIndicator.appendChild(progressBar) ;
 navigationBar.appendChild(navPlus) ;
-navPlus.appendChild(sidebar) ;
-
-
+//navPlus.appendChild(sidebar) ;
+//sidebar.appendChild(sidebarImg) ;
+//sidebarImg.appendChild(sidebarImg_technopedia) ;
+//sidebarImg.appendChild(toggleTheme) ;
+menuTop.appendChild(sidebarImg_technopedia)
+menuTop.appendChild(toggleTheme) ;
+toggleTheme.appendChild(toggleTheme_img) ;
 navPlus.appendChild(formSearch) ;
 formSearch.appendChild(formSearch_input) ;
 formSearch.appendChild(formSearchResults) ;
@@ -43,7 +51,6 @@ formSearch.appendChild(formSearchResults) ;
 // افزودن کلاس های نوی
 navBar.classList.add("nav-bar") ;
 sidebarBtn.classList.add("sidebar-btn") ;
-
 formSearch.classList.add("form-search") ;
 formSearch_input.classList.add("form-search-input") ;
 formSearchResults.classList.add("form-search-results") ;
@@ -52,41 +59,27 @@ menuApps.classList.add("menu-apps") ;
 scrollIndicator.classList.add("scroll-indicator") ;
 progressBar.classList.add("progress-bar") ;
 navPlus.classList.add("nav-plus") ;
-sidebar.classList.add("sidebar") ;
-sidebar.classList.add("menu-two") ;
+//sidebar.classList.add("sidebar") ;
+//sidebar.classList.add("menu-two") ;
+//sidebarImg.classList.add("sidebar-img") ;
+toggleTheme.classList.add("toggle-theme") ;
 
 
 // نوشتن در ناو بار
+
 sidebarBtn_img.src = "./icon/menu.svg" ;
 searchBtn_img.src = "./icon/search.svg" ;
 menuApps_img.src = "./images/technopedia-logo-u.png" ;
 formSearch_input.type = "search" ;
 formSearch_input.placeholder = " جستجو... " ;
+sidebarImg_technopedia.src = "./images/technopedia-logo.png" ;
+
+toggleTheme_img.src ="icon/dark_mode.svg" ; 
 
 
 
-// سید بار
-var menuTwo = document.querySelectorAll(".menu-two") ;
-menuTwo.forEach(function(menuTwo) {
-    var sidebarImg = document.createElement("div") ;
-    var sidebarImg_technopedia = document.createElement("img") ;
-    var toggleTheme = document.createElement("div") ;
-    var toggleTheme_img = document.createElement("img") ;
-    sidebarImg.classList.add("sidebar-img") ;
-    toggleTheme.classList.add("toggle-theme") ;
-
-    toggleTheme.onclick = toggleTheme ;
-    sidebarImg_technopedia.src = "./images/technopedia-logo.png" ;
-    toggleTheme_img.src ="icon/dark_mode.svg" ; 
-    toggleTheme.onclick = toggleTheme ;
-
-    menuTwo.appendChild(sidebarImg) ;
-    sidebarImg.appendChild(sidebarImg_technopedia) ;
-    sidebarImg.appendChild(toggleTheme) ;
-    toggleTheme.appendChild(toggleTheme_img) ;
 
 
-});
 
 
 

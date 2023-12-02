@@ -23,9 +23,12 @@ window.addEventListener("scroll", () => {
   progressBar.style.width = `${scrolled}%`;
 });
 
+
+toggleTheme.onclick = mytoggleTheme ;
 // حالت تاریک روشن 
-function toggleTheme() {
+  function mytoggleTheme() {
   const bodyTheme = document.body ;
+  
   if (bodyTheme.classList.contains("light-theme")) {
     bodyTheme.classList.remove("light-theme") 
     bodyTheme.classList.add("dark-theme")
@@ -43,7 +46,7 @@ function toggleTheme() {
 function checkAutoTheme() {
   const savedTheme = localStorage.getItem("theme")
   if (savedTheme === "dark") {
-    toggleTheme()
+    mytoggleTheme();
 }
 } 
 checkAutoTheme() ;
@@ -88,48 +91,42 @@ $(document).ready(function(){
 
  // سید بار
 const html = document.querySelector("html") ;
+const menubb = document.querySelector(".menu")
+const mainCTN = document.querySelector(".main-content")
 sidebarBtn.addEventListener("click", () => {
-    if (sidebar.style.width === "250px") {
-        sidebar.style.width = "0" ;
-        sidebarBtn_img.style.display = "block" ;
-        sidebarBtn.style.top = "11px" ;
-        sidebarBtn.style.padding = "2px" ;
-        sidebarBtn.style.background = "" ;
+    if (menubb.style.width === "80%") {
+        menubb.style.width = "0" ;
+        mainCTN.style.width = "100%"
+        sidebarBtn_img.src = "./icon/menu.svg" ; 
         html.style.overflow = "auto" ;
+        menubb .style.position = "static" ;
     } else {
-        sidebar.style.width = "250px" ;
-        sidebarBtn.style.top = "0px" ;
-        sidebarBtn_img.style.display = "none" ;
-        sidebarBtn.style.padding = "100%" ;
-        sidebarBtn.style.background = "rgba(0, 0, 0, 0.788)" ; 
+        menubb.style.width = "80%" ;
+        sidebarBtn_img.src = "./icon/close.svg" ;
+        mainCTN.style.width = "20%"
         html.style.overflow = "hidden" ;
+        menubb.style.position = "fixed" ;
+        menubb.style.zIndex = "1000"
+
     }
-    
     
 });
 
-
-
 // دکمه جستجو کردن
-
 searchBtn.addEventListener("click", function() {
   if (formSearch.style.display === "block") {
     formSearch.style.display = "none" ;
     searchBtn_img.src = "./icon/search.svg" ;
     searchBtn_img.style.transform = "rotate(360deg)" ;
-   // searchBtn.style.padding = "0" ;
-    //searchBtn.style.top = "13px" ;
-//searchBtn.style.background = "" ;
-
-  }
-
-  else{
+    searchBtn.style.width = "auto" ;
+    searchBtn.style.height = "auto" ;
+  } else{
     formSearch.style.display = "block" ;
-  searchBtn_img.src = "./icon/close.svg" ;
-  searchBtn_img.style.transform = "rotate(180deg)" ;
-  //searchBtn.style.padding = "100%" ;
-    //searchBtn.style.top = "0" ;
-    //searchBtn.style.background = "" ;
+    searchBtn_img.src = "./icon/close.svg" ;
+    searchBtn_img.style.transform = "rotate(180deg)" ;
+    searchBtn.style.width = "100%" ;
+    searchBtn.style.height = "150vh" ;
+  
   }
 });
 
@@ -139,9 +136,7 @@ footerCenterMenuTitle_img.addEventListener("click", () => {
     footerCenterMenuItems.style.height = "0"
     footerCenterMenuTitle_img.style.transform = "rotate(90deg)"
     
-  }
-
-  else {
+  } else {
     footerCenterMenuItems.style.height = "auto"
     footerCenterMenuTitle_img.style.transform = "rotate(0deg)"
   }
@@ -152,9 +147,7 @@ footerCenterMenuTitle2_img.addEventListener("click", () => {
     footerCenterMenuItems2.style.height = "0"
     footerCenterMenuTitle2_img.style.transform = "rotate(90deg)"
     
-  }
-
-  else {
+  } else {
     footerCenterMenuItems2.style.height = "auto"
     footerCenterMenuTitle2_img.style.transform = "rotate(0deg)"
   }
