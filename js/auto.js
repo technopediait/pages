@@ -114,7 +114,7 @@ var buttons = document.querySelector(".buttons") ;
 var btn1 = document.querySelector(".btn1") ;
 var btn2 = document.querySelector(".btn2") ;
 btn1.textContent = " دانلود برنامه" ;
-btn1.href = "https://s31.picofile.com/d/8469176542/d3bb60c1-bb71-45a5-a3d2-6fbeb6315fed/app_debug.apk" ;
+btn1.href = "./technobat.html" ;
 
 btn2.textContent = " تلگرام " ;
 btn2.href = "https://www.addtoany.com/share#url=https://technopediait.github.io/pages" ;
