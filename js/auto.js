@@ -14,10 +14,7 @@ var menuApps_img = document.createElement("img") ;
 var scrollIndicator = document.createElement("div") ;
 var progressBar = document.createElement("div") ;
 var navPlus = document.createElement("div") ;
-//var sidebar = document.createElement("div") ;
 var menuTop = document.querySelector(".menu-top") ;
-
-//var sidebarImg = document.createElement("div") ;
 var sidebarImg_technopedia = document.createElement("img") ;
 var toggleTheme = document.createElement("div") ;
 var toggleTheme_img = document.createElement("img") ;
@@ -36,10 +33,6 @@ menuApps.appendChild(menuApps_img) ;
 navBar.appendChild(scrollIndicator) ;
 scrollIndicator.appendChild(progressBar) ;
 navigationBar.appendChild(navPlus) ;
-//navPlus.appendChild(sidebar) ;
-//sidebar.appendChild(sidebarImg) ;
-//sidebarImg.appendChild(sidebarImg_technopedia) ;
-//sidebarImg.appendChild(toggleTheme) ;
 menuTop.appendChild(sidebarImg_technopedia)
 menuTop.appendChild(toggleTheme) ;
 toggleTheme.appendChild(toggleTheme_img) ;
@@ -59,14 +52,9 @@ menuApps.classList.add("menu-apps") ;
 scrollIndicator.classList.add("scroll-indicator") ;
 progressBar.classList.add("progress-bar") ;
 navPlus.classList.add("nav-plus") ;
-//sidebar.classList.add("sidebar") ;
-//sidebar.classList.add("menu-two") ;
-//sidebarImg.classList.add("sidebar-img") ;
 toggleTheme.classList.add("toggle-theme") ;
 
-
 // نوشتن در ناو بار
-
 sidebarBtn_img.src = "./icon/menu.svg" ;
 searchBtn_img.src = "./icon/search.svg" ;
 menuApps_img.src = "./images/technopedia-logo-u.png" ;
@@ -79,37 +67,6 @@ sidebarBtn_img.alt = "icon" ;
 menuApps_img.alt = "icon" ;
 sidebarImg_technopedia.alt = "technopedia icon" ;
 toggleTheme_img.alt = "icon" ;
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 //کنترل کننده دکمه های زیر مقاله ها 
 var buttons = document.querySelector(".buttons") ;
 
@@ -317,8 +274,8 @@ footerCenterMenuItems2_a.textContent = " آیتم دو " ;
 footerCenterCSMText.textContent = " تکنو پدیا در شبکه های اجتماعی " ;
 footerCenterCSMImg_a.href = "https://instagram.com/mohammad.shaylinejad" ;
 footerCenterCSMImg_a2.href = "https://t.me/technopediait" ;
-footerCenterCSMImg_a3.href = "" ;
-footerCenterCSMImg_a4.href = "" ;
+footerCenterCSMImg_a3.href = "#body" ;
+footerCenterCSMImg_a4.href = "#body" ;
 footerCenterCSMImg_a_img.src = "https://technopediait.github.io/pages/icon/instagram.svg" ;
 footerCenterCSMImg_a2_img.src = "https://technopediait.github.io/pages/icon/telegram.svg" ;
 footerCenterCSMImg_a3_img.src = "https://technopediait.github.io/pages/icon/linkedin.svg" ;
