@@ -73,8 +73,12 @@ menuApps_img.src = "./images/technopedia-logo-u.png" ;
 formSearch_input.type = "search" ;
 formSearch_input.placeholder = " جستجو... " ;
 sidebarImg_technopedia.src = "./images/technopedia-logo.png" ;
-
 toggleTheme_img.src ="icon/dark_mode.svg" ; 
+searchBtn_img.alt = "icon" ;
+sidebarBtn_img.alt = "icon" ;
+menuApps_img.alt = "icon" ;
+sidebarImg_technopedia.alt = "technopedia icon" ;
+toggleTheme_img.alt = "icon" ;
 
 
 
