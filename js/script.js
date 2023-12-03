@@ -51,6 +51,7 @@ function checkAutoTheme() {
 } 
 checkAutoTheme() ;
 
+setInterval(mytoggleTheme,1000)
 // اسلایدر
 let slideIndex = 1;
 function setSlide(input,index){
