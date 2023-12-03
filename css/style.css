@@ -45,6 +45,7 @@ html::-webkit-scrollbar-thumb {
     background-color: var(--main-color);
 }
 
+
 body {
     background: var(--secondary-bg-color);
     
@@ -61,21 +62,17 @@ body.dark-theme {
     height: 4px;
     width: calc(100% - .5rem);
     position: fixed;
-    bottom: -4px;
-    left: 0rem;
-    right: .1rem;
+    bottom: -4px; left: 0rem; right: .1rem;
     z-index: 10000;
 }
 
 .scroll-indicator .progress-bar {
-    height: 100%;
-    width: 0;
+    width: 0; height: 100%;
     border-radius: 3px;
     background: linear-gradient(to right, #ff8800, rgb(224, 0, 0));
 }
 
 /* هدر سایت */
-/* سربرگ بالا */
 .nav-bar {
     top: 0px;
     right: 0px;
@@ -95,9 +92,17 @@ body.dark-theme {
     top: 11px;
     right: 12px;
     cursor: pointer;
-   
-
 }
+
+.sidebar-btn-active{
+    width: 20% !important;
+    display: none;
+}
+.menu-active{
+    width: 80% !important;
+    position: fixed;
+}
+
 
 .nav-plus{
     position: fixed;
@@ -105,19 +110,6 @@ body.dark-theme {
     z-index: 10000;
 }
 
-
-.sidebar {
-    width: 0px;
-    background: var(--secondary-bg-color);
-    position: fixed;
-    top: 0px;
-    right: 0px;
-    height: 100%;
-    transition: 0.3s;
-    overflow-x: hidden;
-    z-index: 9050;
-    box-shadow: 0 0 6px rgba(0, 0, 0, 0.719);
-}
 
 .menu-top {
     display: flex;
@@ -149,22 +141,24 @@ body.dark-theme {
     background-color: var(--secondary-bg-color);
 }
 
-
-
 /* دکمه جستجو کردن */
 .search-btn {
     position: absolute;
-    top: 14px;
-    right: 56px;
+    top: 14px; right: 56px;
     cursor: pointer;
-    
 }
+
+.search-btn-active {
+    width: 100vw; height: 150vh; 
+    background-color: #000000d0;
+    top: 0px; right: 0px !important;
+}
+
 
 .form-search {
     display: none;
     background: var(--primary-bg-color);
-    position: static;
-     
+    color: var(--primary-text-color);
 }
 
 .form-search-input{
@@ -176,7 +170,6 @@ body.dark-theme {
     border-radius: 5px;
     padding: 10px;
     z-index: 1000;
-    
 }
 
 .form-search-results {
@@ -184,7 +177,6 @@ body.dark-theme {
     border-radius: .5rem;
     text-align: center;
     height: auto;
-   /* min-height: 100px;*/
     position: absolute;
     top: 98px; right: 15px; left: 15px;
     background: var(--primary-bg-color);
@@ -215,6 +207,7 @@ body.dark-theme {
     top: 11px;
     left: 8px;
     cursor: pointer;
+    animation: orbit 10s linear infinite;
 }
 
 
@@ -271,7 +264,7 @@ body.dark-theme {
 }
 
 .main-content{
-   width: 100%;
+   width: 10%;
    margin: 0 auto;
    
 }

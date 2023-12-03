@@ -94,20 +94,23 @@ const html = document.querySelector("html") ;
 const menubb = document.querySelector(".menu")
 const mainCTN = document.querySelector(".main-content")
 sidebarBtn.addEventListener("click", () => {
-    if (menubb.style.width === "80%") {
-        menubb.style.width = "0" ;
-        mainCTN.style.width = "100%"
+    if (menubb.classList.contains("menu-active")){
+        menubb.classList.remove("menu-active") ;
+        mainCTN.classList.remove("sidebar-btn-active") ;
         sidebarBtn_img.src = "./icon/menu.svg" ; 
-        html.style.overflow = "auto" ;
-        menubb .style.position = "static" ;
+        //html.style.overflow = "auto" ;
+        //menubb.style.width = "0" ;
+        //mainCTN.style.width = "100%"
+        //menubb .style.position = "static" ;
     } else {
-        menubb.style.width = "80%" ;
+        menubb.classList.add("menu-active") ;
+        mainCTN.classList.add("sidebar-btn-active") ;
         sidebarBtn_img.src = "./icon/close.svg" ;
-        mainCTN.style.width = "20%"
-        html.style.overflow = "hidden" ;
-        menubb.style.position = "fixed" ;
         menubb.style.zIndex = "1000"
-
+        //html.style.overflow = "hidden" ;
+       // menubb.style.width = "80%" ;
+        //mainCTN.style.width = "20%"
+        //menubb.style.position = "fixed" ;
     }
     
 });
@@ -117,16 +120,11 @@ searchBtn.addEventListener("click", function() {
   if (formSearch.style.display === "block") {
     formSearch.style.display = "none" ;
     searchBtn_img.src = "./icon/search.svg" ;
-    searchBtn_img.style.transform = "rotate(360deg)" ;
-    searchBtn.style.width = "auto" ;
-    searchBtn.style.height = "auto" ;
+    searchBtn.classList.remove("search-btn-active") ;
   } else{
     formSearch.style.display = "block" ;
     searchBtn_img.src = "./icon/close.svg" ;
-    searchBtn_img.style.transform = "rotate(180deg)" ;
-    searchBtn.style.width = "100%" ;
-    searchBtn.style.height = "150vh" ;
-  
+    searchBtn.classList.add("search-btn-active") ;
   }
 });
 

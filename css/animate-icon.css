@@ -23,3 +23,13 @@
     -webkit-animation-name: fadeIn;
     animation-name: fadeIn;
 }
+
+@keyframes orbit{
+    fron{
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
