@@ -64,7 +64,6 @@ body.dark-theme {
     width: calc(100% - .5rem);
     position: fixed;
     bottom: -4px; left: 0rem; right: .1rem;
-    z-index: 10000;
 }
 
 .scroll-indicator .progress-bar {
@@ -83,7 +82,7 @@ body.dark-theme {
     width: 100%;
     height: 60px;
     background-color: rgb(255, 255, 255);
-    z-index: 9000;
+    z-index: 999;
     box-shadow: 0 0 4px rgba(0, 0, 0, 0.719);
 }
 
@@ -103,13 +102,11 @@ body.dark-theme {
     width: 80% !important;
     position: fixed;
 }
-
+/*
 .nav-plus{
-    position: fixed;
-    top: 10px; left: 0; right: 0;
-    z-index: 10000;
+    display: block;
 }
-
+*/
 .menu-top {
     display: flex;
     background-color: rgb(255, 255, 255);
@@ -147,6 +144,7 @@ body.dark-theme {
     position: absolute;
     top: 14px; right: 56px;
     cursor: pointer;
+    
 }
 
 .search-btn-active {
@@ -162,7 +160,7 @@ body.dark-theme {
 }
 
 .form-search-input{
-    position: absolute;
+    position: fixed;
     top: 50px; right: 15px; left: 15px;
     background: var(--secondary-bg-color);
     color: var(--primary-text-color);
@@ -177,11 +175,11 @@ body.dark-theme {
     border-radius: .5rem;
     text-align: center;
     height: auto;
-    position: absolute;
+    position: fixed;
     top: 98px; right: 15px; left: 15px;
     background: var(--primary-bg-color);
-    z-index: 1000;
     font-size: 1.8rem;
+    z-index: 1000;
 }
 
 .form-search-results a {
@@ -200,14 +198,54 @@ body.dark-theme {
 }
 
 /* دکمه منوی برنامه ها */
-.menu-apps img {
+.menu-apps-btn img {
     width: 40px;
     height: 40px;
     position: absolute;
-    top: 11px;
-    left: 8px;
+    top: 11px; left: 8px;
     cursor: pointer;
-    animation: orbit 3s linear infinite;
+    animation: orbit 5s linear infinite;
+    
+}
+
+.menu-apps{
+    width: 250px; height: 400px;
+    border-radius: 1rem;
+    border:.3rem solid var(--main-color);
+    position: fixed;
+    top: 6.5rem; left: .5rem;
+    background: var(--secondary-bg-color);
+    box-shadow: 0 0 10px rgb(9, 255, 0);
+    z-index: 999;
+    transform-origin: top left;
+    animation: fadeIn 1.5s;
+    display: none;
+}
+
+.menu-apps-top{
+    color: blue;
+    font-weight: 700;
+    font-size: 2.2rem;
+    text-align: center;
+    padding: 5px;
+    border-bottom: .1rem solid rgba(0, 0, 0, 0.288);
+    background-color: yellow;
+    border-radius: .5rem;
+}
+
+.menu-apps-center {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
+.menu-apps-center a {
+    color: #cec1ff;
+    font-size: 1.5rem;
+    padding: 15px 10px;
+    background-color: #171C32;
+    margin: 10px 5px;
+    border-radius: 10px;
 }
 
 /* منوی سمت راست */

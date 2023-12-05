@@ -9,8 +9,8 @@ var sidebarBtn = document.createElement("div") ;
 var sidebarBtn_img = document.createElement("img") ;
 var searchBtn = document.createElement("div") ;
 var searchBtn_img = document.createElement("img") ;
-var menuApps = document.createElement("div") ;
-var menuApps_img = document.createElement("img") ;
+var menuAppsBtn = document.createElement("div") ;
+var menuAppsBtn_img = document.createElement("img") ;
 var scrollIndicator = document.createElement("div") ;
 var progressBar = document.createElement("div") ;
 var navPlus = document.createElement("div") ;
@@ -21,6 +21,16 @@ var toggleTheme_img = document.createElement("img") ;
 var formSearch = document.createElement("div") ;
 var formSearch_input = document.createElement("input") ;
 var formSearchResults = document.createElement("div") ;
+var menuApps = document.createElement("div") ;
+var menuAppsTop = document.createElement("div") ;
+var menuAppsCenter = document.createElement("div") ;
+var menuAppsCenter_a = document.createElement("a") ;
+var menuAppsCenter_a2 = document.createElement("a") ;
+var menuAppsCenter_a3 = document.createElement("a") ;
+var menuAppsCenter_a4 = document.createElement("a") ;
+var menuAppsCenter_a5 = document.createElement("a") ;
+var menuAppsCenter_a6 = document.createElement("a") ;
+var menuAppsCenter_a7 = document.createElement("a") ;
 
 // پدر فرزند تمام عنصر های نوی
 navigationBar.appendChild(navBar) ;
@@ -28,8 +38,8 @@ navBar.appendChild(sidebarBtn) ;
 sidebarBtn.appendChild(sidebarBtn_img) ;
 navBar.appendChild(searchBtn) ;
 searchBtn.appendChild(searchBtn_img) ;
-navBar.appendChild(menuApps) ;
-menuApps.appendChild(menuApps_img) ;
+navBar.appendChild(menuAppsBtn) ;
+menuAppsBtn.appendChild(menuAppsBtn_img) ;
 navBar.appendChild(scrollIndicator) ;
 scrollIndicator.appendChild(progressBar) ;
 navigationBar.appendChild(navPlus) ;
@@ -39,6 +49,16 @@ toggleTheme.appendChild(toggleTheme_img) ;
 navPlus.appendChild(formSearch) ;
 formSearch.appendChild(formSearch_input) ;
 formSearch.appendChild(formSearchResults) ;
+navPlus.appendChild(menuApps) ;
+menuApps.appendChild(menuAppsTop) ;
+menuApps.appendChild(menuAppsCenter)
+menuAppsCenter.appendChild(menuAppsCenter_a) ;
+menuAppsCenter.appendChild(menuAppsCenter_a2) ;
+menuAppsCenter.appendChild(menuAppsCenter_a3) ;
+menuAppsCenter.appendChild(menuAppsCenter_a4) ;
+menuAppsCenter.appendChild(menuAppsCenter_a5) ;
+menuAppsCenter.appendChild(menuAppsCenter_a6) ;
+menuAppsCenter.appendChild(menuAppsCenter_a7) ;
 
 
 // افزودن کلاس های نوی
@@ -48,16 +68,28 @@ formSearch.classList.add("form-search") ;
 formSearch_input.classList.add("form-search-input") ;
 formSearchResults.classList.add("form-search-results") ;
 searchBtn.classList.add("search-btn") ;
-menuApps.classList.add("menu-apps") ;
+menuAppsBtn.classList.add("menu-apps-btn") ;
 scrollIndicator.classList.add("scroll-indicator") ;
 progressBar.classList.add("progress-bar") ;
 navPlus.classList.add("nav-plus") ;
 toggleTheme.classList.add("toggle-theme") ;
+menuApps.classList.add("menu-apps") ;
+menuAppsTop.classList.add("menu-apps-top") ;
+menuAppsCenter.classList.add("menu-apps-center") ;
+
 
 // نوشتن در ناو بار
+menuAppsTop.textContent = "برنامه ها" ;
+menuAppsCenter_a.textContent = "برنامه" ;
+menuAppsCenter_a2.textContent = "برنامه" ;
+menuAppsCenter_a3.textContent = "برنامه" ;
+menuAppsCenter_a4.textContent = "برنامه" ;
+menuAppsCenter_a5.textContent = "برنامه" ;
+menuAppsCenter_a6.textContent = "برنامه" ;
+menuAppsCenter_a7.textContent = "برنامه" ;
 sidebarBtn_img.src = "./icon/menu.svg" ;
 searchBtn_img.src = "./icon/search.svg" ;
-menuApps_img.src = "./images/technopedia-logo-u.png" ;
+menuAppsBtn_img.src = "./images/technopedia-logo-u.png" ;
 formSearch_input.type = "search" ;
 formSearch_input.placeholder = " جستجو... " ;
 sidebarImg_technopedia.src = "./images/technopedia-logo.png" ;
@@ -67,6 +99,8 @@ sidebarBtn_img.alt = "icon" ;
 menuApps_img.alt = "icon" ;
 sidebarImg_technopedia.alt = "technopedia icon" ;
 toggleTheme_img.alt = "icon" ;
+
+
 //کنترل کننده دکمه های زیر مقاله ها 
 var buttons = document.querySelector(".buttons") ;
 

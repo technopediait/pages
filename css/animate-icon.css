@@ -19,14 +19,14 @@
     -webkit-animation-name: fadeIn;
     animation-name: fadeIn;
 }
-
+/*
 @keyframes orbit{
     from{
-        transform: rotate(180deg) scale(.7);  
+        transform: rotate(0deg) scale(.5);  
     } to{
-        transform: rotate(360deg) scale(1.1);
+        transform: rotate(360deg) scale(1.3);
     }
-   /* 0%{
+    0%{
         transform: rotate(0deg);
         left: 10px;
     }
@@ -45,5 +45,6 @@
     100%{
         transform: rotate(-360deg) scale(1.1);
         left: 15px;
-    }*/
+    }
 }
+*/

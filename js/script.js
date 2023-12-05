@@ -88,7 +88,7 @@ sidebarBtn.addEventListener("click", () => {
         menubb.classList.add("menu-active") ;
         mainCTN.classList.add("sidebar-btn-active") ;
         sidebarBtn_img.src = "./icon/close.svg" ;
-        menubb.style.zIndex = "1000"
+        menubb.style.zIndex = "998"
         //html.style.overflow = "hidden" ;
        // menubb.style.width = "80%" ;
         //mainCTN.style.width = "20%"
@@ -109,6 +109,16 @@ searchBtn.addEventListener("click", function() {
     searchBtn.classList.add("search-btn-active") ;
   }
 });
+
+menuAppsBtn.addEventListener("click" ,  function(){
+  if (menuApps.style.display === "block") {
+    menuApps.style.display = "none" ;
+    menuAppsBtn_img.style.transform = "rotate(0deg) scale(1)"
+  } else {
+    menuApps.style.display = "block" ;
+    menuAppsBtn_img.style.transform = "rotate(180deg) scale(1.3)"
+  }
+})
 
 // منو های باز شو فوتر
 footerCenterMenuTitle_img.addEventListener("click", () => {
