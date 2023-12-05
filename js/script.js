@@ -1,6 +1,5 @@
 
 let prevScrollPos = window.scrollY;
-
 window.addEventListener("scroll", function () {
   let currScrollPos = window.scrollY;
 

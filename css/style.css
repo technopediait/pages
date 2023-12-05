@@ -210,7 +210,7 @@ body.dark-theme {
     animation: orbit 12s linear infinite;
 }
 
-/* منوی سمت راست که پس طول 600 پیکسل نمایش داده می شود */
+/* منوی سمت راست */
 .menu {
     background: var(--primary-bg-color);
     box-shadow: 0 0 4px rgba(0, 0, 0, 0.555);
@@ -273,6 +273,62 @@ section {
 p {
     text-align: justify;
 }
+
+/* div 1 */
+.div-1 {
+    font-size: 1.4rem;
+}
+
+.div-1 .div-2{
+    font-size: 1.6rem;
+    padding-bottom: .8rem;
+    margin: 3px;
+}
+
+.div-1 .div-3{
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    margin-top: .6rem;
+    margin-bottom: 1.5rem;
+    border-bottom: .1rem dashed var(--secondary-text-color);
+    padding-bottom: 1.7rem;
+}
+
+.div-1 .div-4{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 1rem;
+}
+.div-1 .div-5{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.div-1 .div-2 a {
+    color: #4C84FF;
+}
+
+.div-1 .div-4 img{
+    margin-left: 2px;
+}
+.div-1 .div-5 img{
+    margin-left: 2px;
+    
+}
+
+.div-1 .div-4 span{
+    color: var(--secondary-text-color);
+}
+.div-1 .div-5 span{
+    color: var(--secondary-text-color);
+}
+
+
+
+/* div 1 */
 
 /* سکشن خانه*/
 .home {
