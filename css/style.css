@@ -207,7 +207,7 @@ body.dark-theme {
     top: 11px;
     left: 8px;
     cursor: pointer;
-    animation: orbit 10s linear infinite;
+    animation: orbit 15s linear infinite;
 }
 
 /* منوی سمت راست که پس طول 600 پیکسل نمایش داده می شود */

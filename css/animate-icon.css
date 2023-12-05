@@ -2,9 +2,7 @@
 @-webkit-keyframes fadeIn{
     from{
         opacity: 0;
-    }
-
-    to{
+    } to{
         opacity: 1;
     }
 }
@@ -12,9 +10,7 @@
 @keyframes fadeIn{
     from{
         opacity: 0;
-    }
-    
-    to{
+    }to{
         opacity: 1;
     }
 }
@@ -25,11 +21,24 @@
 }
 
 @keyframes orbit{
-    fron{
+    0%{
         transform: rotate(0deg);
+        left: 10px;
     }
-
-    to {
+     25%{
         transform: rotate(360deg);
+        left: 80px;
+    }
+    50%{
+        transform: rotate(-720deg);
+        left: 50px;
+    }
+    75%{
+        transform: rotate(360deg);
+        left: 120px;
+    }
+    100%{
+        transform: scale(50deg);
+        left: 15px;
     }
 }
