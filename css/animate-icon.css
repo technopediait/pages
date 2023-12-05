@@ -30,15 +30,15 @@
         left: 80px;
     }
     50%{
-        transform: rotate(-720deg);
+        transform: rotate(-720deg) ;
         left: 50px;
     }
     75%{
-        transform: rotate(360deg);
-        left: 120px;
+        transform: rotate(360deg) scale(.7);
+        left:300px;
     }
     100%{
-        transform: scale(50deg);
+        transform: rotate(-360deg) scale(1.1);
         left: 15px;
     }
 }
