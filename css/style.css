@@ -207,7 +207,7 @@ body.dark-theme {
     top: 11px;
     left: 8px;
     cursor: pointer;
-    animation: orbit 12s linear infinite;
+    animation: orbit 3s linear infinite;
 }
 
 /* منوی سمت راست */
@@ -288,7 +288,7 @@ p {
 .div-1 .div-3{
     display: flex;
     align-items: center;
-    justify-content: flex-start;
+    justify-content: space-between;
     margin-top: .6rem;
     margin-bottom: 1.5rem;
     border-bottom: .1rem dashed var(--secondary-text-color);
@@ -299,9 +299,15 @@ p {
     display: flex;
     align-items: center;
     justify-content: center;
+}
+
+.div-1 .div-5{
+    display: flex;
+    align-items: center;
+    justify-content: center;
     margin-left: 1rem;
 }
-.div-1 .div-5{
+.div-1 .div-6{
     display: flex;
     align-items: center;
     justify-content: center;
@@ -311,18 +317,17 @@ p {
     color: #4C84FF;
 }
 
-.div-1 .div-4 img{
-    margin-left: 2px;
-}
 .div-1 .div-5 img{
     margin-left: 2px;
-    
+}
+.div-1 .div-6 img{
+    margin-left: 2px;
 }
 
-.div-1 .div-4 span{
+.div-1 .div-5 span{
     color: var(--secondary-text-color);
 }
-.div-1 .div-5 span{
+.div-1 .div-6 span{
     color: var(--secondary-text-color);
 }
 
