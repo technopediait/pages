@@ -32,14 +32,14 @@ toggleTheme.onclick = mytoggleTheme ;
   if (bodyTheme.classList.contains("light-theme")) {
     bodyTheme.classList.remove("light-theme") 
     bodyTheme.classList.add("dark-theme")
-    toggleTheme_img.src = "icon/light_mode.svg"
-    toggleTheme_img.style.transform = "rotate(180deg)"
+    toggleTheme_img.src = "icon/light_mode.svg" ;
+    toggleTheme_img.style.transform = "rotate(180deg)" ;
     localStorage.setItem("theme", "dark")
 } else {
   bodyTheme.classList.remove("dark-theme")
   bodyTheme.classList.add("light-theme")
-  toggleTheme_img.src = "icon/dark_mode.svg"
-  toggleTheme_img.style.transform = "rotate(360deg)"
+  toggleTheme_img.src = "icon/dark_mode.svg" ;
+  toggleTheme_img.style.transform = "rotate(360deg)" ;
   localStorage.setItem("theme", "light")
 }
 }
@@ -51,7 +51,7 @@ function checkAutoTheme() {
 } 
 checkAutoTheme() ;
 
-//setInterval(mytoggleTheme,1000)
+//setInterval(mytoggleTheme,5000)
 // اسلایدر
 let slideIndex = 1;
 function setSlide(input,index){
@@ -71,24 +71,6 @@ setInterval(()=>{
   }
   setSlide(`slide${slideIndex}` , slideIndex)
 } , 5000)
-/*
-$(document).ready(function(){
-  // smooth scrolling 
-  $('a[href*="#"]').on('click',function(e){
-
-    e.preventDefault();
-
-    $('html, body').animate({
-
-      scrollTop : $($(this).attr('href')).offset().top,
-    },
-      500,
-      'linear'
-    );
-
-  });
-
-});*/
 
  // سید بار
 const html = document.querySelector("html") ;
