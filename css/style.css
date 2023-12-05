@@ -31,6 +31,7 @@
 html {
     font-size: 60.5%;
     overflow-x: hidden;
+    scroll-behavior: smooth;
 }
 
 html::-webkit-scrollbar {
