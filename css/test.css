@@ -1,1 +1,54 @@
+@font-face {
+    font-family: iran-sans;
+    src: url(../fonts/iransans.ttf);
+}
+
+@font-face {
+    font-family: gandom;
+    src: url(../fonts/Gandom-FD.ttf);
+}
+
+@font-face {
+    font-family: grapic;
+    src: url(../fonts/Graphic.TTF);
+}
+
+@font-face {
+    font-family: yekan;
+    src: url(../fonts/Yekan.ttf);
+}
+
+@font-face {
+    font-family: ziba;
+    src: url(../fonts/B\ Ziba_0.ttf);
+}
+
+*{
+    font-family: gandom;
+}
+
+
+.vzir {
+    font-family: vazir;
+}
+.iran-sans {
+    font-family: iran-sans;
+}
+.gandom {
+    font-family: gandom;
+}
+.grapic {
+    font-family: grapic;
+}
+.yekan {
+    font-family: yekan;
+}
+
+
+.vzir, .iran-sans , .gandom , .grapic , .yekan{
+    margin: 20px auto;
+    padding: 20px;
+    font-size: 30px;
+}
+
 
