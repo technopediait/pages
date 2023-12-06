@@ -222,10 +222,8 @@ p {
     color: var(--primary-text-color);
     font-size: 1.6rem;
     padding: 5px 15px;
-    margin: 5px 5px;
+    margin: 5px;
     border-radius: 10px;
-    background-color: var(--primary-bg-color);
-    box-shadow: 0 0 430px blueviolet;
 }
 /* پایان منو برنامه ها  */
 /* پایان هدر */
