@@ -43,14 +43,14 @@ toggleTheme.onclick = mytoggleTheme ;
 }
 }
 function checkAutoTheme() {
-  const savedTheme = localStorage.getItem("theme")
+  const savedTheme = localStorage.getItem("theme") 
   if (savedTheme === "dark") {
     mytoggleTheme();
 }
-} 
+}
 checkAutoTheme() ;
 
-//setInterval(mytoggleTheme,5000)
+//setInterval(mytoggleTheme,500)
 // اسلایدر
 let slideIndex = 1;
 function setSlide(input,index){
@@ -61,38 +61,43 @@ function setSlide(input,index){
       element.classList.remove('slide-active');
   })
   item.classList.add('slide-active');
+}/*
+document.querySelector(".slider-buttons").addEventListener("click", () => {
+  slideIndex +=1;
+  if(slideIndex==4){
+    slideIndex=1;
 }
-
+setSlide(`slide${slideIndex}` , slideIndex)
+});
+*/
 setInterval(()=>{
   slideIndex +=1;
+  
   if(slideIndex==4){
       slideIndex=1;
   }
   setSlide(`slide${slideIndex}` , slideIndex)
-} , 5000)
+} , 6000)
 
  // سید بار
 const html = document.querySelector("html") ;
 const menubb = document.querySelector(".menu")
 const mainCTN = document.querySelector(".main-content")
+
 sidebarBtn.addEventListener("click", () => {
     if (menubb.classList.contains("menu-active")){
         menubb.classList.remove("menu-active") ;
         mainCTN.classList.remove("sidebar-btn-active") ;
         sidebarBtn_img.src = "./icon/menu.svg" ; 
-        //html.style.overflow = "auto" ;
-        //menubb.style.width = "0" ;
-        //mainCTN.style.width = "100%"
-        //menubb .style.position = "static" ;
+        menuTop.style.width = "auto" ;
+        menuTop.style.position = "static" ;
     } else {
         menubb.classList.add("menu-active") ;
         mainCTN.classList.add("sidebar-btn-active") ;
         sidebarBtn_img.src = "./icon/close.svg" ;
-        menubb.style.zIndex = "998"
-        //html.style.overflow = "hidden" ;
-       // menubb.style.width = "80%" ;
-        //mainCTN.style.width = "20%"
-        //menubb.style.position = "fixed" ;
+        menubb.style.zIndex = "998" ;
+        menuTop.style.width = "80%" ;
+        menuTop.style.position = "fixed" ;
     }
     
 });
@@ -108,7 +113,7 @@ searchBtn.addEventListener("click", function() {
     searchBtn_img.src = "./icon/close.svg" ;
     searchBtn.classList.add("search-btn-active") ;
   }
-});
+})
 
 menuAppsBtn.addEventListener("click" ,  function(){
   if (menuApps.style.display === "block") {
@@ -125,7 +130,6 @@ footerCenterMenuTitle_img.addEventListener("click", () => {
   if (footerCenterMenuItems.style.height === "auto"){
     footerCenterMenuItems.style.height = "0"
     footerCenterMenuTitle_img.style.transform = "rotate(90deg)"
-    
   } else {
     footerCenterMenuItems.style.height = "auto"
     footerCenterMenuTitle_img.style.transform = "rotate(0deg)"

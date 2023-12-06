@@ -19,6 +19,16 @@
     -webkit-animation-name: fadeIn;
     animation-name: fadeIn;
 }
+
+@keyframes trn {
+    from{
+        left: -100%;
+    }to{
+        left: .5rem;
+    }
+
+}
+
 /*
 @keyframes orbit{
     from{

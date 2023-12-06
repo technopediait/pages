@@ -14,7 +14,9 @@ var menuAppsBtn_img = document.createElement("img") ;
 var scrollIndicator = document.createElement("div") ;
 var progressBar = document.createElement("div") ;
 var navPlus = document.createElement("div") ;
-var menuTop = document.querySelector(".menu-top") ;
+var menuContiner = document.querySelector(".menu-continer") ;
+var menuTop = document.createElement("div") ;
+var menuContent = document.createElement("div") ;
 var sidebarImg_technopedia = document.createElement("img") ;
 var toggleTheme = document.createElement("div") ;
 var toggleTheme_img = document.createElement("img") ;
@@ -31,7 +33,38 @@ var menuAppsCenter_a4 = document.createElement("a") ;
 var menuAppsCenter_a5 = document.createElement("a") ;
 var menuAppsCenter_a6 = document.createElement("a") ;
 var menuAppsCenter_a7 = document.createElement("a") ;
+var menuAppsCenter_a_img = document.createElement("img") ;
+var menuAppsCenter_a_span = document.createElement("span") ;
+// دسته بندی ها
+var menuContentTitle = document.createElement("div") ;
+var menuContentTitle_span = document.createElement("span") ;
+var menuContentTitle_img = document.createElement("img") ;
+var menuContentItem = document.createElement("div") ;
+var menuContentItem_A = document.createElement("a") ;
+var menuContentItem_A2 = document.createElement("a") ;
+var menuContentItem_A3 = document.createElement("a") ;
+var menuContentItem_A4 = document.createElement("a") ;
 
+
+menuContent.appendChild(menuContentTitle);
+menuContentTitle.appendChild(menuContentTitle_span) ;
+menuContentTitle.appendChild(menuContentTitle_img) ;
+menuContent.appendChild(menuContentItem) ;
+menuContentItem.appendChild(menuContentItem_A) ;
+menuContentItem.appendChild(menuContentItem_A2) ;
+menuContentItem.appendChild(menuContentItem_A3) ;
+menuContentItem.appendChild(menuContentItem_A4) ;
+
+menuContentTitle.classList.add("menu-content-title") ;
+menuContentItem.classList.add("menu-content-item") ;
+
+menuContentTitle_span.textContent = " منوی ایتم" ;
+menuContentTitle_img.src = "icon/expand-more-black.svg" ;
+menuContentItem_A.textContent = " آیتم " ;
+menuContentItem_A2.textContent = " آیتم " ;
+menuContentItem_A3.textContent = " آیتم " ;
+menuContentItem_A4.textContent = " آیتم " ;
+// پایان دسته بندی ها
 // پدر فرزند تمام عنصر های نوی
 navigationBar.appendChild(navBar) ;
 navBar.appendChild(sidebarBtn) ;
@@ -43,9 +76,11 @@ menuAppsBtn.appendChild(menuAppsBtn_img) ;
 navBar.appendChild(scrollIndicator) ;
 scrollIndicator.appendChild(progressBar) ;
 navigationBar.appendChild(navPlus) ;
+menuContiner.appendChild(menuTop) ;
 menuTop.appendChild(sidebarImg_technopedia)
 menuTop.appendChild(toggleTheme) ;
 toggleTheme.appendChild(toggleTheme_img) ;
+menuContiner.appendChild(menuContent) ;
 navPlus.appendChild(formSearch) ;
 formSearch.appendChild(formSearch_input) ;
 formSearch.appendChild(formSearchResults) ;
@@ -59,7 +94,8 @@ menuAppsCenter.appendChild(menuAppsCenter_a4) ;
 menuAppsCenter.appendChild(menuAppsCenter_a5) ;
 menuAppsCenter.appendChild(menuAppsCenter_a6) ;
 menuAppsCenter.appendChild(menuAppsCenter_a7) ;
-
+menuAppsCenter_a.appendChild(menuAppsCenter_a_img) ;
+menuAppsCenter_a.appendChild(menuAppsCenter_a_span) ;
 
 // افزودن کلاس های نوی
 navBar.classList.add("nav-bar") ;
@@ -72,15 +108,20 @@ menuAppsBtn.classList.add("menu-apps-btn") ;
 scrollIndicator.classList.add("scroll-indicator") ;
 progressBar.classList.add("progress-bar") ;
 navPlus.classList.add("nav-plus") ;
+menuTop.classList.add("menu-top") ;
+menuContent.classList.add("menu-content") ;
 toggleTheme.classList.add("toggle-theme") ;
 menuApps.classList.add("menu-apps") ;
 menuAppsTop.classList.add("menu-apps-top") ;
 menuAppsCenter.classList.add("menu-apps-center") ;
 
 
+
 // نوشتن در ناو بار
 menuAppsTop.textContent = "برنامه ها" ;
-menuAppsCenter_a.textContent = "برنامه" ;
+menuAppsCenter_a.href = "./technobat.html" ;
+menuAppsCenter_a_img.src = "icon/public.svg" ;
+menuAppsCenter_a_span.textContent = "تکنوبات"
 menuAppsCenter_a2.textContent = "برنامه" ;
 menuAppsCenter_a3.textContent = "برنامه" ;
 menuAppsCenter_a4.textContent = "برنامه" ;
@@ -96,7 +137,7 @@ sidebarImg_technopedia.src = "./images/technopedia-logo.png" ;
 toggleTheme_img.src ="icon/dark_mode.svg" ; 
 searchBtn_img.alt = "icon" ;
 sidebarBtn_img.alt = "icon" ;
-menuApps_img.alt = "icon" ;
+menuAppsBtn_img.alt = "icon" ;
 sidebarImg_technopedia.alt = "technopedia icon" ;
 toggleTheme_img.alt = "icon" ;
 
