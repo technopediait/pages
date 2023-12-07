@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="IR-fa">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> ساعت </title>
+    <style>
+        body {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+            font-family: 'Arial', sans-serif;
+            background-color: #f4f4f4;
+        }
+
+        #digital-clock {
+            font-size: 3em;
+            color: #333;
+        }
+    </style>
+    <title>ساعت دیجیتال</title>
+</head>
+<body>
+    <div id="digital-clock"></div>
+
+    <script>
+        function updateDigitalClock() {
+            const now = new Date();
+
+            const hours = now.getHours().toString().padStart(2, '0');
+            const minutes = now.getMinutes().toString().padStart(2, '0');
+            const seconds = now.getSeconds().toString().padStart(2, '0');
+
+            const timeString = `${hours}:${minutes}:${seconds}`;
+
+            document.getElementById('digital-clock').innerText = timeString;
+        }
+
+        setInterval(updateDigitalClock, 1000);
+        updateDigitalClock(); // نمایش اولیه}
+    </script>
+</body>
+</html>
