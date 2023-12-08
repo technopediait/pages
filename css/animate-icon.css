@@ -43,32 +43,37 @@
 }
 
 .progress {
-  width: 5em;
-  height: 5em;
+  width: 2em;
+  height: 2em;
   margin: 0.8em;
   scale: 0;
   border-radius: 50%;
   background: blue;
   animation: loading_492 1s ease infinite;
-  animation-delay: 1s;
 }
 
 @keyframes loading_492 {
+  
   50% {
     scale: 1.3;
   }
+
 }
 
+.progress:nth-child(1) {
+    animation-delay: .9s;
+  }
+
 .progress:nth-child(2) {
-  animation-delay: 1.3s;
+  animation-delay: .8s;
 }
 
 .progress:nth-child(3) {
-  animation-delay: 1.7s;
+  animation-delay: .7s;
 }
 
 .loader{
-    display: none ;
+    display: flex ;
 }
 
 
