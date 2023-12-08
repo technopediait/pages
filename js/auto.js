@@ -41,6 +41,9 @@ var menuAppsCenter_a4_span = document.createElement("span") ;
 var menuAppsCenter_a5 = document.createElement("a") ;
 var menuAppsCenter_a5_img = document.createElement("img") ;
 var menuAppsCenter_a5_span = document.createElement("span") ;
+var menuAppsCenter_a6 = document.createElement("a") ;
+var menuAppsCenter_a6_img = document.createElement("img") ;
+var menuAppsCenter_a6_span = document.createElement("span") ;
 // دسته بندی ها
 var menuContentTitle = document.createElement("div") ;
 var menuContentTitle_span = document.createElement("span") ;
@@ -108,6 +111,9 @@ menuAppsCenter_a4.appendChild(menuAppsCenter_a4_span) ;
 menuAppsCenter.appendChild(menuAppsCenter_a5) ;
 menuAppsCenter_a5.appendChild(menuAppsCenter_a5_img) ;
 menuAppsCenter_a5.appendChild(menuAppsCenter_a5_span) ;
+menuAppsCenter.appendChild(menuAppsCenter_a6) ;
+menuAppsCenter_a6.appendChild(menuAppsCenter_a6_img) ;
+menuAppsCenter_a6.appendChild(menuAppsCenter_a6_span) ;
 
 
 // افزودن کلاس های نوی
@@ -147,6 +153,9 @@ menuAppsCenter_a4_span.textContent = "تکنوبات" ;
 menuAppsCenter_a5.href = " " ;
 menuAppsCenter_a5_img.src = "icon/public.svg" ;
 menuAppsCenter_a5_span.textContent = "تکنوبات" ;
+menuAppsCenter_a6.href = " " ;
+menuAppsCenter_a6_img.src = "icon/public.svg" ;
+menuAppsCenter_a6_span.textContent = "تکنوبات" ;
 sidebarBtn_img.src = "./icon/menu.svg" ;
 searchBtn_img.src = "./icon/search.svg" ;
 menuAppsBtn_img.src = "./images/technopedia-logo-u.png" ;
