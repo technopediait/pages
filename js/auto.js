@@ -97,17 +97,17 @@ menuAppsCenter.appendChild(menuAppsCenter_a) ;
 menuAppsCenter_a.appendChild(menuAppsCenter_a_img) ;
 menuAppsCenter_a.appendChild(menuAppsCenter_a_span) ;
 menuAppsCenter.appendChild(menuAppsCenter_a2) ;
-menuAppsCenter_a.appendChild(menuAppsCenter_a2_img) ;
-menuAppsCenter_a.appendChild(menuAppsCenter_a2_span) ;
+menuAppsCenter_a2.appendChild(menuAppsCenter_a2_img) ;
+menuAppsCenter_a2.appendChild(menuAppsCenter_a2_span) ;
 menuAppsCenter.appendChild(menuAppsCenter_a3) ;
-menuAppsCenter_a.appendChild(menuAppsCenter_a3_img) ;
-menuAppsCenter_a.appendChild(menuAppsCenter_a3_span) ;
+menuAppsCenter_a3.appendChild(menuAppsCenter_a3_img) ;
+menuAppsCenter_a3.appendChild(menuAppsCenter_a3_span) ;
 menuAppsCenter.appendChild(menuAppsCenter_a4) ;
-menuAppsCenter_a.appendChild(menuAppsCenter_a4_img) ;
-menuAppsCenter_a.appendChild(menuAppsCenter_a4_span) ;
+menuAppsCenter_a4.appendChild(menuAppsCenter_a4_img) ;
+menuAppsCenter_a4.appendChild(menuAppsCenter_a4_span) ;
 menuAppsCenter.appendChild(menuAppsCenter_a5) ;
-menuAppsCenter_a.appendChild(menuAppsCenter_a5_img) ;
-menuAppsCenter_a.appendChild(menuAppsCenter_a5_span) ;
+menuAppsCenter_a5.appendChild(menuAppsCenter_a5_img) ;
+menuAppsCenter_a5.appendChild(menuAppsCenter_a5_span) ;
 
 
 // افزودن کلاس های نوی
