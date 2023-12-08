@@ -12,6 +12,19 @@ window.addEventListener("scroll", function () {
   prevScrollPos = currScrollPos;
 });
 
+window.onload = () =>{
+
+  fadeOut();
+}
+
+function loader(){
+  document.querySelector('.loader-active').classList.add('loader');
+}
+
+function fadeOut(){
+  setTimeout(loader, 2500);
+}
+
 const height =
   document.documentElement.scrollHeight - document.documentElement.clientHeight;
 

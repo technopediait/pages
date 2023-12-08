@@ -53,6 +53,10 @@ body.dark-theme {
     --secondary-text-color: #eee;
 }
 
+body{
+    background-color: var(--secondary-bg-color);
+}
+
 p {
     text-align: justify;
 }
