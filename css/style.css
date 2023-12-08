@@ -212,7 +212,7 @@ p {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    justify-content: space-evenly;
+    justify-content: space-around;
 }
 
 .menu-apps-center a {
@@ -221,9 +221,9 @@ p {
     justify-content: center;
     align-items: center;
     color: var(--primary-text-color);
-    font-size: 1.6rem;
-    padding: 5px 15px;
-    margin: 5px;
+    font-size: 1.4rem;
+    padding: 4px 15px;
+    margin: 2px;
     border-radius: 10px;
 }
 /* پایان منو برنامه ها  */
