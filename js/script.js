@@ -22,7 +22,7 @@ function loader(){
 }
 
 function fadeOut(){
-  setTimeout(loader, 1200);
+  setTimeout(loader, 500);
 }
 
 const height =
