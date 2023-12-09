@@ -55,8 +55,6 @@ body.dark-theme {
 
 body{
     background-color: var(--secondary-bg-color);
-    animation: blor 3s;
-    animation-delay: 1.2s;
 }
 
 p {
@@ -331,18 +329,25 @@ section {
     padding: 0 8%;
 }
 
-/* div 1 */
+/* info */
 .div-1 {
     font-size: 1.4rem;
 }
 
-.div-1 .div-2 {
+.div-1 .page-address {
     font-size: 1.6rem;
     padding-bottom: .8rem;
     margin: 3px;
 }
 
-.div-1 .div-3 {
+.img {
+    height: auto;
+}
+.img img{
+    width: 100%;
+}
+
+.div-1 .info-share-container {
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -350,47 +355,38 @@ section {
     margin-bottom: 1.5rem;
     border-bottom: .2rem dashed var(--secondary-text-color);
     padding-bottom: 1.4rem;
+    color: var(--secondary-text-color);
+    font-size: 1.6rem;
 }
 
-.div-1 .div-4 {
+.div-1 .info-container {
     display: flex;
     align-items: center;
     justify-content: center;
 }
 
-.div-1 .div-5 {
+.div-1 .writer-name {
     display: flex;
     align-items: center;
     justify-content: center;
     margin-left: 1rem;
 }
 
-.div-1 .div-6 {
+.div-1 .date-time {
     display: flex;
     align-items: center;
     justify-content: center;
 }
 
-.div-1 .div-2 a {
+.div-1 .page-address a {
     color: #4C84FF;
 }
 
-.div-1 .div-5 img {
+.div-1 .writer-name img {
     margin-left: 2px;
 }
 
-.div-1 .div-6 img {
-    margin-left: 2px;
-}
-
-.div-1 .div-5 span {
-    color: var(--secondary-text-color);
-}
-
-.div-1 .div-6 span {
-    color: var(--secondary-text-color);
-}
-/* div 1 */
+/* info */
 
 /* سکشن خانه*/
 .home {

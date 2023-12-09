@@ -84,11 +84,3 @@ display: none;
     }
 
 }
-
-@keyframes blor {
-    from{
-        filter: blur(30px);
-    }to{
-        filter: blur(0);
-    }
-}
