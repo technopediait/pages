@@ -22,7 +22,7 @@ function loader(){
 }
 
 function fadeOut(){
-  setTimeout(loader, 500);
+  setTimeout(loader, 1000);
 }
 
 const height =
@@ -63,8 +63,6 @@ function checkAutoTheme() {
 }
 checkAutoTheme() ;
 
-//setInterval(mytoggleTheme,500)
-// اسلایدر
 let slideIndex = 1;
 function setSlide(input,index){
   slideIndex = index;
@@ -159,5 +157,3 @@ footerCenterMenuTitle2_img.addEventListener("click", () => {
     footerCenterMenuTitle2_img.style.transform = "rotate(0deg)"
   }
 })
-
-
