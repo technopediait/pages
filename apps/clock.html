@@ -5,14 +5,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ساعت بزرگ</title>
-        
     <style>
       body{
     background-color: AliceBlue;
     padding: 0;
     margin: 0;
 }
-    
 
 .clock{
     width: 300px;
@@ -175,12 +173,6 @@
     </style>
 </head>
 <body>
-    
-     <div class="loader-active">
-        <div class="progress"></div>
-        <div class="progress"></div>
-        <div class="progress"></div>
-     </div>
     <div class="clock">
         <div class="hourHand"></div>
         <div class="minuteHand"></div>
@@ -203,8 +195,9 @@
         </ul>
     </div>
 
-    
-   <audio src="../tiktok.mp3" class="audio"></audio>
+    <audio src="../tiktok.mp3" class="audio"   ></audio>
+
+
 
  <script>
    window.onload = function() {
@@ -234,12 +227,12 @@ const hourHand = document.querySelector('.hourHand');
         hourHand.style.transform = `rotate(${hourDeg}deg)`;
         
         time.innerHTML = '<span>' + '<strong>' + hour + '</strong>' + ' : ' + minute + ' : ' + '<small>' + second +'</small>'+ '</span>';
-     }
+
         }
   
     setInterval(setDate, 1000);
  
-
+}
  </script> 
-        
+</body>
 </html>
