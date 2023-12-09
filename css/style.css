@@ -55,6 +55,7 @@ body.dark-theme {
 
 body{
     background-color: var(--secondary-bg-color);
+    animation: blor 3s;
 }
 
 p {

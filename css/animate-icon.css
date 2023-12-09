@@ -77,15 +77,18 @@ display: none;
 }
 
 @keyframes mahv{
-    0%{
-        filter: blur(0px);
-    }
 
     50%{
-        filter: blur(5px);
+
+        filter: sepia(10);
     }
 
-    100%{
-        filter: blur(0px);
+}
+
+@keyframes blor {
+    from{
+        filter: blur(30px);
+    }to{
+        filter: blur(0);
     }
 }
