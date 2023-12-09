@@ -12,6 +12,9 @@
     padding: 0;
     margin: 0;
 }
+    .loader-active {
+        background-color: AliceBlue;
+    }
 
 .clock{
     width: 300px;
@@ -233,7 +236,7 @@ const hourHand = document.querySelector('.hourHand');
         hourHand.style.transform = `rotate(${hourDeg}deg)`;
         
         time.innerHTML = '<span>' + '<strong>' + hour + '</strong>' + ' : ' + minute + ' : ' + '<small>' + second +'</small>'+ '</span>';
-
+     }
         }
   
     setInterval(setDate, 1000);
