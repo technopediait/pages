@@ -32,7 +32,7 @@ function addOutput() {
 
     }   
     else if (inputText.includes("تصویر")){
-    img.src = "images/technopedia-no-bg.png"
+    img.src = "../images/technopedia-no-bg.png"
 
     }
     
