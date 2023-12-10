@@ -482,7 +482,7 @@ section {
 }
 
 .btn {
-    display: none;
+    display: block; text-align: center;
     padding: .9rem 3.5rem;
     font-size: 2rem;
     background: none;

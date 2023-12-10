@@ -210,8 +210,8 @@ artDate1.textContent = "27 آبان 1402"
 artTitle1.textContent = "Chat GPT چیست؟"
 artTitle1.href = "https://technopediait.github.io/pages/articles/page.html"
 artP1.textContent = "چت جی‌پی‌تی هوش مصنوعی"
-artBtn1.textContent = ""
-artBtn1.href = ""
+artBtn1.textContent = "بیشتر بدانید"
+artBtn1.href = "https://technopediait.github.io/pages/articles/page.html"
 
 // کنترل مقاله 2
 var article2 = document.querySelector(".article2")

@@ -44,13 +44,13 @@ toggleTheme.onclick = mytoggleTheme ;
   if (bodyTheme.classList.contains("light-theme")) {
     bodyTheme.classList.remove("light-theme") 
     bodyTheme.classList.add("dark-theme")
-    toggleTheme_img.src = "icon/light_mode.svg" ;
+    toggleTheme_img.src = "https://technopediait.github.io/pages/icon/light_mode.svg" ;
     toggleTheme_img.style.transform = "rotate(180deg)" ;
     localStorage.setItem("theme", "dark")
 } else {
   bodyTheme.classList.remove("dark-theme")
   bodyTheme.classList.add("light-theme")
-  toggleTheme_img.src = "icon/dark_mode.svg" ;
+  toggleTheme_img.src = "https://technopediait.github.io/pages/icon/dark_mode.svg" ;
   toggleTheme_img.style.transform = "rotate(360deg)" ;
   localStorage.setItem("theme", "light")
 }
