@@ -33,6 +33,7 @@
 
 .loader-active {
   position: fixed;
+  top: 0;
   background: var(--secondary-bg-color);
   display: flex;
   flex-direction: row;

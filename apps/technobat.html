@@ -1,32 +1,48 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="IR-fa">
 <head>
    <meta charset="UTF-8">
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
    <title>تکنوبات</title>
+   <link rel="stylesheet" href="../css/style.css">
+   <link rel="stylesheet" href="../css/animate-icon.css">
 <style>
    
-    @font-face {
-        font-family: farsi;
-        src: url(./fonts/Vazir-Regular.ttf);
-    }
+   body{
+    background: linear-gradient(to right, #00aeff, rgb(88, 253, 43));
+   }
 
-    * {
-        margin: 0px;
-        padding: 0px;
-        font-family: farsi;
-        direction: rtl;
-    }
-
-    body{
-        background-color: rgb(240, 251, 250);
-    }
-
+   .control{
+    background-color: var(--primary-bg-color);
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.451);
+    border-radius: 10px;
+    min-height: 100vh;
+    margin: 20px;
+    padding: 10px;
+   }
+    
     #title{
+        text-align: center ;
+        color: #fff;
+        background: var(--main-color);
+        font-size: 2.2rem ;
+        font-weight: 500;
+        border-radius: 35px 5px 0px 0px;
+    }
+    #title::before{
+        content: '';
+    }
+
+    #ptitle{
         text-align: center;
-        color: blue;
-        font-size: 1.4rem;
-        font-weight: bold;
+        font-size: 1.8rem;
+        background-color: rgb(99, 255, 114);
+        
+        border-radius: 0px 0px 35px 5px;
+    }
+
+    #ptitle::before{
+        content: "";
     }
 
     form {
@@ -40,8 +56,6 @@
     right: 10px;
     left: 0px;
     justify-content: center;
-
-    
     }
 
     input {
@@ -69,17 +83,21 @@
 
     form input:focus{
         color: black;
-        background-color: yellow;
+        background-color: blanchedalmond;
     }
 
     b{
         font-weight: 300;
-        background-color: bisque;
+        background-color: lightblue;
+        border-radius: 5px;
         text-align: left;
         display: block;
         padding: 7px;
-        
-        box-shadow: 0px 0px 2px rgb(251, 255, 0);
+    }
+
+    b::before{
+        content: "شما: ";
+        color: blue;
     }
 
     p {
@@ -87,16 +105,17 @@
         margin-bottom: 15px;
         padding: 10px;
         color: #3f3554;
-        border: 1px solid;
-        box-shadow: 0px 0px 3px rgb(66, 62, 0);
     }
 
-    #ptitle{
-        text-align: center;
+    p::before{
+        content: "تکنوبات: " ;
+        color: #ff0000;
     }
+
+    
 
     .out{
-        
+        font-size: 1.7rem;
         margin: 10px;
 
     }
@@ -107,30 +126,38 @@
 
     img{
         width: 100%;
-        border-radius: 14px;
-        box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.868);
-    
-    }
-
-    .control{
-        max-width: 800px;
-        margin: 0px auto;
+        border-radius: 10px;
+        box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.589);
     }
 </style>
 </head>
 <body>
+    <div class="loader-active">
+        <div class="progress"></div>
+        <div class="progress"></div>
+        <div class="progress"></div>
+    </div>
    <div class="control">
    <form id="myForm">
       <input type="text" id="inputText" placeholder="متن خود را وارد کنید...">
-      <button type="button" onclick="addOutput()">ارسال</button>
+      <button class="button" type="button" onclick="addOutput()">ارسال</button>
    </form>
    <div class="out">
       <b id="title">تکنو بات</b>
       <p id="ptitle">به تکنو بات خوش آمدید</p>
+      
+      <b>تکنو بات</b>
+      <p>به تکنو بات خوش آمدید</p>
+      <b>تکنو بات</b>
+      <p>به تکنو بات خوش آمدید</p>
+      <b>تکنو بات</b>
+      <p>به تکنو بات خوش آمدید</p>
    </div>
    <div class="blonk"></div>
    </div>
+   <audio src="../audios/MyRingtone.IR_1549233543_3459.mp3" class="audio"   ></audio>
    
-   <script src="./js/technobat.js"></script>
+   <script src="../js/technobat.js"></script>
+   <script src="../js/script.js"></script>
 </body>
 </html>

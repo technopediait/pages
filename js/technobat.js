@@ -5,19 +5,21 @@ function addOutput() {
     var out = document.querySelector(".out") ;
     var outTXT = document.createElement("p") ;
     var img = document.createElement("img") ;
-    
+    const audio = document.querySelector('.audio');
+
     
     
       if (inputText === "سلام"){
         outTXT.textContent = " سلام چه کمکی می توانم به شما کنم "
         
     } 
-    else if (inputText === "محمد شائلی نژاد"){
-        outTXT.textContent = "چرا نمیشه"
-        outTXT.href = "index.html"
+    else if (inputText === ""){
+        alert("این پیام خالی است")
     } 
     else if (inputText === "خوبی"){
+        
         outTXT.textContent = "بله من خوبم شما خوبین"
+        
     }  
     else if (inputText === "اسمت چیه"){
         outTXT.textContent = "به تو چه"
@@ -52,5 +54,7 @@ out.appendChild(img) ;
 
 document.getElementById("inputText").value = "" ; 
 window.scrollTo(0, document.body.scrollHeight)
+audio.play();
 
 }
+
