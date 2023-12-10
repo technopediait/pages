@@ -76,11 +76,3 @@
 display: none;
 }
 
-@keyframes mahv{
-
-    50%{
-
-        filter: sepia(10);
-    }
-
-}

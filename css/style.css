@@ -205,13 +205,13 @@ p {
 }
 
 .menu-apps-top {
-    color: blue;
-    font-weight: 700;
+    color: #fff;
+    font-weight: 500;
     font-size: 2.2rem;
     text-align: center;
     padding: 5px;
     border-bottom: .3rem solid rgba(0, 0, 0, 0.288);
-    background-color: yellow;
+    background-color: var(--main-color);
     border-radius: .5rem;
 }
 
@@ -260,7 +260,7 @@ main {
 /* منو بازشو - بالا */
 .menu-top {
     display: flex;
-    background-color: rgb(255, 255, 255);
+    background-color: rgb(19, 163, 216);
     box-shadow: 0 0 6px rgba(0, 0, 0, 0.719);
     margin-top: 1px;
     justify-content: space-between;
@@ -270,24 +270,18 @@ main {
 }
 
 .menu-top>img {
-    width: 150px;
-    height: 55px;
-    padding-top: 0px;
-    padding-right: 5px;
-    padding-bottom: 0;
-    animation: mahv 4s linear infinite;
+    width: 170px; height: 53px;
+    padding: 0 5px;
 }
 
 .menu-top .toggle-theme {
-    padding-left: 16px;
-    padding-top: 13px;
-    padding-bottom: 2px;
+    padding: 6px 6px 0 10px;
 }
 
 .menu-top .toggle-theme img {
-    width: 45px;
-    height: 45px;
-    box-shadow: 0 0 6px var(--secondary-text-color);
+    width: 43px;
+    height: 43px;
+    box-shadow: 0 0 2px var(--secondary-text-color);
     border-radius: 50%;
     background-color: var(--secondary-bg-color);
 }

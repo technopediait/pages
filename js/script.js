@@ -63,33 +63,6 @@ function checkAutoTheme() {
 }
 checkAutoTheme() ;
 
-let slideIndex = 1;
-function setSlide(input,index){
-  slideIndex = index;
-  let item = document.querySelector(`#${input}`)
-  let slides = [...document.querySelector('.slides').children];
-  slides.forEach((element)=>{
-      element.classList.remove('slide-active');
-  })
-  item.classList.add('slide-active');
-}/*
-document.querySelector(".slider-buttons").addEventListener("click", () => {
-  slideIndex +=1;
-  if(slideIndex==4){
-    slideIndex=1;
-}
-setSlide(`slide${slideIndex}` , slideIndex)
-});
-*/
-setInterval(()=>{
-  slideIndex +=1;
-  
-  if(slideIndex==4){
-      slideIndex=1;
-  }
-  setSlide(`slide${slideIndex}` , slideIndex)
-} , 6000)
-
  // سید بار
 const html = document.querySelector("html") ;
 const menubb = document.querySelector(".menu")
@@ -99,11 +72,11 @@ sidebarBtn.addEventListener("click", () => {
     if (menubb.classList.contains("menu-active")){
         menubb.classList.remove("menu-active") ;
         mainCTN.classList.remove("sidebar-btn-active") ;
-        sidebarBtn_img.src = "./icon/menu.svg" ; 
+        sidebarBtn_img.src = "https://technopediait.github.io/pages/icon/menu.svg" ; 
     } else {
         menubb.classList.add("menu-active") ;
         mainCTN.classList.add("sidebar-btn-active") ;
-        sidebarBtn_img.src = "./icon/close.svg" ;
+        sidebarBtn_img.src = "https://technopediait.github.io/pages/icon/close.svg" ;
         menubb.style.zIndex = "998" ;
     }
     
@@ -113,11 +86,11 @@ sidebarBtn.addEventListener("click", () => {
 searchBtn.addEventListener("click", function() {
   if (formSearch.style.display === "block") {
     formSearch.style.display = "none" ;
-    searchBtn_img.src = "./icon/search.svg" ;
+    searchBtn_img.src = "https://technopediait.github.io/pages/icon/search.svg" ;
     searchBtn.classList.remove("search-btn-active") ;
   } else{
     formSearch.style.display = "block" ;
-    searchBtn_img.src = "./icon/close.svg" ;
+    searchBtn_img.src = "https://technopediait.github.io/pages/icon/close.svg" ;
     searchBtn.classList.add("search-btn-active") ;
   }
 })
