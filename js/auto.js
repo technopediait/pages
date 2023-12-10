@@ -1,4 +1,5 @@
-
+// favicon
+var favicon = document.getElementById("favicon");
 // کنترل هدر
 var header = document.querySelector(".header") ;
 // نویگشن بار
@@ -156,13 +157,13 @@ menuAppsCenter_a5_span.textContent = "تکنوبات" ;
 menuAppsCenter_a6.href = "timer.html" ;
 menuAppsCenter_a6_img.src = "icon/public.svg" ;
 menuAppsCenter_a6_span.textContent = "تکنوبات" ;
-sidebarBtn_img.src = "./icon/menu.svg" ;
-searchBtn_img.src = "./icon/search.svg" ;
-menuAppsBtn_img.src = "./images/technopedia-logo-u.png" ;
+sidebarBtn_img.src = "https://technopediait.github.io/pages/icon/menu.svg" ;
+searchBtn_img.src = "https://technopediait.github.io/pages/icon/search.svg" ;
+menuAppsBtn_img.src = "https://technopediait.github.io/pages/images/technopedia-logo-u.png" ;
 formSearch_input.type = "search" ;
 formSearch_input.placeholder = " جستجو در سایت... " ;
-sidebarImg_technopedia.src = "./images/technopedia-logo.png" ;
-toggleTheme_img.src ="icon/dark_mode.svg" ; 
+sidebarImg_technopedia.src = "https://technopediait.github.io/pages/images/technopedia-logo.png" ;
+toggleTheme_img.src ="https://technopediait.github.io/pages/icon/dark_mode.svg" ; 
 searchBtn_img.alt = "icon" ;
 sidebarBtn_img.alt = "icon" ;
 menuAppsBtn_img.alt = "icon" ;
@@ -182,7 +183,7 @@ btn1.href = "./technobat.html" ;
 
 btn2.textContent = " تلگرام " ;
 btn2.href = "https://www.addtoany.com/share#url=https://technopediait.github.io/pages" ;
-/*
+
 //کنترل کننده سکشن مقاله ها
 var blog = document.querySelector(".blog") ;
 
@@ -249,7 +250,7 @@ artTitle3.href = ""
 artP3.textContent = ""
 artBtn3.textContent = ""
 artBtn3.href = ""
-*/
+
 // کنترل فوتر
 var footer = document.querySelector(".footer") ;
 // اضافه کردن تمام المنت های فوتر

@@ -100,15 +100,11 @@ sidebarBtn.addEventListener("click", () => {
         menubb.classList.remove("menu-active") ;
         mainCTN.classList.remove("sidebar-btn-active") ;
         sidebarBtn_img.src = "./icon/menu.svg" ; 
-        menuTop.style.width = "auto" ;
-        menuTop.style.position = "static" ;
     } else {
         menubb.classList.add("menu-active") ;
         mainCTN.classList.add("sidebar-btn-active") ;
         sidebarBtn_img.src = "./icon/close.svg" ;
         menubb.style.zIndex = "998" ;
-        menuTop.style.width = "80%" ;
-        menuTop.style.position = "fixed" ;
     }
     
 });
