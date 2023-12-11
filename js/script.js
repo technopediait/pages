@@ -126,3 +126,15 @@ footerCenterMenuTitle2_img.addEventListener("click", () => {
     footerCenterMenuTitle2_img.style.transform = "rotate(0deg)"
   }
 })
+
+var showReadBtn = document.querySelector(".show-read-btn");
+var showRead = document.querySelector(".show-read")
+showReadBtn.addEventListener("click", () => {
+  if (showRead.style.height === "160px") {
+    showReadBtn.textContent = "نمایش"
+    showRead.style.height = "0" ;
+  }else{
+    showReadBtn.textContent = "مخفی"
+    showRead.style.height = "160px" ;
+  }
+})
