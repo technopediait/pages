@@ -138,3 +138,19 @@ showReadBtn.addEventListener("click", () => {
     showRead.style.height = "160px" ;
   }
 })
+
+
+menuContentTitle.addEventListener("click", () => {
+  if (menuContentItem.style.height === "auto") {
+    menuContentItem.style.height = "0" ;
+  }else{
+    menuContentItem.style.height = "auto" ;
+  }
+})
+menuContentTitle2.addEventListener("click", () => {
+  if (menuContentItem2.style.height === "auto") {
+    menuContentItem2.style.height = "0" ;
+  }else{
+    menuContentItem2.style.height = "auto" ;
+  }
+})

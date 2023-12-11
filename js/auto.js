@@ -54,6 +54,14 @@ var menuContentItem_A = document.createElement("a") ;
 var menuContentItem_A2 = document.createElement("a") ;
 var menuContentItem_A3 = document.createElement("a") ;
 var menuContentItem_A4 = document.createElement("a") ;
+var menuContentTitle2 = document.createElement("div") ;
+var menuContentTitle2_span = document.createElement("span") ;
+var menuContentTitle2_img = document.createElement("img") ;
+var menuContentItem2 = document.createElement("div") ;
+var menuContentItem2_A = document.createElement("a") ;
+var menuContentItem2_A2 = document.createElement("a") ;
+var menuContentItem2_A3 = document.createElement("a") ;
+var menuContentItem2_A4 = document.createElement("a") ;
 
 
 menuContent.appendChild(menuContentTitle);
@@ -64,16 +72,33 @@ menuContentItem.appendChild(menuContentItem_A) ;
 menuContentItem.appendChild(menuContentItem_A2) ;
 menuContentItem.appendChild(menuContentItem_A3) ;
 menuContentItem.appendChild(menuContentItem_A4) ;
+menuContent.appendChild(menuContentTitle2);
+menuContentTitle2.appendChild(menuContentTitle2_span) ;
+menuContentTitle2.appendChild(menuContentTitle2_img) ;
+menuContent.appendChild(menuContentItem2) ;
+menuContentItem2.appendChild(menuContentItem2_A) ;
+menuContentItem2.appendChild(menuContentItem2_A2) ;
+menuContentItem2.appendChild(menuContentItem2_A3) ;
+menuContentItem2.appendChild(menuContentItem2_A4) ;
 
 menuContentTitle.classList.add("menu-content-title") ;
 menuContentItem.classList.add("menu-content-item") ;
+menuContentTitle2.classList.add("menu-content-title") ;
+menuContentItem2.classList.add("menu-content-item") ;
 
+// https://technopediait.github.io/pages/
 menuContentTitle_span.textContent = " منوی ایتم" ;
 menuContentTitle_img.src = "icon/expand-more-black.svg" ;
 menuContentItem_A.textContent = " آیتم " ;
 menuContentItem_A2.textContent = " آیتم " ;
 menuContentItem_A3.textContent = " آیتم " ;
 menuContentItem_A4.textContent = " آیتم " ;
+menuContentTitle2_span.textContent = " منوی ایتم" ;
+menuContentTitle2_img.src = "icon/expand-more-black.svg" ;
+menuContentItem2_A.textContent = " آیتم " ;
+menuContentItem2_A2.textContent = " آیتم " ;
+menuContentItem2_A3.textContent = " آیتم " ;
+menuContentItem2_A4.textContent = " آیتم " ;
 // پایان دسته بندی ها
 // پدر فرزند تمام عنصر های نوی
 navigationBar.appendChild(navBar) ;

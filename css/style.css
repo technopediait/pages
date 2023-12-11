@@ -85,21 +85,20 @@ p {
     position: fixed;
     transition: transform 0.5s ease;
     width: 100%;
-    height: 60px;
+    height: 50px;
     background-color: skyblue;
     z-index: 999;
     box-shadow: 0 0 4px rgba(0, 0, 0, 0.6);
 }
 
 .top-empty{
-    width: 100%; height: 60px;
+    width: 100%; height: 50px;
 }
 
 /* دکمه منو بازشو */
 .sidebar-btn {
     position: absolute;
-    top: 11px;
-    right: 12px;
+    top: 5px; right: 12px;
     cursor: pointer;
 }
 
@@ -111,14 +110,14 @@ p {
 .menu-active {
     width: 80% !important;
     position: fixed;
-    top: 60px;
+    top: 50px;
 }
 /* پایان دکمه منو بازشو */
 
 /* جستجو کردن */
 .search-btn {
     position: absolute;
-    top: 14px;
+    top: 7px;
     right: 56px;
     cursor: pointer;
 }
@@ -184,7 +183,7 @@ p {
 .menu-apps-btn img {
     width: 40px;  height: 40px;
     position: absolute;
-    top: 11px; left: 8px;
+    top: 5px; left: 8px;
     cursor: pointer;
     animation: orbit 5s linear infinite;
 }
@@ -248,18 +247,18 @@ main {
 
 /* منو باز شو  */
 .menu {
-    background: var(--primary-bg-color);
+    background: var(--main-color);
+    color: wheat;
     box-shadow: 0 0 4px rgba(0, 0, 0, 0.555);
     width: 0;
     padding: 0px;
     overflow-x: hidden;
-    color: var(--primary-text-color);
 }
 
 /* منو بازشو - بالا */
 .menu-top {
     display: flex;
-    background-color: rgb(19, 163, 216);
+    background-color: rgb(19, 216, 45);
     box-shadow: 0 0 6px rgba(0, 0, 0, 0.719);
     margin-top: 1px;
     justify-content: space-between;
@@ -287,21 +286,35 @@ main {
 /* پایان منو بازشو - بالا */
 
 /* نوشته های داخل منو */
+
+
 .menu-content-title {
     font-size: 2rem;
     display: flex;
     justify-content: space-between;
+    align-items: center;
     margin: 8px;
-    margin-top: 130px;
     padding: 5px;
 }
 
 .menu-content-item {
+    overflow-y: hidden;
     font-size: 1.6rem;
     display: flex;
     flex-direction: column;
+    padding: 0 3px;
+    height: 0;
 }
-/* پایان نوشته های داخل منو */
+.menu-content-item a{
+    margin: 3px 12px;
+    color: rgb(255, 230, 0);
+}
+
+.menu-content-item a::before{
+    content: "#";
+    color: red;
+}
+/* پایان نوشته های داخل منو (•)*/
 /* پایان منو */
 
 /* آنچه که در این مقاله می خوانید */
