@@ -76,4 +76,20 @@
 .loader{
 display: none;
 }
-
+/*
+@keyframes bgcolor {
+  0% , 100% {
+    background-color: rgb(170, 206, 175);
+  }
+  25%{
+    background-color: rgb(90, 180, 0);
+  }
+  50%{
+    background-color: rgb(63, 63, 255);
+  }
+  75%{
+    
+    background-color: blueviolet;
+  }
+}
+*/
