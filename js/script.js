@@ -127,6 +127,22 @@ footerCenterMenuTitle2_img.addEventListener("click", () => {
   }
 })
 
+menuContentTitle_img.addEventListener("click", () => {
+  if (menuContentItem.style.height === "160px") {
+    menuContentItem.style.height = "0" ;
+  }else{
+    menuContentItem.style.height = "160px" ;
+  }
+});
+menuContentTitle2_img.addEventListener("click", () => {
+  if (menuContentItem2.style.height === "160px") {
+    menuContentItem2.style.height = "0" ;
+  }else{
+    menuContentItem2.style.height = "160px" ;
+  }
+});
+
+
 var showReadBtn = document.querySelector(".show-read-btn");
 var showRead = document.querySelector(".show-read")
 showReadBtn.addEventListener("click", () => {
@@ -140,17 +156,3 @@ showReadBtn.addEventListener("click", () => {
 })
 
 
-menuContentTitle.addEventListener("click", () => {
-  if (menuContentItem.style.height === "auto") {
-    menuContentItem.style.height = "0" ;
-  }else{
-    menuContentItem.style.height = "auto" ;
-  }
-})
-menuContentTitle2.addEventListener("click", () => {
-  if (menuContentItem2.style.height === "auto") {
-    menuContentItem2.style.height = "0" ;
-  }else{
-    menuContentItem2.style.height = "auto" ;
-  }
-})
