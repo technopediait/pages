@@ -17,6 +17,7 @@ function addOutput() {
         
     } else if (inputText === ""){
         alert("این پیام خالی است")
+        outTXT.textContent = "پاسخ به این سوال ممکن نیست [ورودی=0]"
     }
      else if (inputText === "ساعت چنده"){
         iframe.src = "./clock.html"
@@ -81,10 +82,11 @@ document.getElementById("inputText").value = "" ;
 window.scrollTo(0, document.body.scrollHeight)
 audio.play();
 
-if (inputText === ""){
-    out.style.display = "none"
+
+    if (inpP.textContent === ""){
+       inpP.style.display = "none"
    }else{
-       out.style.display = "block"
+       inpP.style.display = "block"
    }
    if (iframe.src === ""){
        iframe.style.display = "none"
