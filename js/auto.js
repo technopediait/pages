@@ -248,14 +248,14 @@ var artDate2 = document.querySelector(".art-date2")
 var artTitle2 = document.querySelector(".art-title2")
 var artP2 = document.querySelector(".art-p2")
 var artBtn2 = document.querySelector(".art-btn2")
-artImg2.src = "https://technopediait.github.io/pages/images/1680917624-24c0604e17e910de0f206348c1e99e38.jpeg"
-artName2.textContent = ""
-artDate2.textContent = ""
-artTitle2.textContent = ""
-artTitle2.href = ""
-artP2.textContent = ""
-artBtn2.textContent = ""
-artBtn2.href = ""
+artImg2.src = "https://s6.uupload.ir/files/_e76c8d55-3fc8-4ec6-af46-341f505cd413_cxx2.jpeg"
+artName2.textContent = "محمد شائلی نژاد"
+artDate2.textContent = "۲۱ آذر ۱۴۰۲ - ۶:۳۰"
+artTitle2.textContent = "پتانسیل انقلابی باتری‌ها در دستگاه‌های موبایل"
+artTitle2.href = "https://technopediait.github.io/pages/articles/page2.html"
+artP2.textContent = "یکی از عوامل حیاتی در بهبود عملکرد و تجربه کاربری این دستگاه‌ها، بهبود تکنولوژی باتری‌ها است. در این مقاله، به بررسی پتانسیل انقلابی باتری‌ها در دستگاه‌های موبایل می‌پردازیم."
+artBtn2.textContent = "بیشتر بدانید"
+artBtn2.href = "https://technopediait.github.io/pages/articles/page2.html"
 
 // کنترل مقاله 3
 var article3 = document.querySelector(".article3")
