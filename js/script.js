@@ -140,17 +140,17 @@ showReadBtn.addEventListener("click", () => {
 })
 
 
-menuContentTitle.addEventListener("click", () => {
-  if (menuContentItem.style.height === "auto") {
+menuContentTitle_img.addEventListener("click", () => {
+  if (menuContentItem.style.height === "160px") {
     menuContentItem.style.height = "0" ;
   }else{
-    menuContentItem.style.height = "auto" ;
+    menuContentItem.style.height = "160px" ;
   }
-})
-menuContentTitle2.addEventListener("click", () => {
-  if (menuContentItem2.style.height === "auto") {
-    menuContentItem2.style.height = "0" ;
+});
+menuContentTitle_img.addEventListener("click", () => {
+  if (menuContentItem2.style.height === "0") {
+    menuContentItem2.style.height = "160px" ;
   }else{
     menuContentItem2.style.height = "auto" ;
   }
-})
+});
