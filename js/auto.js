@@ -267,14 +267,14 @@ var artDate3 = document.querySelector(".art-date3")
 var artTitle3 = document.querySelector(".art-title3")
 var artP3 = document.querySelector(".art-p3")
 var artBtn3 = document.querySelector(".art-btn3")
-artImg3.src = "https://technopediait.github.io/pages/images/1680917624-24c0604e17e910de0f206348c1e99e38.jpeg"
-artName3.textContent = ""
-artDate3.textContent = ""
-artTitle3.textContent = ""
-artTitle3.href = ""
-artP3.textContent = ""
-artBtn3.textContent = ""
-artBtn3.href = ""
+artImg3.src = "https://s6.uupload.ir/files/polish_۲۰۲۳۱۲۱۲_۱۹۴۲۳۵۵۴۲_h0fw.jpg"
+artName3.textContent = "توسط ادمین"
+artDate3.textContent = "22 آذر 1402"
+artTitle3.textContent = "بهترین موتور های جستجو در سال 2024"
+artTitle3.href = "https://technopediait.github.io/pages/articles/page3.html"
+artP3.textContent = "موتورهای جستجو ابزارهایی هستند که به کاربران اینترنت کمک می‌کنند تا اطلاعات مورد نظر خود را در وب پیدا کنند."
+artBtn3.textContent = "مطالعه بیشتر"
+artBtn3.href = "https://technopediait.github.io/pages/articles/page3.html"
 
 // کنترل فوتر
 var footer = document.querySelector(".footer") ;
