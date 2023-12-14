@@ -247,8 +247,8 @@ main {
 
 /* منو باز شو  */
 .menu {
-    background: var(--main-color);
-    color: wheat;
+    background: var(--primary-bg-color);
+    color: var(--primary-text-color);
     box-shadow: 0 0 4px rgba(0, 0, 0, 0.555);
     width: 0;
     padding: 0px;
@@ -288,8 +288,6 @@ main {
 /* پایان منو بازشو - بالا */
 
 /* نوشته های داخل منو */
-
-
 .menu-content-title {
     font-size: 2rem;
     display: flex;
@@ -304,18 +302,18 @@ main {
     font-size: 1.8rem;
     display: flex;
     flex-direction: column;
-    padding: 0 3px;
+    padding: 2px 3px;
     height: 0;
-    background-color: rgb(36, 0, 239)
+    background-color: var(--secondary-bg-color)
 }
 .menu-content-item a{
-    margin: 6px 5px;
-    color: rgb(60, 255, 0);
+    margin: 7px 10px;
+    color: var(--secondary-text-color);
 }
 
 .menu-content-item a::before{
     content: "+";
-    color: rgb(255, 255, 255);
+    color: var(--primary-text-color);
 }
 /* پایان نوشته های داخل منو (•)*/
 /* پایان منو */
