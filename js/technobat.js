@@ -25,7 +25,8 @@ function addOutput() {
     }
     else if (inputText === "خوبی"){
     outTXT.textContent = "بله من خوبم شما خوبین"
-    }  
+    } 
+        /*
     else if (inputText === "بدون متن"){
     outTXT.textContent = "بدون متن"
     }
@@ -188,7 +189,7 @@ function addOutput() {
     else if (inputText === "بدون متن"){
     outTXT.textContent = "بدون متن"
     }
-
+     */
 
 
 
@@ -222,7 +223,8 @@ function addOutput() {
     } 
     else if (inputText.includes("کرنومتر")){
     iframe.src = "./stopwatch.html"
-    }   
+    } 
+        /*
     else if (inputText.includes("بدون متن")){
     outTXT.textContent = "بدون متن"
     }
@@ -478,7 +480,7 @@ function addOutput() {
     else if (inputText.includes("بدون متن")){
     outTXT.textContent = "بدون متن"
     }       
-        
+      */  
     else {
     outTXT.textContent = " ورودی نامعتبر است "
     }   
