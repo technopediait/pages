@@ -259,7 +259,7 @@ main {
 /* منو بازشو - بالا */
 .menu-top {
     display: flex;
-    background-color: rgb(136, 0, 255);
+    background-color: purple;
     box-shadow: 0 0 6px rgba(0, 0, 0, 0.719);
     margin-top: 1px;
     justify-content: space-between;
@@ -293,7 +293,7 @@ main {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin: 3px 2px;
+    margin: 7px 4px;
     padding:0 5px;
 }
 
@@ -302,12 +302,13 @@ main {
     font-size: 1.8rem;
     display: flex;
     flex-direction: column;
-    padding: 2px 3px;
+    padding: 2px 5px;
     height: 0;
     background-color: var(--secondary-bg-color)
 }
 .menu-content-item a{
-    margin: 7px 10px;
+    margin: 6px 15px;
+
     color: var(--secondary-text-color);
 }
 
@@ -349,7 +350,7 @@ main {
 
 .show-read a::before{
     content: "# ";
-    color: rgb(0, 209, 10);
+    color: rgb(80, 209, 0);
 }
 
 .show-read a {
@@ -490,6 +491,10 @@ section {
     color: var(--secondary-text-color);
     font-size: 2rem;
     line-height: 4.2rem;
+}
+
+.home .content b{
+    font-size: 2rem;
 }
 /* پایان متن اصلی */
 /* پایانه سکشن خانه */
