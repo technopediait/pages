@@ -128,17 +128,17 @@ footerCenterMenuTitle2_img.addEventListener("click", () => {
 })
 
 menuContentTitle_img.addEventListener("click", () => {
-  if (menuContentItem.style.height === "160px") {
+  if (menuContentItem.style.height === "auto") {
     menuContentItem.style.height = "0" ;
   }else{
-    menuContentItem.style.height = "160px" ;
+    menuContentItem.style.height = "auto" ;
   }
 });
 menuContentTitle2_img.addEventListener("click", () => {
-  if (menuContentItem2.style.height === "160px") {
+  if (menuContentItem2.style.height === "auto") {
     menuContentItem2.style.height = "0" ;
   }else{
-    menuContentItem2.style.height = "160px" ;
+    menuContentItem2.style.height = "auto" ;
   }
 });
 
@@ -146,12 +146,12 @@ menuContentTitle2_img.addEventListener("click", () => {
 var showReadBtn = document.querySelector(".show-read-btn");
 var showRead = document.querySelector(".show-read")
 showReadBtn.addEventListener("click", () => {
-  if (showRead.style.height === "160px") {
+  if (showRead.style.height === "auto") {
     showReadBtn.textContent = "نمایش"
     showRead.style.height = "0" ;
   }else{
     showReadBtn.textContent = "مخفی"
-    showRead.style.height = "160px" ;
+    showRead.style.height = "auto" ;
   }
 })
 
