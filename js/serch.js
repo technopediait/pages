@@ -5,13 +5,12 @@ document.addEventListener('DOMContentLoaded', function () {
         const searchTerm = formSearch_input.value.toLowerCase();
 
         const data = [
-            { title: 'بهترین موتور های جستجو', link: 'https://technopediait.github.io/pages/articles/enteghal-boo.html' },
-            { title: 'chat GPT چیست؟', link: 'https://technopediait.github.io/pages/articles/serch-motor.html' },
-            { title: 'انتقال بو از طریق اینترنت', link: 'https://technopediait.github.io/pages/articles/page.html' },
-            { title: 'تکنو بات', link: 'https://technopediait.github.io/pages/test.html' },
-            { title: 'کانال تلگرام تکنو پدیا', link: 'https://t.me/technopedaiit' },
+            { title: 'بهترین موتور های جستجو', link: 'https://technopediait.github.io/pages/articles/page3.html' },
+            { title: 'chat GPT چیست؟', link: 'https://technopediait.github.io/pages/articles/page.html' },
+            { title: 'پتانسیل انقلابی در باطری های موبایل', link: 'https://technopediait.github.io/pages/articles/page2.html' },
+            { title: 'تکنو بات', link: 'https://technopediait.github.io/pages/apps/technobat.html' },
+            { title: 'کانال تلگرام تکنو پدیا', link: 'https://t.me/technopediait' },
             { title: 'صفحه اینستاگرام تکنو پدیا', link: 'https://instagram.com/technopediait' },
-
         ];
 
         const searchResults = data.filter(item => item.title.toLowerCase().includes(searchTerm));
