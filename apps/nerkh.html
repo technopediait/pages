@@ -1,82 +1,43 @@
+<!DOCTYPE html>
+<html lang="fa">
+<head>
+ <meta charset="UTF-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <title>نرخ نامه سیمکشی و باطری سازی شهرستان زهک</title>
+ <style> 
+@font-face {
+ font-family: iran-sans;
+ src: url(../fonts/iransans.ttf);
+}
+
+@font-face {
+ font-family: vazir;
+ src: url(../fonts/Vazir-Regular.ttf);
+}
+ *{
+  direction: rtl;
+  font-family: vazir;
+ }
+ table{
+  width: 100%;
+ }
+
+ table, tr, td{
+  border: 1px solid black;
+  border-collapse: collapse;
+  text-align: center;
+ }
+
+ tr:nth-child(1), td:nth-child(1){
+  font-weight: bold;
+  font-size: 14px;
+ }
+
  
- <code>
-کد جاوا اسکریپت حالت خودکار حالت تاریک
-// تابعی برای تعیین حالت روشن یا تاریک بر اساس وضعیت سیستم
-    function getMode() {
-      // اگر دستگاه اندروید است، حالت سیستم را تعیین کنید
-      if (window.matchMedia("(prefers-color-scheme: dark)").matches) {
-        return "dark-theme";
-      } else {
-        return "light";
-      }
-    }
-    // تابعی برای تغییر حالت صفحه
-    function changeMode(mode) {
-      // حالت صفحه را بر اساس مقدار بازگشتی تابع getMode() تغییر دهید
-      const body = document.querySelector("body");
-      body.classList.remove("light", "dark-theme");
-      body.classList.add(mode);
-    }
-      // تعیین حالت اولیه صفحه
-      const mode = getMode();
-      changeMode(mode);
-      
-      // نظارت بر تغییر حالت سیستم و تغییر حالت صفحه به صورت خودکار
-      window.addEventListener("color-scheme-change", () => {
-        const mode = getMode();
-        changeMode(mode);
-      });
-      
-      /*
-$(document).ready(function(){
-  // smooth scrolling 
-  $('a[href*="#"]').on('click',function(e){
-
-    e.preventDefault();
-
-    $('html, body').animate({
-
-      scrollTop : $($(this).attr('href')).offset().top,
-    },
-      500,
-      'linear'
-    );
-
-  });
-
-});*/
-
-
-<!-- jquery cdn link 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-    -->
-
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
-
-</code>
-
-
-            <h3> chat gpt <span>چیست؟ </span> </h3>
-            <p>
-                چت جی پی تی (GPT) یک مخفف برای "Generative Pre-trained Transformer" است. این یک مدل یادگیری عمیق مبتنی
-                بر شبکه‌های عصبی است که به توسعه واقعیت‌افزوده توجه دارد. این مدل‌ها توسط OpenAI توسعه داده شده‌اند و از
-                معماری شبکه‌های عصبی بازگشتی (RNN) و شبکه‌های عصبی کانولوشنال (CNN) بهره می‌برند.
-            </p>
-            <p>
-                GPT معمولاً برای تولید متون و پاسخ به سوالات متنی استفاده می‌شود. این مدل‌ها با یادگیری از متون بزرگ در
-                اینترنت آموزش داده می‌شوند و می‌توانند متون جدیدی را تولید کنند که به نظر می‌آید واقعیت دارند. GPT-3،
-                یکی از جدیدترین نسخه‌های این مدل، شناخته شده است و توانایی تولید متون متنوع و پاسخ به سوالات مختلف را
-                دارد.
-            </p>
-            <p>
-                GPT می‌تواند در برنامه‌ها و سرویس‌های مختلف، از جمله چت‌بات‌ها، پرسش و پاسخ‌های متنی و بسیاری از وظایف
-                دیگر مورد استفاده 
-            </p>
-
-
-
-
-
+ 
+ </style>
+</head>
+<body>
 
  <table>
   <tr>
@@ -90,7 +51,7 @@ $(document).ready(function(){
   </tr>
   <tr>
    <td>تعمیر استارت</td>
-   <td></td>
+   <td>f</td>
    <td></td>
    <td></td>
    <td></td>
@@ -297,28 +258,5 @@ $(document).ready(function(){
   </tr>
 
  </table>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+</body>
+</html>
