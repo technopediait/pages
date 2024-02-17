@@ -1,1 +1,38 @@
-asdfghjnb vc
+<!DOCTYPE html>
+<html lang="fa">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>جابجا شدن بین صفحات بدون رفرش</title>
+</head>
+<body>
+    <div id="content">
+        <h1>صفحه اول</h1>
+        <button onclick="navigateTo('mypage.html')">رفتن به صفحه دوم</button>
+        <button onclick="navigateTo('index.html')">دوم</button>
+    </div>
+
+  <script>
+    function loadContent(url) {
+  // دریافت  محتوای  فایل  html
+  const xhr = new XMLHttpRequest();
+  xhr.open("GET", url);
+  xhr.onload = function() {
+      if (xhr.status === 200) {
+          document.getElementById("content").innerHTML = xhr.responseText;
+      }
+  };
+  xhr.send();
+}
+
+// تابعی برای  جابه  جایی  به  صفحه  جدید
+function navigateTo(url) {
+  // اضافه  کردن  یک  مدخل  جدید  به  تاریخچه  مرورگر
+  history.pushState({}, "", url);
+
+  // بارگیری  محتوای  صفحه  جدید
+  loadContent(url);
+}
+  </script>
+</body>
+</html>
