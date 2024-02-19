@@ -30,9 +30,6 @@
       form {
         margin: 2rem;
       }
-      .fff{
-        margin-bottom: 300vh;
-      }
       form input {
         width: 100%;
         padding: 1rem;
@@ -41,49 +38,62 @@
         border-radius: 1.5rem;
         font-size: 1.3rem;
       }
-      form input:focus{
+      form input:focus {
         border-color: blue;
       }
-      button{
-        padding: .3rem 1rem;
+      button {
+        padding: 0.3rem 1rem;
         background-color: blueviolet;
-        border-radius: .5rem;
+        border-radius: 0.5rem;
         font-size: 1.4rem;
-        margin: .3rem;
+        margin: 0.3rem;
       }
-      button a{
+      button:hover{
+      background-color: rgb(171, 81, 255);
+      }
+      button a {
         color: #fff;
       }
-      p{
+      p {
         text-align: center;
         font-size: 1.4rem;
       }
+    .boxes{
+      display: flex;
+      flex-wrap: wrap;
+      padding: .4rem;
+      justify-content: center;
+      gap: .4rem;
+    }
+    .box{
+      background-color: blueviolet;
+      color: #fff;
+      padding: .5rem;
+      border-radius: 1rem;
+    }
+    .box:hover{
+      background-color: rgb(171, 81, 255);
+    }
+
     </style>
   </head>
   <body>
     <h1 class="title">this is my page</h1>
-    <h1><a href="https://chat.openai.com/">Chat GPT</a></h1>
-    <h1><a href="https://gemini.google.com/u/1/app?hl=fa">Gmini</a></h1>
-    <h1><a href="https://github.com">GitHub</a></h1>
-    <h1><a href="https://www.google.com">Google</a></h1>
-    <h1><a href="#"></a></h1>
-    <h1><a href="#"></a></h1>
-    <h1><a href="#"></a></h1>
+    <div class="boxes">
+      <a class="box" href="https://chat.openai.com/">Chat GPT</a>
+      <a class="box" href="https://gemini.google.com/u/1/app?hl=fa">Gmini</a>
+      <a class="box" href="https://github.com">GitHub</a>
+      <a class="box" href="https://www.google.com">Google</a>
+    </div>
+
     <form id="search_form">
-      <input type="search" name="" id="searchbox" placeholder="جستجو در گوگل..."/>
-      <center><button><a href="" id="searchBtn">جستجو</a></button></center>
+      <input type="search" id="searchbox" placeholder="جستجو در گوگل...">
+      <center>
+        <button><a href="" id="searchBtn">جستجو</a></button>
+      </center>
     </form>
-    <div id="content">
-      <h1>صفحه اول</h1>
-      <button onclick="navigateTo('s.html')">رفتن به صفحه دوم</button>
-      <button onclick="navigateTo('index.html')">دوم</button>
-  </div>
-
-
     <p>خروجی:</p>
     <p id="output" class="output"></p>
-
-    <div class="fff"></div>
     <script>
       var search_form = document.getElementById("search_form");
       var searchbox = document.getElementById("searchbox");
@@ -91,70 +101,44 @@
       document.addEventListener("DOMContentLoaded", function () {
         searchbox.addEventListener("input", function () {
           var search_l = searchbox.value.toLowerCase();
-          linkF = "https://www.google.com/search?q="+search_l;
-           searchBtn.href = linkF;
+          linkF = "https://www.google.com/search?q=" + search_l;
+          searchBtn.href = linkF;
         });
       });
-        // متغیری برای  ذخیره  وضعیت  اجرای  حلقه
-        let isRunning = false;
+      // متغیری برای  ذخیره  وضعیت  اجرای  حلقه
+      let isRunning = false;
+      function showNumbers() {
+        // متغیری برای  ذخیره  شمارنده
+        let counter = 0;
+        const interval = setInterval(() => {
+          counter++;
 
-        // تابعی برای  نمایش اعداد  از 0 تا 1245 در عرض پنج ثانیه
-        function showNumbers() {
-            // متغیری برای  ذخیره  شمارنده
-            let counter = 0;
+          // نمایش  شمارنده  در  html
+          document.getElementById("output").innerHTML = counter;
 
-            // setInterval  برای  اجرای  یک  تابع  به  طور  مکرر  در  یک  فاصله  زمانی  مشخص  استفاده می شود.
-            const interval = setInterval(() => {
-                // افزایش  شمارنده
-                counter++;
-
-                // نمایش  شمارنده  در  html
-                document.getElementById("output").innerHTML = counter;
-
-                // بررسی  اگر  شمارنده  به  1245  رسید  clearInterval  برای  توقف  setInterval  استفاده می شود.
-                if (counter === 1245) {
-                    clearInterval(interval);
-                }
-            }, 5); // 5 میلی ثانیه  معادل  0.005 ثانیه  است
-        }
-
-        // IntersectionObserver  برای  مشاهده  عنصر  با  کلاس  output
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach((entry) => {
-                // اگر  عنصر  با  کلاس  output  در  viewport  قابل  مشاهده  شد
-                if (entry.isIntersecting) {
-                    // اگر  حلقه  در  حال  اجرا  نیست
-                    if (!isRunning) {
-                        // شروع  اجرای  حلقه
-                        isRunning = true;
-                        showNumbers();
-                    }
-                }
-            });
-        });
-
-        // مشاهده  عنصر  با  کلاس  output
-        observer.observe(document.querySelector(".output"));
-        function loadContent(url) {
-  // دریافت  محتوای  فایل  html
-  const xhr = new XMLHttpRequest();
-  xhr.open("GET", url);
-  xhr.onload = function() {
-      if (xhr.status === 200) {
-          document.getElementById("content").innerHTML = xhr.responseText;
+          // بررسی  اگر  شمارنده  به  1245  رسید  clearInterval  برای  توقف  setInterval  استفاده می شود.
+          if (counter === 10245) {
+            clearInterval(interval);
+          }
+        }, 5); // 5 میلی ثانیه  معادل  0.005 ثانیه  است
       }
-  };
-  xhr.send();
-}
 
-// تابعی برای  جابه  جایی  به  صفحه  جدید
-function navigateTo(url) {
-  // اضافه  کردن  یک  مدخل  جدید  به  تاریخچه  مرورگر
-  history.pushState({}, "", url);
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+          // اگر  عنصر  با  کلاس  output  در  viewport  قابل  مشاهده  شد
+          if (entry.isIntersecting) {
+            // اگر  حلقه  در  حال  اجرا  نیست
+            if (!isRunning) {
+              // شروع  اجرای  حلقه
+              isRunning = true;
+              showNumbers();
+            }
+          }
+        });
+      });
 
-  // بارگیری  محتوای  صفحه  جدید
-  loadContent(url);
-}
+      // مشاهده  عنصر  با  کلاس  output
+      observer.observe(document.querySelector(".output"));
     </script>
   </body>
 </html>
