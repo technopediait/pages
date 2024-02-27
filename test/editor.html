@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Simple WYSIWYG Editor</title>
+    <style>
+      @font-face {
+        font-family: vazir;
+        src: url(../fonts/Vazir-Regular.ttf);
+      }
+      * {
+        direction: rtl;
+        margin: 0;
+        /* padding: 0; */
+        font-family: vazir; 
+        /* overflow-x: hidden; */
+      }
+      #toolbar {
+        margin-bottom: 10px;
+      }
+
+      .format-action {
+        margin-right: 5px;
+      }
+
+      #editor {
+        background-color: aquamarine;
+        min-height: 300px;
+        border-radius: 5px;
+        padding: 7px;
+        box-shadow: 0 0 7px black;
+      }
+
+      .format-action {
+        margin-right: 5px;
+        transition: background-color 0.3s;
+      }
+      .active {
+        background-color: rgb(86, 80, 255);
+      }
+      .format-action:active {
+        background-color: lightgray;
+      }
+
+
+    </style>
+  </head>
+  <body>
+    <div id="toolbar">
+      <button onclick="active(this)" class="format-action" data-action="bold">Bold</button>
+      <button onclick="active(this)" class="format-action" data-action="italic">Italic</button>
+      <button onclick="active(this)" class="format-action" data-action="underline">Underline</button>
+      <button onclick="active(this)" class="format-action" data-action="strikethrough">Strike</button>
+      <button onclick="active(this)" class="format-action" data-action="insertOrderedList">olist</button>
+      <button onclick="active(this)" class="format-action" data-action="insertUnorderedList">ulist</button>
+      <select class="format-action" data-action="heading">
+        <option value="">Normal text</option>
+        <option value="p">p text</option>
+        <option value="h1">Heading 1</option>
+        <option value="h2">Heading 2</option>
+        <option value="h3">Heading 3</option>
+        <option value="h4">Heading 4</option>
+        <option value="h5">Heading 5</option>
+        <option value="h6">Heading 6</option>
+      </select>
+      <input type="text" id="imageLinkInput" placeholder="Enter image URL" />
+      <button onclick="insertImage()">Insert Image</button>
+    </div>
+    <div id="editor" contenteditable="true" oninput="updateTextarea()">
+      <p>Hello, world!</p>
+    </div>
+    <textarea id="hiddenTextarea" style="display: none"></textarea>
+    <script>
+      function updateTextarea() {
+        var editorContent = document.getElementById("editor").innerHTML;
+        document.getElementById("hiddenTextarea").textContent = editorContent;
+      }
+
+      function active(e){
+        if (e.classList.contains("active")){
+          e.classList.remove("active");
+        }else{
+          e.classList.add("active");
+        }
+      }
+
+      function insertImage() {
+        var imageUrl = document.getElementById("imageLinkInput").value;
+        if (imageUrl.trim() !== "") {
+          var imageElement = document.createElement("img");
+          imageElement.src = imageUrl;
+          imageElement.style.width = "100%";
+          imageElement.style.height = "auto";
+          document.getElementById("editor").appendChild(imageElement);
+        }
+      }
+
+
+      document.addEventListener("DOMContentLoaded", function () {
+        var toolbar = document.getElementById("toolbar");
+        toolbar.addEventListener("click", function (event) {
+          var action = event.target.dataset.action;
+          if (action) {
+            document.execCommand(action, false, null);
+          }
+        });
+
+        toolbar
+          .querySelector('select[data-action="heading"]')
+          .addEventListener("click", function (event) {
+            var selectedHeading = event.target.value;
+            if (selectedHeading) {
+              document.execCommand("formatBlock", false, selectedHeading);
+            }
+          });
+      });
+    </script>
+  </body>
+</html>
