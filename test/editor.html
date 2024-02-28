@@ -79,7 +79,7 @@
         background-color: #d4d4d432;
       }
 
-      i {
+      button i {
         position: relative;
         z-index: -1;
       }
@@ -92,7 +92,7 @@
         background-color: rgba(255, 255, 255, 0.46);
       }
 
-      .img-window{
+      .img-window {
         display: none;
         flex-direction: column;
         height: 300px;
@@ -106,41 +106,40 @@
         z-index: 2;
       }
 
-
-      .img-window input{
+      .img-window input {
         border: 1px solid rgb(82, 82, 82);
         border-radius: 5px;
         padding: 5px;
       }
 
-      .img-window input[type=url]{
+      .img-window input[type="url"] {
         direction: ltr;
       }
 
-      .img-window>input{
+      .img-window > input {
         width: 100%;
       }
 
-      .row{
+      .row {
         margin-top: 30px;
         display: flex;
         justify-content: center;
       }
 
-      .row input{
+      .row input {
         margin-left: 10px;
         width: 100px;
         text-align: center;
       }
 
-      .submit{
+      .submit {
         padding: 5px 15px;
-        background-color: #2626ff;
+        background-color: #2929ff;
         color: #fff;
         border-radius: 5px;
       }
 
-      .submit:hover{
+      .submit:hover {
         background-color: #4a4aff;
       }
     </style>
@@ -175,33 +174,50 @@
         <option value="h2">عنوان فرعی</option>
         <option value="h3">زیر عنوان</option>
       </select>
-      <button class="format-action" onclick="insertTable(3, 4);">
+      <button class="format-action" onclick="createTable()">
         <i class="fa fa-table"></i>
       </button>
       <button onclick="imgWindow()">
         <i class="fa fa-image"></i>
       </button>
+      <button class="format-action" onclick="setTextAlignment('justifyLeft')">
+        <i class="fa fa-align-left"></i>
+      </button>
+      <button class="format-action" onclick="setTextAlignment('justifyCenter')">
+        <i class="fa fa-align-center"></i>
+      </button>
+      <button class="format-action" onclick="setTextAlignment('justifyRight')">
+        <i class="fa fa-align-right"></i>
+      </button>
+      <button class="format-action" onclick="setTextColor()">
+        تنظیم این رنگ
+      </button>
+      <input type="color" id="colorPicker" />
+      <button class="format-action" onclick="removeTextColor()">برداشتن</button>
+      <button class="toolbar-button" onclick="deleteTable()">Delete Table</button>
+
     </div>
     <div class="img-window">
       <label for="imageLinkInput">لینک تصویر:</label>
       <input type="url" id="imageLinkInput" value="https://" />
       <label for="img-alt">توضیحات تصویر:</label>
-      <input type="text" id="img-alt" placeholder="تصویر را توصیف کنید."/>
+      <input type="text" id="img-alt" placeholder="تصویر را توصیف کنید." />
       <div class="row">
         <label for="img-width">عرض:</label>
         <input type="text" id="img-width" value="100%" />
         <label for="img-height">طول:</label>
-        <input type="text" id="img-height" value="auto"/>
+        <input type="text" id="img-height" value="auto" />
       </div>
       <center>
-        <button onclick="insertImage()" class="submit">
-          ذخیره تصویر
-        </button>  
+        <button onclick="insertImage()" class="submit">ذخیره تصویر</button>
 
-        <button onclick="imgWindow()" class="submit" style="background-color: red;">
+        <button
+          onclick="imgWindow()"
+          class="submit"
+          style="background-color: red"
+        >
           لغو
         </button>
-
       </center>
     </div>
     <span id="length">0</span>
@@ -230,6 +246,10 @@
         }
       }
 
+      function setTextAlignment(alignment) {
+        document.execCommand(alignment, false, null);
+      }
+
       function insertImage() {
         var imageUrl = document.getElementById("imageLinkInput").value;
         var imgAlt = document.getElementById("img-alt").value;
@@ -247,19 +267,47 @@
         }
       }
 
-      function insertTable(rows, columns) {
-        var html = '<table border="1">';
-        for (var i = 0; i < rows; i++) {
-          html += "<tr>";
-          for (var j = 0; j < columns; j++) {
-            html += "<td>Cell</td>";
-          }
-          html += "</tr>";
-        }
-        html += "</table>";
-
-        document.execCommand("insertHTML", false, html);
+      function removeTextColor() {
+        document.execCommand("removeFormat", false, null);
       }
+
+      function setTextColor() {
+        var colorPicker = document.getElementById("colorPicker");
+        var colorValue = colorPicker.value;
+        document.execCommand("foreColor", false, colorValue);
+      }
+
+      function createTable() {
+        var tableHTML = '<table border="1">';
+        var rows = prompt("Enter number of rows:");
+        var columns = prompt("Enter number of columns:");
+
+        for (var i = 0; i < rows; i++) {
+          tableHTML += "<tr>";
+          for (var j = 0; j < columns; j++) {
+            tableHTML += "<td>Cell " + (i + 1) + "-" + (j + 1) + "</td>";
+          }
+          tableHTML += "</tr>";
+        }
+
+        tableHTML += "</table>";
+
+        document.execCommand("insertHTML", false, tableHTML);
+      }
+
+      function deleteTable() {
+            var selection = document.getSelection();
+            if (selection.rangeCount > 0) {
+                var range = selection.getRangeAt(0);
+                var table = range.startContainer;
+                while (table && table.nodeName.toLowerCase() !== 'table') {
+                    table = table.parentNode;
+                }
+                if (table && table.nodeName.toLowerCase() === 'table') {
+                    table.remove();
+                }
+            }
+        }
 
       document.addEventListener("DOMContentLoaded", function () {
         var toolbar = document.getElementById("toolbar");
@@ -299,10 +347,10 @@
 
       function imgWindow() {
         var img_window = document.querySelector(".img-window");
-        if(img_window.style.display === "flex"){
-          img_window.style.display = "none"
-        }else{
-          img_window.style.display = "flex" 
+        if (img_window.style.display === "flex") {
+          img_window.style.display = "none";
+        } else {
+          img_window.style.display = "flex";
         }
       }
     </script>
