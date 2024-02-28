@@ -13,7 +13,7 @@
         direction: rtl;
         margin: 0;
         /* padding: 0; */
-        font-family: vazir; 
+        font-family: vazir;
         /* overflow-x: hidden; */
       }
       #toolbar {
@@ -42,18 +42,25 @@
       .format-action:active {
         background-color: lightgray;
       }
-
-
+      table{
+        width: 100%;
+        border-collapse: collapse;
+      }
     </style>
   </head>
   <body>
     <div id="toolbar">
-      <button onclick="active(this)" class="format-action" data-action="bold">Bold</button>
-      <button onclick="active(this)" class="format-action" data-action="italic">Italic</button>
-      <button onclick="active(this)" class="format-action" data-action="underline">Underline</button>
-      <button onclick="active(this)" class="format-action" data-action="strikethrough">Strike</button>
-      <button onclick="active(this)" class="format-action" data-action="insertOrderedList">olist</button>
-      <button onclick="active(this)" class="format-action" data-action="insertUnorderedList">ulist</button>
+      <button class="format-action" data-action="bold">Bold</button>
+      <button class="format-action" data-action="italic">Italic</button>
+      <button class="format-action" data-action="underline">Underline</button>
+      <button class="format-action" data-action="strikethrough">Strike</button>
+      <button class="format-action" data-action="insertOrderedList">
+        olist
+      </button>
+      <button class="format-action" data-action="insertUnorderedList">
+        ulist
+      </button>
+      <button class="format-action">link</button>
       <select class="format-action" data-action="heading">
         <option value="">Normal text</option>
         <option value="p">p text</option>
@@ -64,6 +71,7 @@
         <option value="h5">Heading 5</option>
         <option value="h6">Heading 6</option>
       </select>
+      <button class="format-action" onclick="insertTable(3, 4);">Strike</button>
       <input type="text" id="imageLinkInput" placeholder="Enter image URL" />
       <button onclick="insertImage()">Insert Image</button>
     </div>
@@ -77,11 +85,19 @@
         document.getElementById("hiddenTextarea").textContent = editorContent;
       }
 
-      function active(e){
-        if (e.classList.contains("active")){
-          e.classList.remove("active");
-        }else{
-          e.classList.add("active");
+      // function active(e) {
+      //   if (e.classList.contains("active")) {
+      //     e.classList.remove("active");
+      //   } else {
+      //     e.classList.add("active");
+      //   }
+      // }
+
+      function insertLink() {
+        var url = prompt("Enter URL:", "http://");
+        prompt("Enter URL:", "http://");
+        if (url) {
+          document.execCommand("createLink", false, url);
         }
       }
 
@@ -96,13 +112,38 @@
         }
       }
 
+      function insertTable(rows, columns) {
+        var html = '<table border="1">';
+        for (var i = 0; i < rows; i++) {
+          html += "<tr>";
+          for (var j = 0; j < columns; j++) {
+            html += "<td>Cell</td>";
+          }
+          html += "</tr>";
+        }
+        html += "</table>";
+
+        document.execCommand("insertHTML", false, html);
+      }
 
       document.addEventListener("DOMContentLoaded", function () {
         var toolbar = document.getElementById("toolbar");
+        function setActiveState() {
+          var formatActions = document.querySelectorAll(".format-action");
+          formatActions.forEach(function (action) {
+            var command = action.dataset.action;
+            if (document.queryCommandState(command)) {
+              action.classList.add("active");
+            } else {
+              action.classList.remove("active");
+            }
+          });
+        }
         toolbar.addEventListener("click", function (event) {
           var action = event.target.dataset.action;
           if (action) {
             document.execCommand(action, false, null);
+            setActiveState();
           }
         });
 
@@ -113,6 +154,11 @@
             if (selectedHeading) {
               document.execCommand("formatBlock", false, selectedHeading);
             }
+          });
+        document
+          .getElementById("editor")
+          .addEventListener("input", function () {
+            setActiveState();
           });
       });
     </script>
