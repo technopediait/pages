@@ -189,13 +189,14 @@
       <button class="format-action" onclick="setTextAlignment('justifyRight')">
         <i class="fa fa-align-right"></i>
       </button>
-      <button class="format-action" onclick="setTextColor()">
+      <!-- <button class="format-action" onclick="setTextColor()">
         تنظیم این رنگ
-      </button>
+      </button> -->
       <input type="color" id="colorPicker" />
       <button class="format-action" onclick="removeTextColor()">برداشتن</button>
-      <button class="toolbar-button" onclick="deleteTable()">Delete Table</button>
-
+      <button class="toolbar-button" onclick="deleteTable()">
+        Delete Table
+      </button>
     </div>
     <div class="img-window">
       <label for="imageLinkInput">لینک تصویر:</label>
@@ -271,11 +272,11 @@
         document.execCommand("removeFormat", false, null);
       }
 
-      function setTextColor() {
-        var colorPicker = document.getElementById("colorPicker");
-        var colorValue = colorPicker.value;
-        document.execCommand("foreColor", false, colorValue);
-      }
+      // function setTextColor() {
+      //   var colorPicker = document.getElementById("colorPicker");
+      //   var colorValue = colorPicker.value;
+      //   document.execCommand("foreColor", false, colorValue);
+      // }
 
       function createTable() {
         var tableHTML = '<table border="1">';
@@ -296,18 +297,18 @@
       }
 
       function deleteTable() {
-            var selection = document.getSelection();
-            if (selection.rangeCount > 0) {
-                var range = selection.getRangeAt(0);
-                var table = range.startContainer;
-                while (table && table.nodeName.toLowerCase() !== 'table') {
-                    table = table.parentNode;
-                }
-                if (table && table.nodeName.toLowerCase() === 'table') {
-                    table.remove();
-                }
-            }
+        var selection = document.getSelection();
+        if (selection.rangeCount > 0) {
+          var range = selection.getRangeAt(0);
+          var table = range.startContainer;
+          while (table && table.nodeName.toLowerCase() !== "table") {
+            table = table.parentNode;
+          }
+          if (table && table.nodeName.toLowerCase() === "table") {
+            table.remove();
+          }
         }
+      }
 
       document.addEventListener("DOMContentLoaded", function () {
         var toolbar = document.getElementById("toolbar");
@@ -344,6 +345,14 @@
             setActiveState();
           });
       });
+
+      document
+        .getElementById("colorPicker")
+        .addEventListener("input", function () {
+          var colorPicker = document.getElementById("colorPicker");
+          var colorValue = colorPicker.value;
+          document.execCommand("foreColor", false, colorValue);
+        });
 
       function imgWindow() {
         var img_window = document.querySelector(".img-window");
