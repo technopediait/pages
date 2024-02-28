@@ -1,29 +1,85 @@
+// بارگیری فایل JSON
+fetch('data.json')
+    .then(response => response.json()) // تبدیل پاسخ به JSON
+    .then(data => {
+        // پردازش داده
+        displayData(data);
+    })
+    .catch(error => {
+        console.error('Error loading the JSON file:', error);
+    });
 
-const text = document.querySelector(".sec-text");
-const textLoad = () => {
- setTimeout(() => {
-  text.textContent = "فریلنسر"; 
-
- }, 0);
- setTimeout(() => {
-  text.textContent = " بلاگر"; 
-
-
- }, 4000);
- 
- setTimeout(() => {
-  text.textContent = "یوتیوبر"; 
-
-
- }, 8000);
+// نمایش داده‌ها در صفحه HTML
+function displayData(data) {
+    const container = document.getElementById('data-container');
+    
+    // ایجاد عناصر HTML بر اساس داده JSON
+    data.forEach(item => {
+        const listItem = document.createElement('div');
+        listItem.textContent = `Name: ${item.name}, Age: ${item.age}`;
+        container.appendChild(listItem);
+    });
 }
 
-textLoad()
-setInterval(textLoad, 12000)
 
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// const text = document.querySelector(".sec-text");
+// const textLoad = () => {
+//  setTimeout(() => {
+//   text.textContent = "فریلنسر"; 
+
+//  }, 0);
+//  setTimeout(() => {
+//   text.textContent = " بلاگر"; 
+
+
+//  }, 4000);
+ 
+//  setTimeout(() => {
+//   text.textContent = "یوتیوبر"; 
+
+
+//  }, 8000);
+// }
+
+// textLoad()
+// setInterval(textLoad, 12000)
 /*
 <!DOCTYPE html>
 <html lang="en">
