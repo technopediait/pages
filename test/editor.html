@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="fa">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ویرایشگر متن</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.css"
+    />
+    <style>
+      @font-face {
+        font-family: vazir;
+        src: url(../fonts/Vazir-Regular.ttf);
+      }
+      * {
+        direction: rtl;
+        margin: 0;
+        /* padding: 0; */
+        font-family: vazir;
+        /* overflow-x: hidden; */
+        border: none;
+        outline: none;
+      }
+      #toolbar {
+        margin-bottom: 10px;
+      }
+
+      button {
+        color: #131c25;
+        padding: 8px 18px;
+        border-radius: 4px;
+        background: none;
+        font-size: 20px;
+      }
+
+      .format-action {
+        color: #131c25;
+        font-size: 20px;
+        font-weight: 300;
+        background: transparent;
+        padding: 10px 20px;
+      }
+
+      #editor {
+        background-color: rgb(255, 255, 255);
+        min-height: 300px;
+        border-radius: 5px;
+        padding: 7px;
+        box-shadow: 0 0 7px black;
+      }
+
+      .format-action {
+        margin-right: 5px;
+        transition: background-color 0.3s;
+      }
+      .active {
+        background-color: #00000015;
+        color: #0000f6;
+      }
+
+      .format-action:active {
+        background-color: rgba(51, 0, 255, 0.139);
+      }
+
+      table {
+        width: 100%;
+        border-collapse: collapse;
+      }
+
+      table,
+      td,
+      th,
+      tr {
+        border: 1px solid #131c25;
+      }
+
+      button:hover {
+        background-color: #d4d4d432;
+      }
+
+      i {
+        position: relative;
+        z-index: -1;
+      }
+
+      #length {
+        position: absolute;
+        font-size: 18px;
+        left: 10px;
+        color: #3d3d3d;
+        background-color: rgba(255, 255, 255, 0.46);
+      }
+
+      .img-window{
+        display: none;
+        flex-direction: column;
+        height: 300px;
+        padding: 15px;
+        gap: 10px;
+        background-color: #b4b4ff;
+        position: fixed;
+        border-radius: 10px;
+        left: 10px;
+        right: 10px;
+        z-index: 2;
+      }
+
+
+      .img-window input{
+        border: 1px solid rgb(82, 82, 82);
+        border-radius: 5px;
+        padding: 5px;
+      }
+
+      .img-window input[type=url]{
+        direction: ltr;
+      }
+
+      .img-window>input{
+        width: 100%;
+      }
+
+      .row{
+        margin-top: 30px;
+        display: flex;
+        justify-content: center;
+      }
+
+      .row input{
+        margin-left: 10px;
+        width: 100px;
+        text-align: center;
+      }
+
+      .submit{
+        padding: 5px 15px;
+        background-color: #2626ff;
+        color: #fff;
+        border-radius: 5px;
+      }
+
+      .submit:hover{
+        background-color: #4a4aff;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="toolbar">
+      <button class="format-action" data-action="bold">
+        <i class="fa fa-bold"></i>
+      </button>
+      <button class="format-action" data-action="italic">
+        <i class="fa fa-italic"></i>
+      </button>
+      <button class="format-action" data-action="underline">
+        <i class="fa fa-underline"></i>
+      </button>
+      <button class="format-action" data-action="strikethrough">
+        <i class="fas fa-remove-format"></i>
+      </button>
+      <button class="format-action" data-action="insertOrderedList">
+        <i class="fa fa-list-ol"></i>
+      </button>
+      <button class="format-action" data-action="insertUnorderedList">
+        <i class="fa fa-list-ul"></i>
+      </button>
+      <button onclick="insertLink()" class="format-action">
+        <i class="fa fa-link"></i>
+      </button>
+      <select class="format-action" data-action="heading">
+        <option value="">هیچ کدام</option>
+        <option value="p">پاراگراف</option>
+        <option value="h1">عنوان اصلی</option>
+        <option value="h2">عنوان فرعی</option>
+        <option value="h3">زیر عنوان</option>
+      </select>
+      <button class="format-action" onclick="insertTable(3, 4);">
+        <i class="fa fa-table"></i>
+      </button>
+      <button onclick="imgWindow()">
+        <i class="fa fa-image"></i>
+      </button>
+    </div>
+    <div class="img-window">
+      <label for="imageLinkInput">لینک تصویر:</label>
+      <input type="url" id="imageLinkInput" value="https://" />
+      <label for="img-alt">توضیحات تصویر:</label>
+      <input type="text" id="img-alt" placeholder="تصویر را توصیف کنید."/>
+      <div class="row">
+        <label for="img-width">عرض:</label>
+        <input type="text" id="img-width" value="100%" />
+        <label for="img-height">طول:</label>
+        <input type="text" id="img-height" value="auto"/>
+      </div>
+      <center>
+        <button onclick="insertImage()" class="submit">
+          ذخیره تصویر
+        </button>  
+
+        <button onclick="imgWindow()" class="submit" style="background-color: red;">
+          لغو
+        </button>
+
+      </center>
+    </div>
+    <span id="length">0</span>
+    <div id="editor" contenteditable="true" oninput="updateTextarea()"></div>
+    <textarea id="hiddenTextarea" style="display: none"></textarea>
+    <script>
+      function updateTextarea() {
+        var editorContent = document.getElementById("editor").innerHTML;
+        document.getElementById("hiddenTextarea").textContent = editorContent;
+        tlen = editorContent.toLowerCase();
+        document.getElementById("length").innerHTML = tlen.length;
+      }
+
+      // function active(e) {
+      //   if (e.classList.contains("active")) {
+      //     e.classList.remove("active");
+      //   } else {
+      //     e.classList.add("active");
+      //   }
+      // }
+
+      function insertLink() {
+        var url = prompt("Enter URL:", "http://");
+        if (url) {
+          document.execCommand("createLink", false, url);
+        }
+      }
+
+      function insertImage() {
+        var imageUrl = document.getElementById("imageLinkInput").value;
+        var imgAlt = document.getElementById("img-alt").value;
+        var imgWidth = document.getElementById("img-width").value;
+        var imgHeight = document.getElementById("img-height").value;
+
+        if (imageUrl.trim() !== "") {
+          var imageElement = document.createElement("img");
+          imageElement.src = imageUrl;
+          imageElement.alt = imgAlt;
+          imageElement.style.width = imgWidth;
+          imageElement.style.height = imgHeight;
+          document.getElementById("editor").appendChild(imageElement);
+          imgWindow();
+        }
+      }
+
+      function insertTable(rows, columns) {
+        var html = '<table border="1">';
+        for (var i = 0; i < rows; i++) {
+          html += "<tr>";
+          for (var j = 0; j < columns; j++) {
+            html += "<td>Cell</td>";
+          }
+          html += "</tr>";
+        }
+        html += "</table>";
+
+        document.execCommand("insertHTML", false, html);
+      }
+
+      document.addEventListener("DOMContentLoaded", function () {
+        var toolbar = document.getElementById("toolbar");
+        function setActiveState() {
+          var formatActions = document.querySelectorAll(".format-action");
+          formatActions.forEach(function (action) {
+            var command = action.dataset.action;
+            if (document.queryCommandState(command)) {
+              action.classList.add("active");
+            } else {
+              action.classList.remove("active");
+            }
+          });
+        }
+        toolbar.addEventListener("click", function (event) {
+          var action = event.target.dataset.action;
+          if (action) {
+            document.execCommand(action, false, null);
+            setActiveState();
+          }
+        });
+
+        toolbar
+          .querySelector('select[data-action="heading"]')
+          .addEventListener("change", function (event) {
+            var selectedHeading = event.target.value;
+            if (selectedHeading) {
+              document.execCommand("formatBlock", false, selectedHeading);
+            }
+          });
+        document
+          .getElementById("editor")
+          .addEventListener("input", function () {
+            setActiveState();
+          });
+      });
+
+      function imgWindow() {
+        var img_window = document.querySelector(".img-window");
+        if(img_window.style.display === "flex"){
+          img_window.style.display = "none"
+        }else{
+          img_window.style.display = "flex" 
+        }
+      }
+    </script>
+  </body>
+</html>
