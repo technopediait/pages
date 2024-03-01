@@ -89,7 +89,8 @@
         font-size: 18px;
         left: 10px;
         color: #3d3d3d;
-        background-color: rgba(255, 255, 255, 0.46);
+        background-color: rgba(255, 255, 255, 0.745);
+        font-weight: bold;
       }
 
       .img-window {
@@ -142,6 +143,26 @@
       .submit:hover {
         background-color: #4a4aff;
       }
+
+      input[type=color]{
+        background: none;
+      }
+
+      textarea {
+        width: 95%;
+        margin: 20px auto;
+        border: 3px solid blueviolet;
+        background-color: aliceblue;
+        resize: vertical;
+        min-height: 300px;
+        position: fixed;
+        left: 2%;
+        right: 2%;
+        top: 20%;
+        padding: 10px;
+        direction: ltr;
+        display: none;
+      }
     </style>
   </head>
   <body>
@@ -156,7 +177,7 @@
         <i class="fa fa-underline"></i>
       </button>
       <button class="format-action" data-action="strikethrough">
-        <i class="fas fa-remove-format"></i>
+        <i class="fas fa-strikethrough"></i>
       </button>
       <button class="format-action" data-action="insertOrderedList">
         <i class="fa fa-list-ol"></i>
@@ -189,14 +210,17 @@
       <button class="format-action" onclick="setTextAlignment('justifyRight')">
         <i class="fa fa-align-right"></i>
       </button>
-      <!-- <button class="format-action" onclick="setTextColor()">
+      <!-- <button class="format-action" onclick="setTextAlignment('bold')">
         تنظیم این رنگ
       </button> -->
       <input type="color" id="colorPicker" />
-      <button class="format-action" onclick="removeTextColor()">برداشتن</button>
-      <button class="toolbar-button" onclick="deleteTable()">
-        Delete Table
+      <button class="format-action" onclick="removeTextFormat()">
+      <i class="fa fa-remove-format"></i>
+    </button>
+      <button onclick="sourceCodeWindow()">
+      <i class="fas fa-code"></i>
       </button>
+      <button class="toolbar-button" onclick="deleteTable()">حذف جدول</button>
     </div>
     <div class="img-window">
       <label for="imageLinkInput">لینک تصویر:</label>
@@ -222,8 +246,13 @@
       </center>
     </div>
     <span id="length">0</span>
-    <div id="editor" contenteditable="true" oninput="updateTextarea()"></div>
-    <textarea id="hiddenTextarea" style="display: none"></textarea>
+    <div
+      id="editor"
+      contenteditable="true"
+      autofocus
+      oninput="updateTextarea()"
+    ></div>
+    <textarea id="hiddenTextarea"></textarea>
     <script>
       function updateTextarea() {
         var editorContent = document.getElementById("editor").innerHTML;
@@ -231,6 +260,8 @@
         tlen = editorContent.toLowerCase();
         document.getElementById("length").innerHTML = tlen.length;
       }
+
+      var editor = document.getElementById("editor");
 
       // function active(e) {
       //   if (e.classList.contains("active")) {
@@ -268,8 +299,9 @@
         }
       }
 
-      function removeTextColor() {
+      function removeTextFormat() {
         document.execCommand("removeFormat", false, null);
+        editor.focus();
       }
 
       // function setTextColor() {
@@ -282,11 +314,11 @@
         var tableHTML = '<table border="1">';
         var rows = prompt("Enter number of rows:");
         var columns = prompt("Enter number of columns:");
-
+         
         for (var i = 0; i < rows; i++) {
           tableHTML += "<tr>";
           for (var j = 0; j < columns; j++) {
-            tableHTML += "<td>Cell " + (i + 1) + "-" + (j + 1) + "</td>";
+            tableHTML += "<td>سلول " + (i + 1) + "-" + (j + 1) +"</td>";
           }
           tableHTML += "</tr>";
         }
@@ -328,6 +360,9 @@
           if (action) {
             document.execCommand(action, false, null);
             setActiveState();
+            if (action !== "heading") {
+              editor.focus();
+            }
           }
         });
 
@@ -352,7 +387,11 @@
           var colorPicker = document.getElementById("colorPicker");
           var colorValue = colorPicker.value;
           document.execCommand("foreColor", false, colorValue);
+          editor.focus();
+
         });
+
+           
 
       function imgWindow() {
         var img_window = document.querySelector(".img-window");
@@ -360,6 +399,15 @@
           img_window.style.display = "none";
         } else {
           img_window.style.display = "flex";
+        }
+      }
+
+      function sourceCodeWindow(){
+        var CodeWindow = document.getElementById("hiddenTextarea");
+        if(CodeWindow.style.display === "block"){
+          CodeWindow.style.display = "none";
+        }else{
+          CodeWindow.style.display = "block";
         }
       }
     </script>
