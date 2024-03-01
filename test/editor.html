@@ -458,7 +458,7 @@
         .addEventListener("input", function () {
           var colorPicker = document.getElementById("colorPicker");
           var colorValue = colorPicker.value;
-          colorIcon.style.color = colorValue;
+          // colorIcon.style.color = colorValue;
           document.execCommand("foreColor", false, colorValue);
           editor.focus();
         });
