@@ -18,12 +18,38 @@
         margin: 0;
         /* padding: 0; */
         font-family: vazir;
-        /* overflow-x: hidden; */
         border: none;
         outline: none;
       }
       #toolbar {
         margin-bottom: 10px;
+        display: flex;
+        overflow-x: scroll;
+        align-items: center;
+        gap: 3px;
+      }
+
+      input[type="color"] {
+        background: none;
+        width: 150px ;
+      }
+
+
+      *::-webkit-scrollbar {
+        height: 7px;
+        width: 6px;
+      }
+
+      *::-webkit-scrollbar-track {
+        background: rgb(233, 233, 233);
+      }
+
+      *::-webkit-scrollbar-thumb {
+        background: blue;
+      }
+
+      html {
+        overflow-x: hidden;
       }
 
       button {
@@ -44,14 +70,15 @@
 
       #editor {
         background-color: rgb(255, 255, 255);
-        min-height: 300px;
+        height: 80vh;
         border-radius: 5px;
         padding: 7px;
         box-shadow: 0 0 7px black;
+        margin: 10px;
+        overflow: auto;
       }
 
       .format-action {
-        margin-right: 5px;
         transition: background-color 0.3s;
       }
       .active {
@@ -87,7 +114,7 @@
       #length {
         position: absolute;
         font-size: 18px;
-        left: 10px;
+        left: 13px;
         color: #3d3d3d;
         background-color: rgba(255, 255, 255, 0.745);
         font-weight: bold;
@@ -104,7 +131,7 @@
         border-radius: 10px;
         left: 10px;
         right: 10px;
-        z-index: 2;
+        z-index: 100;
       }
 
       .img-window input {
@@ -144,9 +171,6 @@
         background-color: #4a4aff;
       }
 
-      input[type=color]{
-        background: none;
-      }
 
       textarea {
         width: 95%;
@@ -162,11 +186,68 @@
         padding: 10px;
         direction: ltr;
         display: none;
+        box-sizing: border-box;
+      }
+
+      #colors-window {
+        display: none;
+        padding: 15px;
+        gap: 10px;
+        flex-wrap: wrap;
+        background-color: #b4b4ff;
+        position: fixed;
+        border-radius: 10px;
+        left: 10px;
+        right: 10px;
+        z-index: 2;
+      }
+
+      #colors-window .colors {
+        width: 30px;
+        height: 30px;
+        border-radius: 4px;
+      }
+
+      #colors-window .colors.red {
+        background-color: red;
+      }
+
+      #colors-window .colors.blue {
+        background-color: blue;
+      }
+      #colors-window .colors.black {
+        background-color: black;
+      }
+      #colors-window .colors.orenge {
+        background-color: orange;
+      }
+
+      select {
+        border: 1px solid rgb(22, 22, 22);
+        padding: 0 !important;
+        border-radius: 4px;
+      }
+
+      .blur {
+        display: none;
+        position: fixed;
+        /* background-color: rgba(255, 255, 255, 0.733); */
+        filter: blur(2px);
+        width: 100%;
+        height: 100vh;
+        top: 0;
       }
     </style>
   </head>
   <body>
     <div id="toolbar">
+      <select class="format-action" data-action="heading">
+        <option value="">هیچ کدام</option>
+        <option value="p">پاراگراف</option>
+        <option value="h1">عنوان اصلی</option>
+        <option value="h2">عنوان فرعی</option>
+        <option value="h3">زیر عنوان</option>
+      </select>
       <button class="format-action" data-action="bold">
         <i class="fa fa-bold"></i>
       </button>
@@ -188,37 +269,32 @@
       <button onclick="insertLink()" class="format-action">
         <i class="fa fa-link"></i>
       </button>
-      <select class="format-action" data-action="heading">
-        <option value="">هیچ کدام</option>
-        <option value="p">پاراگراف</option>
-        <option value="h1">عنوان اصلی</option>
-        <option value="h2">عنوان فرعی</option>
-        <option value="h3">زیر عنوان</option>
-      </select>
       <button class="format-action" onclick="createTable()">
         <i class="fa fa-table"></i>
       </button>
       <button onclick="imgWindow()">
         <i class="fa fa-image"></i>
       </button>
-      <button class="format-action" onclick="setTextAlignment('justifyLeft')">
+      <button class="format-action" data-action="justifyLeft">
         <i class="fa fa-align-left"></i>
       </button>
-      <button class="format-action" onclick="setTextAlignment('justifyCenter')">
+      <button class="format-action" data-action="justifyCenter">
         <i class="fa fa-align-center"></i>
       </button>
-      <button class="format-action" onclick="setTextAlignment('justifyRight')">
+      <button class="format-action" data-action="justifyRight">
         <i class="fa fa-align-right"></i>
       </button>
-      <!-- <button class="format-action" onclick="setTextAlignment('bold')">
-        تنظیم این رنگ
+      <!-- <button class="format-action" onclick="colorsWindow()">
+        <i id="color-icon" class="fas fa-fill"></i>
       </button> -->
+      <button>
       <input type="color" id="colorPicker" />
+      </button>
       <button class="format-action" onclick="removeTextFormat()">
-      <i class="fa fa-remove-format"></i>
-    </button>
+        <i class="fa fa-remove-format"></i>
+      </button>
       <button onclick="sourceCodeWindow()">
-      <i class="fas fa-code"></i>
+        <i class="fas fa-code"></i>
       </button>
       <button class="toolbar-button" onclick="deleteTable()">حذف جدول</button>
     </div>
@@ -245,6 +321,14 @@
         </button>
       </center>
     </div>
+    <div id="colors-window">
+      <div class="colors blue" onclick="setTextColor('blue')"></div>
+      <div class="colors red" onclick="setTextColor('red')"></div>
+      <div class="colors black" onclick="setTextColor('black')"></div>
+      <div class="colors orenge" onclick="setTextColor('orenge')"></div>
+      <span>رنگ های بیشتر: </span
+      ><input type="color" oninput="" id="colorPicker" />
+    </div>
     <span id="length">0</span>
     <div
       id="editor"
@@ -253,6 +337,7 @@
       oninput="updateTextarea()"
     ></div>
     <textarea id="hiddenTextarea"></textarea>
+    <div class="blur"></div>
     <script>
       function updateTextarea() {
         var editorContent = document.getElementById("editor").innerHTML;
@@ -263,16 +348,8 @@
 
       var editor = document.getElementById("editor");
 
-      // function active(e) {
-      //   if (e.classList.contains("active")) {
-      //     e.classList.remove("active");
-      //   } else {
-      //     e.classList.add("active");
-      //   }
-      // }
-
       function insertLink() {
-        var url = prompt("Enter URL:", "http://");
+        var url = prompt("Enter URL:", "https://");
         if (url) {
           document.execCommand("createLink", false, url);
         }
@@ -304,21 +381,15 @@
         editor.focus();
       }
 
-      // function setTextColor() {
-      //   var colorPicker = document.getElementById("colorPicker");
-      //   var colorValue = colorPicker.value;
-      //   document.execCommand("foreColor", false, colorValue);
-      // }
-
       function createTable() {
         var tableHTML = '<table border="1">';
         var rows = prompt("Enter number of rows:");
         var columns = prompt("Enter number of columns:");
-         
+
         for (var i = 0; i < rows; i++) {
           tableHTML += "<tr>";
           for (var j = 0; j < columns; j++) {
-            tableHTML += "<td>سلول " + (i + 1) + "-" + (j + 1) +"</td>";
+            tableHTML += "<td>سلول " + (i + 1) + "-" + (j + 1) + "</td>";
           }
           tableHTML += "</tr>";
         }
@@ -386,12 +457,33 @@
         .addEventListener("input", function () {
           var colorPicker = document.getElementById("colorPicker");
           var colorValue = colorPicker.value;
+          colorIcon.style.color = colorValue;
           document.execCommand("foreColor", false, colorValue);
           editor.focus();
-
         });
 
-           
+      // function setTextColor(color) {
+      //   var colorPicker = document.getElementById("colorPicker");
+      //   var colorIcon = document.getElementById("color-icon");
+      //   var colorValue = colorPicker.value;
+      //     if(color){
+
+      //     console.log(color)
+      //     }
+      //     var colorValue = color;
+      //     colorIcon.style.color = color;
+      //     document.execCommand("foreColor", false, colorValue);
+      //   colorsWindow()
+      // }
+
+      function colorsWindow() {
+        var colors_Window = document.getElementById("colors-window");
+        if (colors_Window.style.display === "flex") {
+          colors_Window.style.display = "none";
+        } else {
+          colors_Window.style.display = "flex";
+        }
+      }
 
       function imgWindow() {
         var img_window = document.querySelector(".img-window");
@@ -402,11 +494,11 @@
         }
       }
 
-      function sourceCodeWindow(){
+      function sourceCodeWindow() {
         var CodeWindow = document.getElementById("hiddenTextarea");
-        if(CodeWindow.style.display === "block"){
+        if (CodeWindow.style.display === "block") {
           CodeWindow.style.display = "none";
-        }else{
+        } else {
           CodeWindow.style.display = "block";
         }
       }
