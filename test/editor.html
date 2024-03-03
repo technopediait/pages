@@ -22,9 +22,9 @@
         outline: none;
       }
       #toolbar {
-        margin-bottom: 10px;
+        margin-bottom: 20px;
         display: flex;
-        overflow-x: scroll;
+        overflow-x: auto;
         align-items: center;
         gap: 3px;
         padding-right: 10px;
@@ -189,32 +189,36 @@
         box-sizing: border-box;
       }
 
-      #colors-window {
+      #colors-window,#bg-colors-window {
         display: none;
         padding: 15px;
         gap: 10px;
+        align-items: center;
         flex-wrap: wrap;
         background-color: #b4b4ff;
         position: fixed;
         border-radius: 10px;
         left: 10px;
         right: 10px;
+        bottom: 10px;
         z-index: 2;
       }
 
       .colors {
-        width: 30px;
-        height: 30px;
-        border-radius: 4px;
-        min-width: 40px !important;
+        width: 25px;
+        height: 25px;
+        border-radius: 3px;
       }
-
-
 
       select {
         border: 1px solid rgb(22, 22, 22);
         padding: 0 !important;
         border-radius: 4px;
+      }
+
+      #bg-color-icon,  #color-icon{
+        background-image: linear-gradient(to right, #f9f8f8, #a4a4a4);
+        padding: 1px;
       }
 
       .blur {
@@ -255,6 +259,15 @@
       <button class="format-action" data-action="insertUnorderedList">
         <i class="fa fa-list-ul"></i>
       </button>
+      <button class="format-action" onclick="colorsWindow()">
+        <i id="color-icon" class="fas fa-fill"></i>
+      </button>
+      <button class="format-action" onclick="BgcolorsWindow()">
+        <i id="bg-color-icon" class="fas fa-fill"></i>
+      </button>
+      <button class="format-action" onclick="removeTextFormat()">
+        <i class="fa fa-remove-format"></i>
+      </button>
       <button onclick="insertLink()" class="format-action">
         <i class="fa fa-link"></i>
       </button>
@@ -273,13 +286,7 @@
       <button class="format-action" data-action="justifyRight">
         <i class="fa fa-align-right"></i>
       </button>
-      <button class="format-action" onclick="colorsWindow()">
-        <i id="color-icon" class="fas fa-fill"></i>
-      </button>
-      <button class="format-action" onclick="removeTextFormat()">
-        <i class="fa fa-remove-format"></i>
-      </button>
-      <button onclick="sourceCodeWindow()">
+      <button onclick="sourceCodeWindow()" id="source-code-btn">
         <i class="fas fa-code"></i>
       </button>
 
@@ -308,10 +315,40 @@
         </button>
       </center>
     </div>
+    <div id="bg-colors-window">
+      <button
+        class="colors"
+        style="background-color: blue"
+        onclick="setBgColor('#0000f6')"
+      ></button>
+      <button
+        class="colors"
+        style="background-color: red"
+        onclick="setBgColor('red')"
+      ></button>
+      <button
+        class="colors"
+        style="background-color: green"
+        onclick="setBgColor('green')"
+      ></button>
+      <span>رنگ های بیشتر: </span><input type="color" id="bg-colorPicker" />
+    </div>
     <div id="colors-window">
-      <button class="colors" style="background-color: blue;" onclick="setTextColor('#0000f6')"></button>
-      <button class="colors" style="background-color: red;" onclick="setTextColor('red')"></button>
-      <button class="colors" style="background-color: green;" onclick="setTextColor('green')"></button>
+      <button
+        class="colors"
+        style="background-color: blue"
+        onclick="setTextColor('#0000f6')"
+      ></button>
+      <button
+        class="colors"
+        style="background-color: red"
+        onclick="setTextColor('red')"
+      ></button>
+      <button
+        class="colors"
+        style="background-color: green"
+        onclick="setTextColor('green')"
+      ></button>
       <span>رنگ های بیشتر: </span><input type="color" id="colorPicker" />
     </div>
     <span id="length">0</span>
@@ -329,7 +366,7 @@
         document.getElementById("hiddenTextarea").textContent = editorContent;
         tlen = editorContent.toLowerCase();
         document.getElementById("length").innerHTML = tlen.length;
-        if(editorContent == ""){
+        if (editorContent == "") {
           document.execCommand("formatBlock", false, "p");
         }
       }
@@ -401,17 +438,55 @@
         }
       }
 
+      document
+        .getElementById("colorPicker")
+        .addEventListener("input", function () {
+          var colorIcon = document.getElementById("color-icon");
+          var colorPicker = document.getElementById("colorPicker");
+          var colorValue = colorPicker.value;
+          colorIcon.style.color = colorValue;
+          document.execCommand("foreColor", false, colorValue);
+          colorPicker.focus();
+        });
+
+        document
+        .getElementById("bg-colorPicker")
+        .addEventListener("input", function () {
+          var colorIcon = document.getElementById("bg-color-icon");
+          var colorPicker = document.getElementById("bg-colorPicker");
+          var colorValue = colorPicker.value;
+          colorIcon.style.color = colorValue;
+          document.execCommand("hiliteColor", false, colorValue);
+          colorPicker.focus();
+        });
+
       document.addEventListener("DOMContentLoaded", function () {
-      //   if(document.queryCommandState('bold')){
-      //  document.getElementById("mySelect").options[2].selected = true;
-      //  }
-        if(editor.innerHTML == ""){
+        if (editor.innerHTML == "") {
           document.execCommand("formatBlock", false, "p");
         }
         function getSelectedTextColor() {
-          var color = document.queryCommandValue("ForeColor");
-          document.getElementById("color-icon").style.color = color;
-          // console.log("رنگ متن انتخاب شده:", color);
+          var Color = document.queryCommandValue("ForeColor");
+          document.getElementById("color-icon").style.color = Color;
+          var BgColor = document.queryCommandValue("backColor");
+          document.getElementById("bg-color-icon").style.color = BgColor;
+          var currentFormat = document.queryCommandValue("formatBlock");
+          if(currentFormat === "p"){  
+          document.getElementById("mySelect").options[1].selected = true;
+          }
+          else if(currentFormat === "h1"){  
+          document.getElementById("mySelect").options[2].selected = true;
+          }
+          else if(currentFormat === "h2"){  
+          document.getElementById("mySelect").options[3].selected = true;
+          }
+
+          else if(currentFormat === "h3"){  
+          document.getElementById("mySelect").options[4].selected = true;
+          }
+          else{
+            document.getElementById("mySelect").options[0].selected = true;
+            document.execCommand("formatBlock", false, "p");
+          }
         }
 
         var toolbar = document.getElementById("toolbar");
@@ -453,30 +528,33 @@
           });
       });
 
-      document
-        .getElementById("colorPicker")
-        .addEventListener("input", function () {
-          var colorIcon = document.getElementById("color-icon");
-          var colorPicker = document.getElementById("colorPicker");
-          var colorValue = colorPicker.value;
-          colorIcon.style.color = colorValue;
-          document.execCommand("foreColor", false, colorValue);
-          if (colorPicker.focus()) {
-            colorsWindow();
-            editor.focus();
-          }
-        });
-
       function setTextColor(colorValue) {
-        document.execCommand("hiliteColor", false, colorValue);
+        document.execCommand("foreColor", false, colorValue);
         var colorIcon = document.getElementById("color-icon");
         colorIcon.style.color = colorValue;
         colorsWindow();
         editor.focus();
       }
 
+      function setBgColor(colorValue) {
+        document.execCommand("hiliteColor", false, colorValue);
+        var colorIcon = document.getElementById("bg-color-icon");
+        colorIcon.style.color = colorValue;
+        BgcolorsWindow();
+        editor.focus();
+      }
+
       function colorsWindow() {
         var colors_Window = document.getElementById("colors-window");
+        if (colors_Window.style.display === "flex") {
+          colors_Window.style.display = "none";
+        } else {
+          colors_Window.style.display = "flex";
+        }
+      }
+
+      function BgcolorsWindow() {
+        var colors_Window = document.getElementById("bg-colors-window");
         if (colors_Window.style.display === "flex") {
           colors_Window.style.display = "none";
         } else {
@@ -497,8 +575,10 @@
         var CodeWindow = document.getElementById("hiddenTextarea");
         if (CodeWindow.style.display === "block") {
           CodeWindow.style.display = "none";
+          document.getElementById("source-code-btn").classList.remove("active");
         } else {
           CodeWindow.style.display = "block";
+          document.getElementById("source-code-btn").classList.add("active");
         }
       }
     </script>
