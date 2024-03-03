@@ -446,7 +446,7 @@
           var colorValue = colorPicker.value;
           colorIcon.style.color = colorValue;
           document.execCommand("foreColor", false, colorValue);
-          colorPicker.focus();
+          editor.focus();
         });
 
         document
@@ -457,7 +457,7 @@
           var colorValue = colorPicker.value;
           colorIcon.style.color = colorValue;
           document.execCommand("hiliteColor", false, colorValue);
-          colorPicker.focus();
+          editor.focus();
         });
 
       document.addEventListener("DOMContentLoaded", function () {
