@@ -202,25 +202,14 @@
         z-index: 2;
       }
 
-      #colors-window .colors {
+      .colors {
         width: 30px;
         height: 30px;
         border-radius: 4px;
+        min-width: 40px !important;
       }
 
-      #colors-window .colors.red {
-        background-color: red;
-      }
 
-      #colors-window .colors.blue {
-        background-color: blue;
-      }
-      #colors-window .colors.black {
-        background-color: black;
-      }
-      #colors-window .colors.orenge {
-        background-color: orange;
-      }
 
       select {
         border: 1px solid rgb(22, 22, 22);
@@ -241,7 +230,7 @@
   </head>
   <body>
     <div id="toolbar">
-      <select class="format-action" data-action="heading">
+      <select class="format-action" id="mySelect" data-action="heading">
         <option value="">هیچ کدام</option>
         <option value="p">پاراگراف</option>
         <option value="h1">عنوان اصلی</option>
@@ -284,11 +273,8 @@
       <button class="format-action" data-action="justifyRight">
         <i class="fa fa-align-right"></i>
       </button>
-      <!-- <button class="format-action" onclick="colorsWindow()">
+      <button class="format-action" onclick="colorsWindow()">
         <i id="color-icon" class="fas fa-fill"></i>
-      </button> -->
-      <button>
-        <input type="color" id="colorPicker" />
       </button>
       <button class="format-action" onclick="removeTextFormat()">
         <i class="fa fa-remove-format"></i>
@@ -296,6 +282,7 @@
       <button onclick="sourceCodeWindow()">
         <i class="fas fa-code"></i>
       </button>
+
       <button class="toolbar-button" onclick="deleteTable()">حذف جدول</button>
     </div>
     <div class="img-window">
@@ -322,12 +309,10 @@
       </center>
     </div>
     <div id="colors-window">
-      <div class="colors blue" onclick="setTextColor('blue')"></div>
-      <div class="colors red" onclick="setTextColor('red')"></div>
-      <div class="colors black" onclick="setTextColor('black')"></div>
-      <div class="colors orenge" onclick="setTextColor('orenge')"></div>
-      <span>رنگ های بیشتر: </span
-      ><input type="color" oninput="" id="colorPicker" />
+      <button class="colors" style="background-color: blue;" onclick="setTextColor('#0000f6')"></button>
+      <button class="colors" style="background-color: red;" onclick="setTextColor('red')"></button>
+      <button class="colors" style="background-color: green;" onclick="setTextColor('green')"></button>
+      <span>رنگ های بیشتر: </span><input type="color" id="colorPicker" />
     </div>
     <span id="length">0</span>
     <div
@@ -344,6 +329,9 @@
         document.getElementById("hiddenTextarea").textContent = editorContent;
         tlen = editorContent.toLowerCase();
         document.getElementById("length").innerHTML = tlen.length;
+        if(editorContent == ""){
+          document.execCommand("formatBlock", false, "p");
+        }
       }
 
       var editor = document.getElementById("editor");
@@ -414,6 +402,18 @@
       }
 
       document.addEventListener("DOMContentLoaded", function () {
+      //   if(document.queryCommandState('bold')){
+      //  document.getElementById("mySelect").options[2].selected = true;
+      //  }
+        if(editor.innerHTML == ""){
+          document.execCommand("formatBlock", false, "p");
+        }
+        function getSelectedTextColor() {
+          var color = document.queryCommandValue("ForeColor");
+          document.getElementById("color-icon").style.color = color;
+          // console.log("رنگ متن انتخاب شده:", color);
+        }
+
         var toolbar = document.getElementById("toolbar");
         function setActiveState() {
           var formatActions = document.querySelectorAll(".format-action");
@@ -449,32 +449,31 @@
           .getElementById("editor")
           .addEventListener("input", function () {
             setActiveState();
+            getSelectedTextColor();
           });
       });
 
       document
         .getElementById("colorPicker")
         .addEventListener("input", function () {
+          var colorIcon = document.getElementById("color-icon");
           var colorPicker = document.getElementById("colorPicker");
           var colorValue = colorPicker.value;
-          // colorIcon.style.color = colorValue;
+          colorIcon.style.color = colorValue;
           document.execCommand("foreColor", false, colorValue);
-          editor.focus();
+          if (colorPicker.focus()) {
+            colorsWindow();
+            editor.focus();
+          }
         });
 
-      // function setTextColor(color) {
-      //   var colorPicker = document.getElementById("colorPicker");
-      //   var colorIcon = document.getElementById("color-icon");
-      //   var colorValue = colorPicker.value;
-      //     if(color){
-
-      //     console.log(color)
-      //     }
-      //     var colorValue = color;
-      //     colorIcon.style.color = color;
-      //     document.execCommand("foreColor", false, colorValue);
-      //   colorsWindow()
-      // }
+      function setTextColor(colorValue) {
+        document.execCommand("hiliteColor", false, colorValue);
+        var colorIcon = document.getElementById("color-icon");
+        colorIcon.style.color = colorValue;
+        colorsWindow();
+        editor.focus();
+      }
 
       function colorsWindow() {
         var colors_Window = document.getElementById("colors-window");
