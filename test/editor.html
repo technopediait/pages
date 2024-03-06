@@ -71,10 +71,10 @@
 
       #editor {
         background-color: rgb(255, 255, 255);
-        height: 80vh;
+        max-height: 80vh;
         border-radius: 5px;
         padding: 7px;
-        box-shadow: 0 0 7px black;
+        box-shadow: 0 0 4px rgb(102, 102, 102);
         margin: 10px;
         overflow: auto;
       }
@@ -233,7 +233,8 @@
     </style>
   </head>
   <body>
-    <div id="toolbar">
+    <div id="SBPTE">
+          <div id="toolbar">
       <select class="format-action" id="mySelect" data-action="heading">
         <option value="">هیچ کدام</option>
         <option value="p">پاراگراف</option>
@@ -360,6 +361,8 @@
     ></div>
     <textarea id="hiddenTextarea"></textarea>
     <div class="blur"></div>
+    </div>
+
     <script>
       function updateTextarea() {
         var editorContent = document.getElementById("editor").innerHTML;
@@ -548,6 +551,7 @@
         var colors_Window = document.getElementById("colors-window");
         if (colors_Window.style.display === "flex") {
           colors_Window.style.display = "none";
+          editor.focus();
         } else {
           colors_Window.style.display = "flex";
         }
@@ -557,6 +561,7 @@
         var colors_Window = document.getElementById("bg-colors-window");
         if (colors_Window.style.display === "flex") {
           colors_Window.style.display = "none";
+          editor.focus();
         } else {
           colors_Window.style.display = "flex";
         }
