@@ -19,7 +19,7 @@ function Content() {
   var BGCOLORS_WINDOW = '<div id="bg-colors-window"><button type="button" class="colors" style="background-color: blue" onclick="setBgColor(\'#0000f6\')"></button><button type="button" class="colors" style="background-color: red" onclick="setBgColor(\'red\')"></button><button type="button" class="colors" style="background-color: green" onclick="setBgColor(\'green\')"></button><span>رنگ های بیشتر: </span><input type="color" id="bg-colorPicker" /></div>';
   var WINDOWS = '<div class="windows">'+IMG_WINDOW+COLORS_WINDOW+BGCOLORS_WINDOW+'</div>';
   var LENGTH = '<span id="length">0</span>';
-  var EDITOe = '<div id="editor" contenteditable="true" autofocus oninput="updateTextarea()"></div>';
+  var EDITOe = '';
   SBPTE.innerHTML = TOOLBAR+WINDOWS+LENGTH+EDITOe;
 }
 

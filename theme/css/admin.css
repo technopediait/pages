@@ -46,7 +46,7 @@ html::-webkit-scrollbar {
   width: 7px;
 }
 
-html::-webkit-s+crollbar-track {
+html::-webkit-scrollbar-track {
   background-color: var(--primary-bg-color);
 }
 
@@ -81,7 +81,7 @@ body{
 
 }
 
-.btn.btn-100{
+.btn-100{
   display: block;
 }
 
