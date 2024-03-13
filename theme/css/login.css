@@ -28,6 +28,11 @@ border-radius: .5em;
 font-size: .9em;
 }
 
+.dark-theme input{
+    background-color: #14163d;
+    color: #fff;
+}
+
 .submit{
     background-color: var(--main-color);
     font-size: 1em;

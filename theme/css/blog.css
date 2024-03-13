@@ -1,0 +1,109 @@
+.blog .box-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.blog .box-container .box {
+  width: 33rem;
+  border-radius: .5rem;
+  box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .1);
+  margin: 1.5rem;
+  background: var(--primary-bg-color);
+  overflow: hidden;
+}
+
+.blog .box-container .box img {
+  width: 100%;
+  height: 20rem;
+  object-fit: cover;
+}
+
+.blog .box-container .box .post_control {
+  padding: 1.5rem;
+}
+
+.blog .box-container .box .post_control .info {
+  border-radius: .5rem;
+  box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .1);
+  text-align: center;
+  position: relative;
+  font-size: 1.5rem;
+  color: var(--primary-text-color);
+  background: var(--secondary-bg-color);
+  padding: 1rem;
+  margin-top: -4rem;
+  margin-bottom: 1rem;
+}
+
+.blog .box-container .box .post_control .info i {
+  color: var(--main-color);
+  padding: 0 1rem;
+}
+
+.blog .box-container .box .post_control .post_title {
+  color: var(--primary-text-color);
+  display: block;
+  font-size: 1.8rem;
+  padding: .5rem 0;
+}
+
+.blog .box-container .box .post_control .post_title:hover {
+  text-decoration: underline;
+  color: var(--main-color);
+}
+
+.blog .box-container .box .post_control .post_content {
+  color: var(--secondary-text-color);
+  padding: .5rem 0;
+  font-size: 1.4rem;
+}
+
+.img {
+  height: auto;
+}
+
+.img img {
+  width: 100%;
+  border-radius: 4px;
+}
+
+.info-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  padding-bottom: 5px;
+  border-bottom: .2rem solid var(--secondary-text-color);
+  margin-top: .6rem;
+  margin-bottom: 1.5rem;
+  padding-bottom: 1.4rem;
+  color: var(--secondary-text-color);
+  font-size: 1.6rem;
+}
+
+.info-container i {
+  color: var(--main-color);
+}
+
+.writer-name {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: 1rem;
+}
+
+.date-time {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.single-post-content {
+  padding: .4rem;
+}
+
+.single-post-content p {
+  font-size: 1.5rem;
+  line-height: 3rem;
+}
