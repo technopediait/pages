@@ -21,7 +21,6 @@
   border: none;
   transition: all 0.3s cubic-bezier(0.38, 1.15, 0.7, 1.12);
   direction: rtl;
-  overflow-x: hidden;
 }
 
 a {
@@ -35,6 +34,10 @@ a {
 
 html {
   scroll-behavior: smooth;
+}
+
+html, body,.main-content,.sidebar{
+  overflow-x: hidden;
 }
 
 *::-webkit-scrollbar {
