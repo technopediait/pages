@@ -64,6 +64,7 @@ body {
   background-color: var(--secondary-bg-color);
   color: var(--secondary-text-color);
   font-size: 16px;
+
 }
 
 /* Start Nav */
@@ -266,12 +267,16 @@ main {
   margin-left: 20%;
   color: var(--secondary-text-color);
   font-size: 1em !important;
+  background-image: url(../img/wave-haikei12.svg);
+  background-size: 100% auto;
+  background-repeat: no-repeat;
 }
 
 ul,
 ol li {
   overflow-x: visible;
   margin-right: 2em;
+  color: #010825;
 }
 
 /* End Main */
@@ -348,6 +353,33 @@ ol li {
   border-radius: 0.3em;
 }
 
+.btn{
+  padding: 4px 10px;
+  border-radius: 4px;
+  margin: 3px;
+  background: var(--main-color);
+  color: #fff;
+  text-align: center;
+  display: inline-block;
+}
+
+.btn-100{
+  display: block;
+}
+
+.btn.btn-g{
+  background: green;
+}
+
+.btn.btn-r{
+  background: red;
+}
+
+.btn.btn-p{
+  background: purple;
+}
+
+
 /* Start Footer */
 .footer {
   background-color: #010825;
@@ -378,8 +410,9 @@ ol li {
   font-weight: 800;
 }
 
-.footer-top-btu img {
-  transform: rotate(180deg);
+.footer-top-btu i{
+  font-size: 1.4em;
+  padding: .2em;
 }
 
 .footer-top-ctn {
@@ -400,8 +433,9 @@ ol li {
   color: #4c84ff;
 }
 
-.footer-top-ctn img {
+.footer-top-ctn i  {
   margin: 1rem;
+  font-size: 1.5em;
 }
 
 .footer-center {
@@ -418,6 +452,7 @@ ol li {
   display: flex;
   flex-direction: column;
   padding: 0.7em;
+ 
 }
 
 .footer-center-menu-title {
@@ -426,6 +461,7 @@ ol li {
   align-items: center;
   justify-content: space-between;
 }
+
 
 .footer-center-menu-items {
   display: flex;
@@ -473,17 +509,30 @@ ol li {
   align-items: center;
 }
 
-.footer-center-csm-img img {
-  padding: 1em;
-  background-color: #c4c9d8;
-  border-radius: 5px;
-  margin-left: 1em;
-  filter: grayscale(70%);
+.footer-center-csm-img a i {
+  padding: .3em;
+  margin-left: .3em;
+  color: #010825;
+  font-size: 2em;
 }
 
-.footer-center-csm-img img:hover {
-  filter: grayscale(2%);
+.footer-center-csm-img a i.fa-instagram-square:hover{
+  color: #9e003d;
 }
+
+.footer-center-csm-img a i.fa-telegram:hover{
+  color: rgb(72, 191, 255);
+}
+
+.footer-center-csm-img a i.fa-linkedin:hover{
+  color: rgb(0, 93, 146);
+}
+
+.footer-center-csm-img a i.fa-facebook-square:hover{
+  color: rgb(38, 0, 255);
+}
+
+
 
 .footer-bottom {
   background-color: #000000;
@@ -493,7 +542,7 @@ ol li {
 }
 
 .footer-bottom-copy {
-  font-size: 0.7em;
+  font-size: 0.9em;
   text-align: center;
   text-shadow: 0.3em 0.3em 1em rgb(57, 139, 46);
 }
@@ -514,6 +563,9 @@ ol li {
   }
   body {
     padding-bottom: 4em;
+  }
+  .article-adt-con{
+    font-size: .8em;
   }
 }
 

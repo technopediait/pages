@@ -59,27 +59,27 @@ function displayData(data) {
 
 
 
-// const text = document.querySelector(".sec-text");
-// const textLoad = () => {
-//  setTimeout(() => {
-//   text.textContent = "فریلنسر"; 
+const text = document.querySelector(".sec-text");
+const textLoad = () => {
+ setTimeout(() => {
+  text.textContent = "فریلنسر"; 
 
-//  }, 0);
-//  setTimeout(() => {
-//   text.textContent = " بلاگر"; 
+ }, 0);
+ setTimeout(() => {
+  text.textContent = " بلاگر"; 
 
 
-//  }, 4000);
+ }, 4000);
  
-//  setTimeout(() => {
-//   text.textContent = "یوتیوبر"; 
+ setTimeout(() => {
+  text.textContent = "یوتیوبر"; 
 
 
-//  }, 8000);
-// }
+ }, 8000);
+}
 
-// textLoad()
-// setInterval(textLoad, 12000)
+textLoad()
+setInterval(textLoad, 12000)
 /*
 <!DOCTYPE html>
 <html lang="en">

@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>خانه</title>
+    <style>
+      @font-face {
+        font-family: "Vazir";
+        src: url(fonts/Vazir-Regular.ttf);
+      }
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: "Vazir";
+        outline: none;
+        border: none;
+        direction: rtl;
+      }
+
+      *::-webkit-scrollbar {
+        width: 0;
+      }
+
+      body {
+        background-image: url(./images/bg.jpg);
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-color: rgba(255, 255, 255, 0.866);
+        backdrop-filter: blur(15px);
+        height: 100vh;
+      }
+
+      html {
+        overflow: hidden;
+      }
+
+      a {
+        text-decoration: none;
+      }
+
+      .apps {
+        max-width: 370px;
+        margin: 0 auto;
+        display: flex;
+        flex-wrap: wrap;
+        overflow: auto;
+        gap: 30px;
+        padding: 10px;
+        justify-content: center;
+        
+      }
+
+      .apps .app{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+      }
+
+      .apps .app img{
+        width: 45px;
+        height: 45px;
+        padding: 2px;
+      }
+
+      .apps .app span{
+        color: black;
+        font-weight: 600;
+        text-shadow: 0 0 .5px yellow;
+        padding: 5px;
+
+      }
+    </style>
+  </head>
+  <body>
+    <header></header>
+    <main>
+      <section class="apps">
+        <a href="https://chat.openai.com/" class="app" target="_blank">
+          <img src="./icon/chatgptpng.png" />
+          <span>Chat GPT</span>
+        </a>
+        <a href="https://web.telegram.org/k/#@mohammad_shaylinejad" class="app">
+          <img src="./icon/telegram.svg" />
+          <span>تلگرام</span>
+        </a>
+        <a href="https://web.whatsapp.com/" class="app">
+          <img src="./icon/whatsapp.svg" />
+          <span>واتساپ</span>
+        </a>
+        <a href="https://web.rubika.ir/#c=u0BXqAC016fad6977cf2c543c73fb4a4" class="app">
+          <img src="./icon/rubika.webp" />
+          <span>روبیکا</span>
+        </a>
+        <a href="" class="app">
+          <img src="./icon/github.png" />
+          <span>گیتهاب</span>
+        </a>
+        <a href="" class="app">
+          <img src="./icon/Google_Bard.svg" />
+          <span>جیمینی</span>
+        </a>
+        <a href="#" class="app">
+          <img src="./icon/public.svg" />
+          <span>خالی</span>
+        </a>
+      </section>
+    </main>
+    <footer></footer>
+  </body>
+</html>
