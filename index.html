@@ -16,6 +16,36 @@
     <link rel="stylesheet" href="./css/style.css"/>
     <link rel="stylesheet" href="./css/animate-icon.css"/>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
+    <script src="https://cdn.jsdelivr.net/npm/intersection-observer@0.12.2/intersection-observer.min.js"></script>
+    <script>
+        // انتخاب المانهایی که می‌خواهید بارگذاری تنبل برای آنها اعمال شود
+const lazyImages = document.querySelectorAll('img');
+
+// تنظیمات Intersection Observer
+const observerOptions = {
+  root: null, // مشخص می‌کند که آیا این المان درون یک المان مشخص شده (به عنوان مثال یک div) باید توسط مشاهده‌گر تعاملی رصد شود یا نه؟
+  rootMargin: '0px', // مرز محاسبه مجاورت با المان ریشه
+  threshold: 0.1 // درصدی از المان‌ها که باید دیده شود تا عملکرد را اجرا کند
+};
+
+// تعریف کردن تابع callback برای هندل کردن وقوع تغییرات در Intersection
+const lazyLoadCallback = (entries, observer) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      const lazyImage = entry.target;
+      lazyImage.src = lazyImage.dataset.src;
+      observer.unobserve(lazyImage);
+    }
+  });
+};
+
+// ایجاد یک نمونه از Intersection Observer با تنظیمات و تابع callback
+const observer = new IntersectionObserver(lazyLoadCallback, observerOptions);
+
+// اعمال تابع رصد برای هر المان تنبل
+lazyImages.forEach(image => observer.observe(image));
+
+    </script>
 </head>
 <body class="light-theme" id="body">
     <div class="loader-active">
