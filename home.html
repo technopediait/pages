@@ -17,6 +17,7 @@
         outline: none;
         border: none;
         direction: rtl;
+        transition: 0.3s;
       }
 
       *::-webkit-scrollbar {
@@ -28,7 +29,7 @@
         background-size: cover;
         background-repeat: no-repeat;
         background-color: rgba(255, 255, 255, 0.866);
-        backdrop-filter: blur(15px);
+        backdrop-filter: blur(30px);
         height: 100vh;
       }
 
@@ -40,6 +41,43 @@
         text-decoration: none;
       }
 
+      .search-form {
+        display: flex;
+        justify-content: center;
+        padding: 1em;
+        padding-top: 2em;
+      }
+
+      .search-form .search-label {
+        border: 0.1em solid blue;
+        box-shadow: 0 0 0.3em #eee;
+        display: flex;
+        padding: 0.7em;
+        width: 95%;
+        border-radius: 0.5em;
+        justify-content: space-between;
+        align-items: center;
+        background: #eee;
+      }
+
+      .search-form .search-label .search-input {
+        background: none;
+        flex: 10;
+      }
+
+      .search-form .search-label .search-submit-con {
+        flex: 1;
+        text-align: center;
+      }
+
+      .search-form .search-label .search-submit {
+        background: blue;
+        color: #eee;
+        padding: 0.3em;
+        border-radius: 0.2em;
+        display: none;
+      }
+
       .apps {
         max-width: 370px;
         margin: 0 auto;
@@ -49,33 +87,56 @@
         gap: 30px;
         padding: 10px;
         justify-content: center;
-        
       }
 
-      .apps .app{
+      .apps .app {
         display: flex;
         flex-direction: column;
         align-items: center;
         justify-content: center;
+        color: rgb(255, 255, 255);
       }
 
-      .apps .app img{
+      .apps .app img {
         width: 45px;
         height: 45px;
         padding: 2px;
       }
 
-      .apps .app span{
-        color: black;
-        font-weight: 600;
-        text-shadow: 0 0 .5px yellow;
-        padding: 5px;
+      .apps .app img:hover {
+        scale: 1.15;
+      }
 
+      .apps .app span {
+        font-size: 1em;
+        font-weight: 300;
+        text-shadow: 0 0 2px rgb(0, 0, 0);
+        padding: 5px;
+      }
+
+      .apps .app:hover{
+        color: rgba(0, 255, 60, 0.875);
       }
     </style>
   </head>
   <body>
-    <header></header>
+    <header>
+      <form method="get" action="https://www.google.com/search" class="search-form">
+        <label for="searchInput" class="search-label">
+          <input
+            type="text"
+            autofocus
+            name="q"
+            id="searchbox"
+            class="search-input"
+            placeholder="جستجو در گوگل..."
+          />
+          <a href="" id="searchBtn" class="search-submit-con"
+            ><span class="search-submit">جستجو</span></a
+          >
+        </label>
+      </form>
+    </header>
     <main>
       <section class="apps">
         <a href="https://chat.openai.com/" class="app" target="_blank">
@@ -90,17 +151,24 @@
           <img src="./icon/whatsapp.svg" />
           <span>واتساپ</span>
         </a>
-        <a href="https://web.rubika.ir/#c=u0BXqAC016fad6977cf2c543c73fb4a4" class="app">
+        <a
+          href="https://web.rubika.ir/#c=u0BXqAC016fad6977cf2c543c73fb4a4"
+          class="app"
+        >
           <img src="./icon/rubika.webp" />
           <span>روبیکا</span>
         </a>
-        <a href="" class="app">
+        <a href="https://" class="app">
           <img src="./icon/github.png" />
           <span>گیتهاب</span>
         </a>
-        <a href="" class="app">
+        <a href="https://bard.google.com" class="app">
           <img src="./icon/Google_Bard.svg" />
           <span>جیمینی</span>
+        </a>
+        <a href="https://www.youtube.com/" class="app">
+          <img src="./SVG-Icons/youtube.svg" />
+          <span>یوتوب</span>
         </a>
         <a href="#" class="app">
           <img src="./icon/public.svg" />
@@ -109,5 +177,19 @@
       </section>
     </main>
     <footer></footer>
+    <script>
+      var searchbox = document.getElementById("searchbox");
+      var searchBtn = document.getElementById("searchBtn");
+      document.addEventListener("DOMContentLoaded", function () {
+        searchbox.addEventListener("input", function () {
+          var search_l = searchbox.value.toLowerCase();
+          linkF = "https://www.google.com/search?q=" + search_l;
+          searchBtn.href = linkF;
+          if(search_l !== ""){
+            document.querySelector(".search-submit").style.display = "inline";
+          }
+        });
+      });
+    </script>
   </body>
 </html>
