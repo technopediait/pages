@@ -9,6 +9,10 @@ function showSidebar() {
   sidebarBtnIcon.classList.toggle("fa-bars", !isSidebarActive);
   body.classList.toggle("active-blur", isSidebarActive);
 }
+var progressBar = document.querySelector(".progress-bar")
+const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+
+
 
 var toggleThemeIcon = document.getElementById("toggle-theme-icon");
 function mytoggleTheme() {

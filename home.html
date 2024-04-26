@@ -115,7 +115,7 @@
       }
 
       .apps .app:hover{
-        color: rgba(0, 255, 60, 0.875);
+        color: rgba(106, 255, 141, 0.875);
       }
     </style>
   </head>
@@ -187,6 +187,8 @@
           searchBtn.href = linkF;
           if(search_l !== ""){
             document.querySelector(".search-submit").style.display = "inline";
+          }else{
+            document.querySelector(".search-submit").style.display = "none";
           }
         });
       });
