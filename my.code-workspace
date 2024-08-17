@@ -1,0 +1,23 @@
+{
+	"folders": [
+		{
+			"name": "laravel-app",
+			"path": "../laravel-app"
+		},
+		{
+			"name": "myschool",
+			"path": "../myschool"
+		},
+		{
+			"name": "pages",
+			"path": "."
+		},
+		{
+			"path": "../school"
+		},
+		{
+			"path": "../technopediait"
+		}
+	],
+	"settings": {}
+}

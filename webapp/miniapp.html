@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- <meta http-equiv="refresh" content="3"> -->
+    <title>الاغ کوین</title>
+    <style>
+      html{
+        overflow-x: hidden;
+      }
+      body {
+        background-color: rgb(255, 255, 255);
+        color: #0d0557;
+        font-weight: 600;
+      }
+
+      .top{
+        font-size: 45px;
+        font-family:Verdana, Geneva, Tahoma, sans-serif;
+      }
+
+      .cnt {
+        max-width: 450px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        margin: 0 auto;
+      }
+
+      .imgcnt {
+        margin: 50px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+
+       .img{
+        color: #ffffff;
+        border-radius: 50%;
+        padding: 10px;
+      } 
+
+      .img img {
+        border-radius: 50%;
+        width: 210px;
+        height: 225px;
+        border: 7px solid rgb(33, 33, 177);
+        transition: .6s;
+      
+      }
+
+      .btm{
+        position: fixed;
+        bottom: 0;
+        padding: 10px;
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        width: 96%;
+        background-color: #0d0557;
+        
+        color: #fff;
+        border-radius: 20px;
+        margin: 3px 2%;
+      }
+
+      .btm span{
+        padding: 17px;
+        border-radius: 5px;
+
+      }
+
+      .btm span:hover{
+        background-color: #eeeeee2f;
+      }
+
+      .e{
+        background-color: #eeeeee2f;
+      }
+
+      .nwa{
+        position: relative;
+        width: 100%;
+        height: 12px;
+        background-color: rgb(50, 0, 131);
+        border-radius: 5px;
+        
+      }
+
+      .ns{
+        font-size: 20px;
+      }
+
+      .nov{
+        filter: blur(4px);
+      }
+
+    </style>
+  </head>
+  <body>
+    <div class="cnt">
+      <div class="top">
+        <span class="na">0</span>
+      </div>
+      <div class="imgcnt">
+        <div class="img">
+          <img
+            src="https://s32.picofile.com/file/8478254150/52.jpg"
+            alt=""
+            onclick="swd(this)"
+          />
+        </div>
+        <marquee style="position: fixed;top: 80px; font-size: 22px;" behavior="1s" direction="right"> الاغ کوین در تاریخ 22 آگوست 2024 لیست می شود</marquee>
+        
+      </div>
+      <div class="ns"><span class="naw">100</span>/<span>100</span></div>
+      <div style="box-shadow: 0 0 5px blueviolet; width: 100%;border-radius: 5px;"><div class="nwa"></div></div>
+      <div class="btm">
+        <span>کیف پول</span>
+        <span>پروفایل</span>
+        <span class="e">بازی</span>
+        <span>دوستان</span>
+        <span>جوایز</span>
+      </div>
+    </div>
+    <audio class="mp" src="./12.mp3"></audio>
+
+    <script>
+      let newWidth = 100;
+      function swd(e) {
+        navigator.vibrate(50);
+        const xwd = document.querySelector(".na");
+        const naw = document.querySelector(".naw");
+        
+        const element = document.querySelector(".nwa");
+        if(naw.textContent == 0){
+          e.classList.add('nov');
+        }else{
+          naw.textContent--
+         
+        
+
+         newWidth--
+
+    
+    element.style.width = newWidth + '%';
+        const swc = xwd.textContent++;
+        if(e.style.rotate == '-30deg'){
+          e.style.rotate = '0deg';
+          // document.body.style.background = "yellow";
+        }else{
+          e.style.rotate = '-30deg';
+          // document.body.style.background = "green";
+        }
+        localStorage.setItem("na", swc+1);
+      }
+    }
+
+      function checkAutoTheme() {
+        const sa = localStorage.getItem("na");
+        document.querySelector(".na").textContent = sa;
+      }
+      checkAutoTheme();
+    </script>
+  </body>
+</html>
