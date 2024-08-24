@@ -13,9 +13,11 @@
 			"path": "."
 		},
 		{
+			"name": "school",
 			"path": "../school"
 		},
 		{
+			"name": "technopediait",
 			"path": "../technopediait"
 		}
 	],

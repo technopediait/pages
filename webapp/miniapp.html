@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" dir="rtl">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -46,8 +46,8 @@
         border-radius: 50%;
         width: 210px;
         height: 225px;
-        border: 7px solid rgb(33, 33, 177);
-        transition: .6s;
+        border: 7px solid green;
+        transition: .3s;
       
       }
 
@@ -60,7 +60,7 @@
         justify-content: space-around;
         width: 96%;
         background-color: #0d0557;
-        
+        z-index: 2;
         color: #fff;
         border-radius: 20px;
         margin: 3px 2%;
@@ -97,6 +97,20 @@
         filter: blur(4px);
       }
 
+      #swps{
+        position: fixed;
+        background-color: rgb(68, 68, 68);
+        top: 0;
+        width: 100%;
+        font-size: 40px;
+        bottom: 0;
+        color: #fff;
+        justify-content: center;
+        align-items: center;
+        display: none;
+
+      }
+
     </style>
   </head>
   <body>
@@ -107,27 +121,44 @@
       <div class="imgcnt">
         <div class="img">
           <img
-            src="https://s32.picofile.com/file/8478254150/52.jpg"
+            src="https://s32.picofile.com/file/8478611018/1724534119410_124611.jpg"
             alt=""
             onclick="swd(this)"
           />
         </div>
-        <marquee style="position: fixed;top: 80px; font-size: 22px;" behavior="1s" direction="right"> الاغ کوین در تاریخ 22 آگوست 2024 لیست می شود</marquee>
+        <marquee style="position: fixed;top: 80px; font-size: 22px;" behavior="1s" direction="right"> ممد کوین در تاریخ 22 آگوست 2024 لیست می شود</marquee>
         
       </div>
       <div class="ns"><span class="naw">100</span>/<span>100</span></div>
       <div style="box-shadow: 0 0 5px blueviolet; width: 100%;border-radius: 5px;"><div class="nwa"></div></div>
       <div class="btm">
-        <span>کیف پول</span>
-        <span>پروفایل</span>
-        <span class="e">بازی</span>
-        <span>دوستان</span>
-        <span>جوایز</span>
+        <span onclick="swp(1)">کیف پول</span>
+        <span onclick="swp(2)">پروفایل</span>
+        <span onclick="swp(3)" class="e">بازی</span>
+        <span onclick="swp(5)">دوستان</span>
+        <span onclick="swp(4)">جوایز</span>
       </div>
     </div>
-    <audio class="mp" src="./12.mp3"></audio>
 
+    <audio class="mp" src="./12.mp3"></audio>
+    <div id="swps">
+      این نسخه به زود آپدیت می شود
+    </div>
     <script>
+    const swps = document.getElementById("swps")
+      function swp(e) {
+        if(e == 3){
+          swps.style.display = "none";
+        }else{
+        if(swps.style.display == "flex"){
+          swps.style.display = "none";
+        }else{
+          swps.style.display = "flex";
+        }
+      }
+      }
+
+
       let newWidth = 100;
       function swd(e) {
         navigator.vibrate(50);
@@ -139,19 +170,14 @@
           e.classList.add('nov');
         }else{
           naw.textContent--
-         
-        
-
          newWidth--
-
-    
     element.style.width = newWidth + '%';
         const swc = xwd.textContent++;
-        if(e.style.rotate == '-30deg'){
+        if(e.style.rotate == '-10deg'){
           e.style.rotate = '0deg';
           // document.body.style.background = "yellow";
         }else{
-          e.style.rotate = '-30deg';
+          e.style.rotate = '-10deg';
           // document.body.style.background = "green";
         }
         localStorage.setItem("na", swc+1);
