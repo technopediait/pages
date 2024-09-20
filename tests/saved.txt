@@ -1,0 +1,324 @@
+ 
+ <code>
+کد جاوا اسکریپت حالت خودکار حالت تاریک
+// تابعی برای تعیین حالت روشن یا تاریک بر اساس وضعیت سیستم
+    function getMode() {
+      // اگر دستگاه اندروید است، حالت سیستم را تعیین کنید
+      if (window.matchMedia("(prefers-color-scheme: dark)").matches) {
+        return "dark-theme";
+      } else {
+        return "light";
+      }
+    }
+    // تابعی برای تغییر حالت صفحه
+    function changeMode(mode) {
+      // حالت صفحه را بر اساس مقدار بازگشتی تابع getMode() تغییر دهید
+      const body = document.querySelector("body");
+      body.classList.remove("light", "dark-theme");
+      body.classList.add(mode);
+    }
+      // تعیین حالت اولیه صفحه
+      const mode = getMode();
+      changeMode(mode);
+      
+      // نظارت بر تغییر حالت سیستم و تغییر حالت صفحه به صورت خودکار
+      window.addEventListener("color-scheme-change", () => {
+        const mode = getMode();
+        changeMode(mode);
+      });
+      
+      /*
+$(document).ready(function(){
+  // smooth scrolling 
+  $('a[href*="#"]').on('click',function(e){
+
+    e.preventDefault();
+
+    $('html, body').animate({
+
+      scrollTop : $($(this).attr('href')).offset().top,
+    },
+      500,
+      'linear'
+    );
+
+  });
+
+});*/
+
+
+<!-- jquery cdn link 
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    -->
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
+
+</code>
+
+
+            <h3> chat gpt <span>چیست؟ </span> </h3>
+            <p>
+                چت جی پی تی (GPT) یک مخفف برای "Generative Pre-trained Transformer" است. این یک مدل یادگیری عمیق مبتنی
+                بر شبکه‌های عصبی است که به توسعه واقعیت‌افزوده توجه دارد. این مدل‌ها توسط OpenAI توسعه داده شده‌اند و از
+                معماری شبکه‌های عصبی بازگشتی (RNN) و شبکه‌های عصبی کانولوشنال (CNN) بهره می‌برند.
+            </p>
+            <p>
+                GPT معمولاً برای تولید متون و پاسخ به سوالات متنی استفاده می‌شود. این مدل‌ها با یادگیری از متون بزرگ در
+                اینترنت آموزش داده می‌شوند و می‌توانند متون جدیدی را تولید کنند که به نظر می‌آید واقعیت دارند. GPT-3،
+                یکی از جدیدترین نسخه‌های این مدل، شناخته شده است و توانایی تولید متون متنوع و پاسخ به سوالات مختلف را
+                دارد.
+            </p>
+            <p>
+                GPT می‌تواند در برنامه‌ها و سرویس‌های مختلف، از جمله چت‌بات‌ها، پرسش و پاسخ‌های متنی و بسیاری از وظایف
+                دیگر مورد استفاده 
+            </p>
+
+
+
+
+
+
+ <table>
+  <tr>
+   <td>شرح خدمات انجام شده</td>
+   <td>سمند, پارس پژو 405</td>
+   <td>پراید</td>
+   <td>پیکان</td>
+   <td>تیبا کوییک</td>
+   <td>زانتیا</td>
+   <td>TU5</td>
+  </tr>
+  <tr>
+   <td>تعمیر استارت</td>
+   <td></td>
+   <td></td>
+   <td></td>
+   <td></td>
+   <td></td>
+   <td></td>
+  </tr>
+  <tr>
+   <td>تعمیر دینام</td>
+   <td></td>
+   <td></td>
+   <td></td>
+   <td></td>
+   <td></td>
+   <td></td>
+  </tr>
+  <tr>
+   <td>تعویض رادیاتور بخاری</td>
+   <td></td>
+   <td></td>
+   <td></td>
+   <td></td>
+   <td></td>
+   <td></td>
+  </tr>
+  <tr>
+   <td>سیم کشی موتور</td>
+   <td></td>
+   <td></td>
+   <td></td>
+   <td></td>
+   <td></td>
+   <td></td>
+  </tr>
+  <tr>
+   <td>بازو بست داشبورد</td>
+   <td></td>
+   <td></td>
+   <td></td>
+   <td></td>
+   <td></td>
+   <td></td>
+  </tr>
+  <tr>
+   <td>تعویض سنسور کیلومتر</td>
+   <td></td>
+   <td></td>
+   <td></td>
+   <td></td>
+   <td></td>
+   <td></td>
+  </tr>
+  <tr>
+   <td>نصب رله تقویت چراغ جلو</td>
+   <td></td>
+   <td></td>
+   <td></td>
+   <td></td>
+   <td></td>
+   <td></td>
+  </tr>
+  <tr>
+   <td>تعمیر شیشه بالابر</td>
+   <td></td>
+   <td></td>
+   <td></td>
+   <td></td>
+   <td></td>
+   <td></td>
+  </tr>
+  <tr>
+   <td>تعمیر برف پاکن</td>
+   <td></td>
+   <td></td>
+   <td></td>
+   <td></td>
+   <td></td>
+   <td></td>
+  </tr>
+  <tr>
+   <td>تعویض یا تعمیر پنل بخاری</td>
+   <td></td>
+   <td></td>
+   <td></td>
+   <td></td>
+   <td></td>
+   <td></td>
+  </tr>
+  <tr>
+   <td>تعویض تخته سویچ</td>
+   <td></td>
+   <td></td>
+   <td></td>
+   <td></td>
+   <td></td>
+   <td></td>
+  </tr>
+  <tr>
+   <td>تعمیر یا تعویض بوق</td>
+   <td></td>
+   <td></td>
+   <td></td>
+   <td></td>
+   <td></td>
+   <td></td>
+  </tr>
+  <tr>
+   <td>تعمیر یا تعویض فن رادیاتور</td>
+   <td></td>
+   <td></td>
+   <td></td>
+   <td></td>
+   <td></td>
+   <td></td>
+  </tr>
+  <tr>
+   <td>تعویض آینه بغل (هر عدد)</td>
+   <td></td>
+   <td></td>
+   <td></td>
+   <td></td>
+   <td></td>
+   <td></td>
+  </tr>
+  <tr>
+   <td>تعویض پمپ بنزین</td>
+   <td></td>
+   <td></td>
+   <td></td>
+   <td></td>
+   <td></td>
+   <td></td>
+  </tr>
+  <tr>
+   <td>تعویض یا تعمیر فن بخاری</td>
+   <td></td>
+   <td></td>
+   <td></td>
+   <td></td>
+   <td></td>
+   <td></td>
+  </tr>
+  <tr>
+   <td>تعویض بوبین کمپرسور</td>
+   <td></td>
+   <td></td>
+   <td></td>
+   <td></td>
+   <td></td>
+   <td></td>
+  </tr>
+  <tr>
+   <td>نصب رله برای تقویت (هر عدد)</td>
+   <td></td>
+   <td></td>
+   <td></td>
+   <td></td>
+   <td></td>
+   <td></td>
+  </tr>
+  <tr>
+   <td>تعویض تسمه دینام</td>
+   <td></td>
+   <td></td>
+   <td></td>
+   <td></td>
+   <td></td>
+   <td></td>
+  </tr>
+  <tr>
+   <td>نصب و تعمیر چراغ عقب</td>
+   <td></td>
+   <td></td>
+   <td></td>
+   <td></td>
+   <td></td>
+   <td></td>
+  </tr>
+  <tr>
+   <td>نصب و تعمیر چراغ جلو</td>
+   <td></td>
+   <td></td>
+   <td></td>
+   <td></td>
+   <td></td>
+   <td></td>
+  </tr>
+  <tr>
+   <td>نصب ظبط و رادیو</td>
+   <td></td>
+   <td></td>
+   <td></td>
+   <td></td>
+   <td></td>
+   <td></td>
+  </tr>
+  <tr>
+   <td>تعمیر یا تعویض دسته راهنما</td>
+   <td></td>
+   <td></td>
+   <td></td>
+   <td></td>
+   <td></td>
+   <td></td>
+  </tr>
+
+ </table>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

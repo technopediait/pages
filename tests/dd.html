@@ -1,0 +1,68 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <!-- <link rel="stylesheet" href="output.css"> -->
+  <script src="./alpine.js" defer></script>
+  <style>
+    .ac{
+      color: blue;
+
+    }
+    .ab{
+      color: green;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body x-data="{
+  objstr: 'Hello world',
+  count: 0,
+  active: false,
+  open: false,
+  parentMessage: ''
+}">
+  
+
+<h1 x-text="objstr"></h1>
+
+
+<div x-data="{ open: false }">
+  <button @click="open = !open">Toggle</button>
+  <div x-show="open">This is visible when open is true</div>
+</div>
+
+
+
+<div></div>
+  <button @click="count++">افزایش</button>
+  <p>مقدار: <span x-text="count"></span></p>
+</div>
+
+  <button @click="active = !active">فعال/غیرفعال</button>
+  <p :class="{ 'bg-blue-800': active, 'ac': !active }">
+    این متن تغییر رنگ می‌دهد.
+  </p>
+</div>
+
+<div x-data="{ message: '' }">
+  <input type="text" x-model="message" placeholder="پیامت را وارد کن">
+  <p>پیام: <span x-text="message"></span></p>
+</div>
+
+
+<div>
+  <button @click="open = !open">باز/بسته کردن</button>
+  <div x-show="open" x-transition>این متن به آرامی نمایش داده می‌شود.</div>
+</div>
+
+
+
+
+
+</body>
+</html>
