@@ -20,6 +20,11 @@ Math.sinus = function (degree) {
   return Math.sin((degree / 180) * Math.PI);
 };
 
+var audio = document.getElementById('myAudio');
+
+
+
+
 // Game data
 let phase = "waiting"; // waiting | stretching | turning | walking | transitioning | falling
 let lastTimestamp; // The timestamp of the previous requestAnimationFrame cycle
@@ -168,7 +173,7 @@ window.addEventListener("keydown", function (event) {
   }
 });
 
-window.addEventListener("mousedown", function (event) {
+window.addEventListener("touchstart", function (event) {
   if (phase == "waiting") {
     lastTimestamp = undefined;
     introductionElement.style.opacity = 0;
@@ -177,7 +182,7 @@ window.addEventListener("mousedown", function (event) {
   }
 });
 
-window.addEventListener("mouseup", function (event) {
+window.addEventListener("touchend", function (event) {
   if (phase == "stretching") {
     phase = "turning";
   }
@@ -217,6 +222,7 @@ function animate(timestamp) {
           // Increase score
           score += perfectHit ? 2 : 1;
           scoreElement.innerText = score;
+          audio.play();
 
           if (perfectHit) {
             perfectElement.style.opacity = 1;
