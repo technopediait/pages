@@ -1,0 +1,100 @@
+    .blog .box-container {
+
+        font-size: 16px;
+        width: 1000px;
+    }
+
+    .blog .box-container .box {
+        width: 20em !important;
+        border-radius: .3em;
+        box-shadow: 0 .3em .6em rgba(0, 0, 0, .1);
+        margin: .9em;
+        background: var(--primary-bg-color);
+        overflow: hidden;
+        box-shadow: 0 0 .7em #999;
+    }
+
+    .blog .box-container .box img {
+        width: 100%;
+        height: 12em;
+        object-fit: cover;
+    }
+
+    .blog .box-container .box img:hover {
+        scale: 1.07;
+        transition: .7s;
+    }
+
+    .blog .box-container .box .box-info {
+        display: flex;
+        justify-content: space-between;
+        position: relative;
+        bottom: 3em;
+        padding: .4em;
+        color: #fff;
+        font-size: .8em;
+        text-shadow: 0 0 .5em #111;
+        padding-bottom: 0;
+    }
+
+
+
+    
+    .blog .box-container .box .box-info .box-info-right a{
+      color: #fff;
+    }
+
+    .blog .box-container .box .box-info .box-info-left span:hover,
+     .blog .box-container .box .box-info .box-info-right a:hover{
+      color: yellow;
+  }
+
+    
+
+    .blog .box-container .box .box-content {
+        margin-top: -4.3em;
+        padding: 1em;
+    }
+
+    .blog .box-container .box .box-content h3 {
+        color: #171c32;
+        padding-bottom: .5em;
+    }
+
+    .blog .box-container .box .box-content h3:hover {
+        color: var(--main-color);
+    }
+
+    .blog .box-container .box .box-content p {
+        color: #666;
+        font-size: .9em;
+    }
+
+    .blog .box-container .box .box-info-rel {
+        position: relative;
+        bottom: 7.2em;
+        padding: .4em;
+        font-size: .8em;
+        padding-bottom: 0;
+    }
+
+    .blog .box-container .box .box-info-rel:hover{
+        background-color: var(--main-color);
+    }
+
+    .btn-more{
+        display: inline-flex;
+        align-items: center;
+        column-gap: 1em;
+        font-size: .85em;
+        padding: .4em;
+        background-color: #eee;
+        border-radius: .3em;
+        color: #111;
+        margin-top: .5em;
+    }
+
+    .btn-more:hover{
+        color: var(--main-color);
+        padding: .4em .9em;
+    }
